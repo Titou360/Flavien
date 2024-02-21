@@ -7,7 +7,8 @@ const Header = () => {
   return (
     <header className="w-5/6 xs:w-full m-auto h-screen relative">
       <Image src={HeroPicture} className="absolute inset-0 w-full h-full object-cover" alt="Photo de la devanture du restaurant" />
-      <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-40"></div> {/* Changement de la direction du dégradé */}
+      {/* Next line making a gradient over the preview pic */}
+      <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-40"></div>
       <Image src={logo} alt="Logo du Café de la Place" width={128} height={64} className="absolute top-5 left-5" />
       <div className="absolute w-full flex flex-row justify-center items-center gap-3 flex-wrap text-sm py-3">
         <Navbar />

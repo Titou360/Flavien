@@ -3,6 +3,7 @@ import data from '../../public/data.json';
 
 import BurgerPic from '../../public/assets/img/Services/burger.jpg';
 import PizzaPic from '../../public/assets/img/Services/pizza.jpg';
+import Link from 'next/link';
 
 const servicesData = data.services;
 const timingData = data.timeSchedule;
@@ -51,11 +52,32 @@ const Services = () => {
           </div>
         </div>
 
-        <div id="burgers" className="w-1/3">
-          <Image alt="Photo d'un burger" src={BurgerPic} className="w-full h-full object-cover" />
+        <div id="burgers" className="w-1/3 relative">
+          <Image src={BurgerPic} className="absolute w-full h-full object-cover" alt="Photo d'un burger" />
+          {/* Next line making a gradient over the pic */}
+          <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-80"></div>
+
+          <div className="w-full absolute inset-0 flex justify-center place-items-center flex-col gap-8">
+            <span className="text-white uppercase font-Kristi text-7xl ">découvrez</span>
+            <h4 className=" text-white flex justify-center place-items-center uppercase font-Quick text-4xl">nos burgers</h4>
+
+            <Link href="#" className="text-white text-xl underline font-Quick">
+              Découvrez le menu
+            </Link>
+          </div>
         </div>
-        <div id="pizzas" className="w-1/3">
-          <Image alt="Photo d'un burger" src={PizzaPic} className="w-full h-full object-cover" />
+
+        <div id="pizzas" className="w-1/3 relative ">
+          <Image src={PizzaPic} className="w-full h-full object-cover" alt="Photo d'une pizza" />
+          {/* Next line making a gradient over the pic */}
+          <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-80"></div>
+          <div className="w-full absolute inset-0 flex justify-center place-items-center flex-col gap-8">
+            <span className="text-white uppercase font-Kristi text-7xl ">découvrez</span>
+            <h4 className=" text-white flex justify-center place-items-center uppercase font-Quick text-4xl">nos pizzas</h4>
+            <Link href="#" className="text-white text-xl underline font-Quick">
+              Découvrez le menu
+            </Link>
+          </div>
         </div>
       </div>
     </section>
