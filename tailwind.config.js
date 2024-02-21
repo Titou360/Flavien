@@ -4,7 +4,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        Quick: ['Quicksand', 'sans']
+        Quick: ['Quicksand', 'sans'],
+        Kristi: ['Kristi', 'serif']
       },
       colors: {
         cafeGray: '#2c2c2c',

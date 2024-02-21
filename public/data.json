@@ -1,0 +1,59 @@
+{
+  "services": [
+    {
+      "title": "Restaurant",
+      "cover": "/assets/img/icons/cloche-couvrant-le-plat-chaud.png",
+      "description": "Restaurant traditionnel, venez découvrir notre carte",
+      "alt": "Icône d'un plat chaud sous cloche"
+    },
+    {
+      "title": "Bar",
+      "cover": "/assets/img/icons/verre-a-vin.png",
+      "description": "Bar ouvert 7 jours sur 7 jusqu'à 22h00",
+      "alt": "Icône d'un verre à vin"
+    },
+    {
+      "title": "Caféterie",
+      "cover": "/assets/img/icons/machine-a-cafe.png",
+      "description": "Café, Thé et boissons frâiches à tout heure",
+      "alt": "Icône d'une machine à café"
+    },
+    {
+      "title": "Vente à emporter",
+      "cover": "/assets/img/icons/fast-food.png",
+      "description": "Pizza & Burger à emporter, Merci de réserver par téléphone",
+      "alt": "Icône d'un morceau de pizza, d'un burger et d'une boisson"
+    }
+  ],
+
+  "timeSchedule": [
+    {
+      "day": "Lundi",
+      "time": "12.00-14.00 - 19.00-22.00"
+    },
+    {
+      "day": "Mardi",
+      "time": "12.00-14.00 - 19.00-22.00"
+    },
+    {
+      "day": "Mercredi",
+      "time": "12.00-14.00 - 19.00-22.00"
+    },
+    {
+      "day": "Jeudi",
+      "time": "12.00-14.00 - 19.00-22.00"
+    },
+    {
+      "day": "Vendredi",
+      "time": "12.00-14.00 - 19.00-22.00"
+    },
+    {
+      "day": "Samedi",
+      "time": "12.00-14.00 - 19.00-22.00"
+    },
+    {
+      "day": "Dimanche",
+      "time": "12.00-14.00 - 19.00-22.00"
+    }
+  ]
+}

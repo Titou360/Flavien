@@ -8,7 +8,7 @@ import Link from 'next/link';
 
 const ExtraHeader = () => {
   return (
-    <nav id="extraHeader" className="bg-white flex flex-row justify-between py-3">
+    <nav id="extraHeader" className="w-5/6 mx-auto flex flex-row justify-between py-3">
       <div className="flex flex-row gap-2 ml-2">
         <motion.a
           tabIndex="0"

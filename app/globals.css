@@ -6,6 +6,10 @@
   font-family: "Quicksand";
   src: url("/assets/fonts/Quicksand.ttf");
 }
+@font-face {
+  font-family: "Kristi";
+  src: url("/assets/fonts/Kristi.ttf");
+}
 
 /* CSS for the mouse in Hero */
 .mouse_scroll {
