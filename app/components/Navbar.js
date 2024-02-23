@@ -1,6 +1,6 @@
 'use client';
-import { motion } from 'framer-motion';
 import Link from 'next/link';
+import BookTable from "./BookTable"
 
 const Navbar = () => {
   return (
@@ -12,9 +12,7 @@ const Navbar = () => {
       <Link href="#Services">Services</Link>
       <Link href="#Menus">Nos cartes</Link>
       <Link href="#Contact_us">Contact</Link>
-      <motion.a className="border border-solid px-2 backdrop-blur-md rounded-lg cursor-pointer" whileHover={{ y: -2 }} whileTap={{ scale: 0.9 }}>
-        Réserver une table
-      </motion.a>
+     <BookTable />
     </nav>
   );
 };

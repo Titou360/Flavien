@@ -28,9 +28,9 @@ const Services = () => {
         ))}
       </div>
 
-      <div className="w-full h-full mx-auto pt-8 flex flex-row justify-between gap-6">
+      <div className="w-full h-screen mx-auto pt-8 flex flex-row justify-between align-baseline gap-6">
         <div className="w-1/3 flex flex-col gap-6">
-          <div id="find_us" className="bg-cafeGray w-full h-96 flex flex-col justify-center items-center text-white px-6">
+          <div id="find_us" className="bg-cafeGray w-full h-full flex flex-col justify-center items-center text-white px-6">
             <h4 className="uppercase mb-6">retrouvez nous ici</h4>
             <adress className="text-center my-2">
               39 Place Robert Bezos <br /> 40420 Brocas
@@ -38,44 +38,42 @@ const Services = () => {
             <a href="tel:0123456789">01.23.45.67.89</a>
             <p>info@lecafedelaplace.fr</p>
           </div>
-          <div id="opening_times_food" className="">
-            <div className=" bg-cafeGold w-full h-96 flex flex-col justify-center items-center text-white px-6">
-              <h4 className="uppercase mb-6">Heures d&apos;ouverture Restaurant</h4>
-              {/* Here we map for the time Schedule */}
-              {timingData.map((timing, index) => (
-                <div className="w-full flex flex-row justify-between items-center text-sm" key={index}>
-                  <h5 className="uppercase">{timing.day}</h5>
-                  <div>{timing.time}</div>
-                </div>
-              ))}
-            </div>
+          <div id="opening_times_food" className=" bg-cafeGold w-full h-full flex flex-col justify-center items-center text-white px-6">
+            <h4 className="uppercase mb-6">Heures d&apos;ouverture Restaurant</h4>
+            {/* Here we map for the time Schedule */}
+            {timingData.map((timing, index) => (
+              <div className="w-full flex flex-row justify-between items-center text-sm" key={index}>
+                <h5 className="uppercase">{timing.day}</h5>
+                <div>{timing.time}</div>
+              </div>
+            ))}
           </div>
         </div>
 
-        <div id="burgers" className="w-1/3 relative">
+        <div id="burgers" className="w-1/3 h-full relative">
           <Image src={BurgerPic} className="absolute w-full h-full object-cover" alt="Photo d'un burger" />
           {/* Next line making a gradient over the pic */}
           <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-80"></div>
 
           <div className="w-full absolute inset-0 flex justify-center place-items-center flex-col gap-8">
-            <span className="text-white uppercase font-Kristi text-7xl ">découvrez</span>
+            <span className="text-white capitalize font-Kristi text-8xl ">découvrez</span>
             <h4 className=" text-white flex justify-center place-items-center uppercase font-Quick text-4xl">nos burgers</h4>
 
             <Link href="#" className="text-white text-xl underline font-Quick">
-              Découvrez le menu
+              Accéder au menu
             </Link>
           </div>
         </div>
 
-        <div id="pizzas" className="w-1/3 relative ">
+        <div id="pizzas" className="w-1/3 relative h-full">
           <Image src={PizzaPic} className="w-full h-full object-cover" alt="Photo d'une pizza" />
           {/* Next line making a gradient over the pic */}
-          <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-80"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-90"></div>
           <div className="w-full absolute inset-0 flex justify-center place-items-center flex-col gap-8">
-            <span className="text-white uppercase font-Kristi text-7xl ">découvrez</span>
+            <span className="text-white capitalize font-Kristi text-8xl ">découvrez</span>
             <h4 className=" text-white flex justify-center place-items-center uppercase font-Quick text-4xl">nos pizzas</h4>
             <Link href="#" className="text-white text-xl underline font-Quick">
-              Découvrez le menu
+              Accéder au menu
             </Link>
           </div>
         </div>

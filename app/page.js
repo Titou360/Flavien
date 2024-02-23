@@ -8,6 +8,7 @@ import OurCards from './components/OurCards';
 import Restaurant from './components/Restaurant';
 import Services from './components/Services';
 import About from './components/about';
+import ContactUs from './components/ContactUs';
 
 export default function Home() {
   return (
@@ -20,12 +21,13 @@ export default function Home() {
 
         <Restaurant />
 
+        <BookNow />
+
         <Services />
 
         <OurCards />
 
-        <BookNow />
-
+        <ContactUs />
         <ContactForm />
 
         <Map />

@@ -61,14 +61,14 @@ const ExtraHeader = () => {
         <div className="flex selection:justify-center place-items-center ">
           <Link href="#" className="flex flex-row flex-nowrap">
             <Image src={CocktailIcon} alt="Icône d'un coktail" className="w-6" />
-            <p className="uppercase">HAPPY HOUR</p>
+            <p className="uppercase">Horaire du bar</p>
           </Link>
         </div>
 
         <div className="flex justify-center place-items-center ">
           <Link href="#" className="flex flex-row flex-nowrap">
             <Image src={DelivryIcon} alt="Icône d'un coktail" className="w-6" />
-            <p className="uppercase">Livraison</p>
+            <p className="uppercase">Vente à emporter</p>
           </Link>
         </div>
       </div>

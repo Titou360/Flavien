@@ -15,13 +15,13 @@
     {
       "title": "Caféterie",
       "cover": "/assets/img/icons/machine-a-cafe.png",
-      "description": "Café, Thé et boissons frâiches à tout heure",
+      "description": "Café, Thé et boissons fraiches à toute heure",
       "alt": "Icône d'une machine à café"
     },
     {
       "title": "Vente à emporter",
       "cover": "/assets/img/icons/fast-food.png",
-      "description": "Pizza & Burger à emporter, Merci de réserver par téléphone",
+      "description": "Pizza & Burger à emporter. Seules les commandes par téléphone et sur place seront acceptées",
       "alt": "Icône d'un morceau de pizza, d'un burger et d'une boisson"
     }
   ],
