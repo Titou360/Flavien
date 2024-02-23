@@ -1,3 +1,4 @@
+"use client"
 import Image from 'next/image';
 import mapPicture from '../../public/assets/img/map/map.png';
 import { motion } from 'framer-motion';
@@ -25,13 +26,31 @@ const Map = () => {
             tabIndex="0"
             aria-label="Accéder à Google Maps"
             target="_blank"
-            whileHover={{ y: -2 }}
+            whileHover={{ x: 5 }}
             whileTap={{ scale: 0.9 }}
           >
-            Google
+            Google Maps
           </motion.a>
-          <div></div>
-          <div></div>
+          <motion.a
+            href="44.0441922859558, -0.5360925317668931"
+            tabIndex="0"
+            aria-label="Accéder à Google Maps"
+            target="_blank"
+            whileHover={{ x: 5 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            GPS
+          </motion.a>
+          <motion.a
+            href="https://maps.app.goo.gl/jgW8R3P9bdiR5MMEA"
+            tabIndex="0"
+            aria-label="Accéder à Google Maps"
+            target="_blank"
+            whileHover={{ x: 5 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            Google Maps
+          </motion.a>
         </div>
       </div>
     </div>
