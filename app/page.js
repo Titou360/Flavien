@@ -1,6 +1,7 @@
 import BookNow from './components/BookNow';
 import ContactForm from './components/ContactForm';
 import ExtraHeader from './components/ExtraHeader';
+import ExtraFooter from './components/ExtraFooter';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Map from './components/Map';
@@ -33,6 +34,7 @@ export default function Home() {
         <Map />
       </main>
       <Footer />
+      <ExtraFooter />
     </>
   );
 }

@@ -4,7 +4,7 @@ import ActionCook from '../../public/assets/img/Restaurant/cuisinier.jpg';
 const Restaurant = () => {
   return (
     <section id="#restaurant">
-      <div className="w-5/6 mx-auto my-40 flex flex-row justify-between gap-6 relative">
+      <div className="w-5/6 mx-auto my-10 flex flex-row justify-between gap-6 relative">
         <div className="w-2/3 relative mt-32 ml-10">
           <div id="Title_restaurant">
             <h2 className="uppercase text-4xl p-6">RESTAURANT</h2>

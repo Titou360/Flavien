@@ -3,11 +3,11 @@ import NousDeux from '../../public/assets/img/About/deux.jpg';
 
 const About = () => {
   return (
-    <section id="About_us" className="w-5/6 my-40 py-8 rounded-lg bg-slate-400">
+    <section id="About_us" className="w-5/6 my-10 py-8 border-y-2 border-black">
       <div className="relative">
-        <h2 className="uppercase text-4xl p-6 text-center">deux</h2>
-        <span className="absolute -top-6 left-1/2 transform -translate-x-1/2 left-50 -ml-2 m-4 font-Kristi text-5xl text-black/60 capitalize place">
-          à propos <span className="normal-case">de nous</span>
+        <h2 className="uppercase text-4xl p-6 text-center">nous deux</h2>
+        <span className="absolute -top-6 left-1/2 transform -translate-x-1/2 left-50 -ml-12 m-4 font-Kristi text-5xl text-black/60 capitalize place">
+          à propos <span className="normal-case">de</span>
         </span>
       </div>
       <div className="w-3/4 m-auto flex flex-row justify-between place-items-center gap-10">

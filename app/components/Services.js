@@ -10,7 +10,7 @@ const timingData = data.timeSchedule;
 
 const Services = () => {
   return (
-    <section id="Services" className="w-5/6 h-screen mt-4 mb-96">
+    <section id="Services" className="w-5/6 h-screen my-10 mb-96">
       <div className="relative">
         <h2 className="uppercase text-4xl p-6 text-center">services</h2>
         <span className="absolute -top-6 left-1/2 transform -translate-x-1/2 left-50 -ml-2 m-3 font-Kristi text-5xl text-black/50 capitalize">

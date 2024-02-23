@@ -5,10 +5,10 @@ import FoodCard from './FoodCard';
 
 const OurCards = () => {
   return (
-    <div id="Menus" className="w-5/6 mt-52 flex flex-row justify-between">
+    <section id="Menus" className="w-5/6 h-auto my-12 flex flex-row justify-evenly items-center gap-6">
       <FoodCard />
       <DrinksCard />
-    </div>
+    </section>
   );
 };
 

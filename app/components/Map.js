@@ -1,11 +1,41 @@
-import React from 'react'
+import Image from 'next/image';
+import mapPicture from '../../public/assets/img/map/map.png';
+import { motion } from 'framer-motion';
+
 
 const Map = () => {
   return (
-    <div>
-      Ici la carte du lieu
-    </div>
-  )
-}
+    <div className="w-5/6 my-10 flex flex-col justify-center">
+      <div className="relative">
+        <h2 className="uppercase text-4xl p-6 relative">RETROUVER ?</h2>
+        <span className="absolute -top-6 left-0 m-4 font-Kristi text-5xl text-black/60 capitalize">
+          Comment <span className="normal-case">nous</span>
+        </span>
+      </div>
 
-export default Map
+      <div className="flex flex-row gap-10">
+        <Image
+          src={mapPicture}
+          alt="Capture d'écran de la carte"
+          className="w-3/4 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]"
+        />
+        <div className="w-1/4">
+          <motion.a
+            href="https://maps.app.goo.gl/jgW8R3P9bdiR5MMEA"
+            tabIndex="0"
+            aria-label="Accéder à Google Maps"
+            target="_blank"
+            whileHover={{ y: -2 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            Google
+          </motion.a>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Map;

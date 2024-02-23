@@ -10,6 +10,8 @@ module.exports = {
       colors: {
         cafeGray: '#2c2c2c',
         cafeGold: '#c5a485',
+        slateWood: '#FFF8DC',
+        slateBody: '#585D6D',
         nemo: '#F77300'
       },
       backgroundImage: {
