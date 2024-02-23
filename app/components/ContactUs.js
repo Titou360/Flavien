@@ -19,7 +19,7 @@ const ContactUs = () => {
       <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-60"></div>
 
       <div className="w-full flex flex-row absolute items-center justify-evenly gap-4 inset-0 p-12">
-        <CheckCaseIcon className="w-20 fill-white" />
+        <CheckCaseIcon className="w-10 fill-white" />
 
         <div className='flex flex-col gap-6'>
           <div className="text-white uppercase flex flex-row">
