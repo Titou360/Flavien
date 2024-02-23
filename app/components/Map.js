@@ -1,6 +1,6 @@
 "use client"
 import Image from 'next/image';
-import mapPicture from '../../public/assets/img/map/map.png';
+import mapPicture from '../../public/assets/img/Map/Map.PNG';
 import { motion } from 'framer-motion';
 
 
