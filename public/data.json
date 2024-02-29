@@ -3,19 +3,19 @@
     {
       "title": "Restaurant",
       "cover": "/assets/img/icons/cloche-couvrant-le-plat-chaud.png",
-      "description": "Restaurant traditionnel, venez découvrir notre carte",
+      "description": "Restaurant traditionnel, découvrez notre carte",
       "alt": "Icône d'un plat chaud sous cloche"
     },
     {
       "title": "Bar",
       "cover": "/assets/img/icons/verre-a-vin.png",
-      "description": "Bar ouvert 7 jours sur 7 jusqu'à 22h00",
+      "description": "Bar ouvert 6 jours sur 7 jusqu'à 22h00",
       "alt": "Icône d'un verre à vin"
     },
     {
       "title": "Caféterie",
       "cover": "/assets/img/icons/machine-a-cafe.png",
-      "description": "Café, Thé et boissons fraiches à toute heure",
+      "description": "Café, Thé et boissons fraiches",
       "alt": "Icône d'une machine à café"
     },
     {
@@ -26,34 +26,66 @@
     }
   ],
 
-  "timeSchedule": [
-    {
-      "day": "Lundi",
-      "time": "12.00-14.00 - 19.00-22.00"
-    },
-    {
-      "day": "Mardi",
-      "time": "12.00-14.00 - 19.00-22.00"
-    },
-    {
-      "day": "Mercredi",
-      "time": "12.00-14.00 - 19.00-22.00"
-    },
-    {
-      "day": "Jeudi",
-      "time": "12.00-14.00 - 19.00-22.00"
-    },
-    {
-      "day": "Vendredi",
-      "time": "12.00-14.00 - 19.00-22.00"
-    },
-    {
-      "day": "Samedi",
-      "time": "12.00-14.00 - 19.00-22.00"
-    },
-    {
-      "day": "Dimanche",
-      "time": "12.00-14.00 - 19.00-22.00"
+  "timeSchedule": {
+    "restaurant": [
+       {
+         "day": "Lundi",
+         "time": "Fermé"
+       },
+       {
+         "day": "Mardi",
+         "time": "12.00-14.00 - 19.00-21.30"
+       },
+       {
+         "day": "Mercredi",
+         "time": "12.00-14.00 - 19.00-21.30"
+       },
+       {
+         "day": "Jeudi",
+         "time": "12.00-14.00 - 19.00-21.30"
+       },
+       {
+         "day": "Vendredi",
+         "time": "12.00-14.00 - 19.00-22.00"
+       },
+       {
+         "day": "Samedi",
+         "time": "12.00-14.00 - 19.00-22.00"
+       },
+       {
+         "day": "Dimanche",
+         "time": "12.00-14.00"
+       }
+     ],
+     "pub": [
+       {
+         "day": "Lundi",
+         "time": "Fermé"
+       },
+       {
+         "day": "Mardi",
+         "time": "08.00-14.00 - 17.00-21.30"
+       },
+       {
+         "day": "Mercredi",
+         "time": "08.00-14.00 - 17.00-21.30"
+       },
+       {
+         "day": "Jeudi",
+         "time": "08.00-14.00 - 17.00-21.30"
+       },
+       {
+         "day": "Vendredi",
+         "time": "08.00-14.00 - 17.00-22.00"
+       },
+       {
+         "day": "Samedi",
+         "time": "08.00-14.00 - 17.00-22.00"
+       },
+       {
+         "day": "Dimanche",
+         "time": "08.00-15.00"
+       }
+     ]
     }
-  ]
 }

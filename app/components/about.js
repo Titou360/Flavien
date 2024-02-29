@@ -1,7 +1,11 @@
+"use client"
 import Image from 'next/image';
 import NousDeux from '../../public/assets/img/About/deux.jpg';
+import { useTranslation } from 'react-i18next';
 
 const About = () => {
+  const { t } = useTranslation();
+
   return (
     <section id="About_us" className="w-5/6 my-10 py-8 border-y-2 border-black">
       <div className="relative">

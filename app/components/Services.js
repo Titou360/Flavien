@@ -1,14 +1,24 @@
+'use client';
 import Image from 'next/image';
+import { useState } from 'react';
 import data from '../../public/data.json';
+import Switcher from './Switcher';
 
+import Link from 'next/link';
 import BurgerPic from '../../public/assets/img/Services/burger.jpg';
 import PizzaPic from '../../public/assets/img/Services/pizza.jpg';
-import Link from 'next/link';
 
 const servicesData = data.services;
-const timingData = data.timeSchedule;
+const timingRestaurant = data.timeSchedule.restaurant;
+const timingPub = data.timeSchedule.pub;
 
 const Services = () => {
+  const [isChecked, setIsChecked] = useState(false);
+
+  const handleToggle = (newValue) => {
+    setIsChecked(newValue);
+    // Vous pouvez effectuer d'autres actions en fonction de la nouvelle valeur isChecked ici
+  };
   return (
     <section id="Services" className="w-5/6 h-screen my-10 mb-96">
       <div className="relative">
@@ -39,14 +49,26 @@ const Services = () => {
             <p>info@lecafedelaplace.fr</p>
           </div>
           <div id="opening_times_food" className=" bg-cafeGold w-full h-full flex flex-col justify-center items-center text-white px-6">
-            <h4 className="uppercase mb-6">Heures d&apos;ouverture Restaurant</h4>
-            {/* Here we map for the time Schedule */}
-            {timingData.map((timing, index) => (
-              <div className="w-full flex flex-row justify-between items-center text-sm" key={index}>
-                <h5 className="uppercase">{timing.day}</h5>
-                <div>{timing.time}</div>
-              </div>
-            ))}
+            <div className="flex flex-row gap-2 justify-center place-items-center py-2">
+              <span>Bar</span>
+              <Switcher onToggle={handleToggle} />
+              <span>Restaurant</span>
+            </div>
+            <h4 className="uppercase mb-6">Nos Heures d&apos;ouverture</h4>
+
+            {isChecked
+              ? timingRestaurant.map((timing, index) => (
+                  <div className="w-full flex flex-row justify-between items-center text-sm" key={index}>
+                    <h5 className="uppercase">{timing.day}</h5>
+                    <div>{timing.time}</div>
+                  </div>
+                ))
+              : timingPub.map((timing, index) => (
+                  <div className="w-full flex flex-row justify-between items-center text-sm" key={index}>
+                    <h5 className="uppercase">{timing.day}</h5>
+                    <div>{timing.time}</div>
+                  </div>
+                ))}
           </div>
         </div>
 
