@@ -6,7 +6,7 @@ import { CheckCaseIcon } from './Icons';
 import BookTable from './BookTable';
 const ContactUs = () => {
   return (
-    <section id="Contact_us" className="relative w-3/4 lg:w-full h-52 m-auto lg:h-96 my-10">
+    <section id="Contact_us" className="lg:h-full w-3/4 lg:w-full h-52 m-auto my-10 relative">
       <div className="w-3/4 h-32 inset-0 m-auto">
         <Image
           src={Vegetables}

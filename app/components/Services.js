@@ -19,7 +19,7 @@ const Services = () => {
     setIsChecked(newValue);
   };
   return (
-    <section id="Services" className="w-5/6 relative md:w-full h-screen my-10 mb-96 lg:-mt-40">
+    <section id="Services" className="w-5/6 md:w-full h-full my-10 mb-96 lg:mb-0">
       <div className="relative">
         <h2 className="uppercase text-4xl p-6 text-center">services</h2>
         <span className="absolute -top-6 left-1/2 transform -translate-x-1/2 left-50 -ml-2 m-3 font-Kristi text-5xl text-black/50 capitalize">
@@ -106,9 +106,9 @@ const Services = () => {
       </div>
 
       {/* Here is the code for mobile screens */}
-      <div className="hidden lg:block">
+      <div className="hidden lg:block lg:pb-80">
         <div className="w-full flex flex-col gap-0 h-full">
-          <div id="find_us" className="bg-cafeGray w-full h-full flex flex-col justify-center items-center text-white px-6 m-auto">
+          <div id="find_us" className="bg-cafeGray w-full h-80 flex flex-col justify-center items-center text-white px-6 m-auto">
             <h4 className="uppercase mb-6">retrouvez nous ici</h4>
             <adress className="text-center my-2">
               39 Place Robert Bezos <br /> 40420 Brocas
@@ -116,7 +116,7 @@ const Services = () => {
             <a href="tel:0123456789">01.23.45.67.89</a>
             <p>info@lecafedelaplace.fr</p>
           </div>
-          <div id="opening_times_food" className=" bg-cafeGold w-full h-full flex flex-col justify-center items-center text-white px-6">
+          <div id="opening_times_food" className=" bg-cafeGold w-full h-80 flex flex-col justify-center items-center text-white px-6">
             <div className="flex flex-row gap-2 justify-center place-items-center py-2">
               <span>Bar</span>
               <Switcher onToggle={handleToggle} />
@@ -138,8 +138,7 @@ const Services = () => {
                   </div>
                 ))}
           </div>
-
-          <div id="burgers" className="w-1/3 lg:w-full h-full lg:h-80 relative">
+          <div id="burgers" className="w-full h-80 relative">
             <Image src={BurgerPic} className="absolute w-full h-full object-cover" alt="Photo d'un burger" />
             {/* Next line making a gradient over the pic */}
             <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-80"></div>
@@ -153,7 +152,7 @@ const Services = () => {
               </Link>
             </div>
           </div>
-          <div id="pizzas" className="w-1/3 lg:w-full lg:h-80 relative">
+          <div id="pizzas" className="w-full h-80 relative">
             <Image src={PizzaPic} className="w-full h-full object-cover" alt="Photo d'une pizza" />
             {/* Next line making a gradient over the pic */}
             <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-90"></div>

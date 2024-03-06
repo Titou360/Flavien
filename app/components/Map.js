@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 const Map = () => {
   return (
-    <div className="w-5/6 md:w-full my-10 flex flex-col justify-center">
+    <section className="w-5/6 md:w-full relative my-10 lg:mt-60 flex flex-col justify-center">
       <div className="relative">
         <h2 className="uppercase text-4xl p-6 relative">RETROUVER ?</h2>
         <span className="absolute -top-6 left-0 m-4 font-Kristi text-5xl text-black/60 capitalize">
@@ -53,7 +53,7 @@ const Map = () => {
           </motion.a>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

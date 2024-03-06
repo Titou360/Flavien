@@ -3,7 +3,7 @@ import FoodCard from './FoodCard';
 
 const OurCards = () => {
   return (
-    <section id="Menus" className="w-5/6 lg:hidden lg:w-full h-auto my-12 flex flex-row lg:flex-col justify-evenly items-center gap-6">
+    <section id="Menus" className="w-5/6 h-full lg:w-full my-12 lg:my-0 flex flex-row lg:flex-col justify-evenly items-center gap-6">
       <FoodCard />
       <DrinksCard />
     </section>
