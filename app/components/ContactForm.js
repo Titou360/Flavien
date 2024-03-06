@@ -58,11 +58,11 @@ const ContactForm = () => {
 
   return (
     <>
-      <section className="w-full h-full my-10 flex flex-col items-center text-dark">
+      <section className="w-full h-full my-10 lg:my-0 flex flex-col items-center text-dark">
         <div className="pt-0 flex flex-col items-center text-dark w-full min-h-screen">
           <div className="flex justify-center items-center w-full h-auto mt-10 sm:mt-0">
             <div className="container my-4 px-4 lg:px-3 lg:my-120">
-              <div className="w-4/5 mx-auto p-20 lg:p-4 my-4 mr-auto rounded-2xl shadow-2xl bg-white items-center justify-center">
+              <div className="w-4/5 lg:w-full mx-auto p-20 lg:p-4 my-4 mr-auto rounded-2xl shadow-2xl bg-white items-center justify-center">
                 <div className="flex justify-between">
                   <h2 className="font-bold font-Quick uppercase text-5xl sm:text-4xl">
                     Envoyez-nous un <span className="text-primary font-Quick">mess@ge</span>

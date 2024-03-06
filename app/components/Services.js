@@ -19,7 +19,7 @@ const Services = () => {
     setIsChecked(newValue);
   };
   return (
-    <section id="Services" className="w-5/6 md:w-full h-full my-10 mb-96 lg:mb-0">
+    <section id="Services" className="w-5/6 md:w-full h-full my-10 lg:mb-0">
       <div className="relative">
         <h2 className="uppercase text-4xl p-6 text-center">services</h2>
         <span className="absolute -top-6 left-1/2 transform -translate-x-1/2 left-50 -ml-2 m-3 font-Kristi text-5xl text-black/50 capitalize">
@@ -106,7 +106,7 @@ const Services = () => {
       </div>
 
       {/* Here is the code for mobile screens */}
-      <div className="hidden lg:block lg:pb-80">
+      <div className="hidden lg:block lg:pb-10">
         <div className="w-full flex flex-col gap-0 h-full">
           <div id="find_us" className="bg-cafeGray w-full h-80 flex flex-col justify-center items-center text-white px-6 m-auto">
             <h4 className="uppercase mb-6">retrouvez nous ici</h4>

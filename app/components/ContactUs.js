@@ -16,9 +16,9 @@ const ContactUs = () => {
           className="absolute inset-0 w-full h-full object-left object-cover"
         />
       </div>
-      <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-60"></div>
+      <div className="absolute inset-0 bg-black/70"></div>
 
-      <div className="w-full flex flex-row lg:flex-col absolute items-center justify-evenly gap-4 inset-0 p-12">
+      <div className="lg:hidden w-full flex flex-row lg:flex-col absolute items-center justify-evenly gap-4 inset-0 p-12">
         <div className="w-32">
           <CheckCaseIcon className="w-32 lg:w-6 fill-white" />
         </div>
@@ -33,6 +33,18 @@ const ContactUs = () => {
         </div>
 
         <BookTable />
+      </div>
+
+      <div className="hidden lg:block w-full flex-row lg:flex-col absolute items-center justify-evenly inset-0 gap-2 p-2">
+        <div className="flex flex-col gap-6">
+          <div className="text-white uppercase flex flex-row lg:flex-col place-items-center">
+            <h4 className="font-Quick text-4xl lg:text-xl font-thin">Contactez-nous !</h4>
+            <Link href="tel:0033621145888" className="underline decoration-1 underline-offset-2 ml-4 ont-Quick text-4xl lg:text-xl font-bold">
+              05.58.58.58.58
+            </Link>
+          </div>
+          <div className="text-white text-center font-bold font-Quick text-lg">Ou utlisez le formulaire ci-dessous </div>
+        </div>
       </div>
     </section>
   );

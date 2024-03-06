@@ -7,7 +7,7 @@ const About = () => {
   const { t } = useTranslation();
 
   return (
-    <section id="About_us" className="relative w-5/6 lg:w-full lg:px-3 my-10 py-8 border-y-2 border-black">
+    <section id="About_us" className="relative w-5/6 lg:w-full lg:px-3 my-10 lg:my-0 py-8 border-y-2 border-black">
       <div className="relative">
         <h2 className="uppercase text-4xl p-6 text-center">nous deux</h2>
         <span className="absolute -top-6 left-1/2 transform -translate-x-1/2 left-50 -ml-12 m-4 font-Kristi text-5xl text-black/60 capitalize place">
