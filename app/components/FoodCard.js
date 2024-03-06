@@ -1,3 +1,6 @@
+"use client"
+import Modal from './Modal';
+
 const FoodCard = () => {
   return (
     <section id="beverage" className="relative w-1/2">
@@ -6,6 +9,7 @@ const FoodCard = () => {
         <span className="absolute -top-6 left-0 m-4 font-Kristi text-5xl text-black/60 capitalize">
           Consulter <span className="normal-case">notre</span>
         </span>
+        <Modal />
       </div>
     </section>
   );

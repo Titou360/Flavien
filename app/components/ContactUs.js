@@ -6,7 +6,7 @@ import { CheckCaseIcon } from './Icons';
 import BookTable from './BookTable';
 const ContactUs = () => {
   return (
-    <section id="Contact_us" className="relative w-3/4 h-52 m-auto my-10">
+    <section id="Contact_us" className="relative w-3/4 lg:w-full h-52 m-auto lg:h-96 my-10">
       <div className="w-3/4 h-32 inset-0 m-auto">
         <Image
           src={Vegetables}
@@ -18,18 +18,18 @@ const ContactUs = () => {
       </div>
       <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-60"></div>
 
-      <div className="w-full flex flex-row absolute items-center justify-evenly gap-4 inset-0 p-12">
-        <div className='w-32'>
-          <CheckCaseIcon className="w-32 fill-white" />
+      <div className="w-full flex flex-row lg:flex-col absolute items-center justify-evenly gap-4 inset-0 p-12">
+        <div className="w-32">
+          <CheckCaseIcon className="w-32 lg:w-6 fill-white" />
         </div>
         <div className="flex flex-col gap-6">
-          <div className="text-white uppercase flex flex-row">
-            <h4 className="inline font-Quick text-4xl font-thin">Contactez-nous !</h4>
-            <Link href="tel:0033621145888" className="underline decoration-1 underline-offset-2 ml-4 ont-Quick text-4xl font-bold">
+          <div className="text-white uppercase flex flex-row lg:flex-col">
+            <h4 className="inline font-Quick text-4xl lg:text-xl font-thin">Contactez-nous !</h4>
+            <Link href="tel:0033621145888" className="underline decoration-1 underline-offset-2 ml-4 ont-Quick text-4xl lg:text-xl font-bold">
               05.58.58.58.58
             </Link>
           </div>
-          <div className="text-white font-Quick text-2xl">Ou utlisez le formulaire ci-dessous </div>
+          <div className="text-white font-Quick text-2xl lg:text-lg">Ou utlisez le formulaire ci-dessous </div>
         </div>
 
         <BookTable />
