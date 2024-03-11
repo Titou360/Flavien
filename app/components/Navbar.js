@@ -56,24 +56,24 @@ const Navbar = () => {
   };
 
   return (
-    <header className="w-full bg-light dark:bg-dark p-2 font-medium flex items-center justify-center dark:border-solid dark:border-primary dark:border-b-2 relative lg:absolute">
+    <header className="w-full bg-light p-2 font-medium flex items-center justify-center relative">
       <button
         aria-label="button hamburger menu"
         className="fixed z-10 p-4 top-5 right-5 flex-col justify-center items-center hidden bg-white rounded-full lg:flex"
         onClick={handleClick}
       >
         <span
-          className={`bg-black dark:bg-light transition-all duration-300 ease-out block h-0.5 w-6 rounded-sm ${
+          className={`bg-black transition-all duration-300 ease-out block h-0.5 w-6 rounded-sm ${
             isOpen ? 'rotate-45 translate-y-1' : '-translate-y-0.5'
           }`}
         ></span>
         <span
-          className={`bg-black dark:bg-light transition-all duration-300 ease-out block h-0.5 w-6 rounded-sm my-0.5 ${
+          className={`bg-black transition-all duration-300 ease-out block h-0.5 w-6 rounded-sm my-0.5 ${
             isOpen ? 'opacity-0' : 'opacity-100'
           }`}
         ></span>
         <span
-          className={`bg-black dark:bg-light transition-all duration-300 ease-out block h-0.5 w-6 rounded-sm ${
+          className={`bg-black transition-all duration-300 ease-out block h-0.5 w-6 rounded-sm ${
             isOpen ? '-rotate-45 -translate-y-1' : 'translate-y-0.5'
           }`}
         ></span>
@@ -81,10 +81,10 @@ const Navbar = () => {
 
       <div className="flex flex-row justify-center items-center place-items-center gap-3 text-white uppercase font-Quick text-lg lg:hidden">
         <nav>
-          <CustomLink href="/" className="mr-4 dark:text-light" title={t('Navbar:Home')} />
-          <CustomLink href="#Services" className="mx-4 dark:text-light" title={t('Navbar:Services')} />
-          <CustomLink href="#Menus" className="mx-4 dark:text-light" title={t('Navbar:Menus')} />
-          <CustomLink href="#Contact_us" className="ml-4 dark:text-light" title="Contact" />
+          <CustomLink href="/" className="mr-4dark:text-light" title={t('Navbar:Home')} />
+          <CustomLink href="#Services" className="mx-4dark:text-light" title={t('Navbar:Services')} />
+          <CustomLink href="#Menus" className="mx-4dark:text-light" title={t('Navbar:Menus')} />
+          <CustomLink href="#Contact_us" className="ml-4dark:text-light" title="Contact" />
         </nav>
         <BookTable />
 

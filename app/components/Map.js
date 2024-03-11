@@ -33,7 +33,7 @@ const Map = () => {
         <div className='w-3/4 mx-auto lg:w-full lg:px-2 flex lg:order-2'>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2867.9032720412156!2d-0.5360818!3d44.044053500000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd55cbc4c66f0e91%3A0xd6b78361f271c301!2sLe%20Caf%C3%A9%20de%20la%20place!5e0!3m2!1sfr!2sfr!4v1710159788533!5m2!1sfr!2sfr"
-            width="800"
+            width="1024"
             height="450"
             style={{ border: 0 }}
             allowFullScreen=""
