@@ -1,10 +1,25 @@
-"use client"
-import Image from 'next/image';
-import mapPicture from '../../public/assets/img/Map/Map.PNG';
+'use client';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
+import GMapPic from '../../public/assets/img/icons/carte.png';
+import wazePic from '../../public/assets/img/icons/waze.png';
 
+const latitude = 44.04421545064293;
+const longitude = -0.5360549779704035;
+
+function openWaze() {
+  // Coordonnées géographiques de l'emplacement
+
+  // Générer l'URL pour Waze avec les coordonnées
+  const wazeUrl = `https://www.waze.com/ul?ll=${latitude},${longitude}&navigate=yes`;
+
+  // Ouvrir le lien dans une nouvelle fenêtre
+  window.open(wazeUrl, '_blank');
+}
 
 const Map = () => {
+  const googleMapsUrl = `https://www.google.com/maps?q=${latitude},${longitude}`;
+
   return (
     <section id="Map" className="w-5/6 md:w-full relative my-10 flex flex-col justify-center">
       <div className="relative">
@@ -14,42 +29,43 @@ const Map = () => {
         </span>
       </div>
 
-      <div className="flex flex-row md:flex-col gap-10 md:gap-2">
-        <Image
-          src={mapPicture}
-          alt="Capture d'écran de la carte"
-          className="w-3/4 md:w-screen md:m-0 md:p-0 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]"
-        />
-        <div className="w-1/4 md:w-screen md:m-auto">
+      <div className="flex flex-row lg:flex-col gap-10 lg:gap-2">
+        <div className='w-3/4 mx-auto lg:w-full lg:px-2 flex lg:order-2'>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2867.9032720412156!2d-0.5360818!3d44.044053500000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd55cbc4c66f0e91%3A0xd6b78361f271c301!2sLe%20Caf%C3%A9%20de%20la%20place!5e0!3m2!1sfr!2sfr!4v1710159788533!5m2!1sfr!2sfr"
+            width="800"
+            height="450"
+            style={{ border: 0 }}
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <div className="hidden lg:flex w-1/4 flex-col justify-center items-center lg:w-full lg:flex-row lg:gap-10 lg:justify-center lg:place-items-center lg:item-center lg:order-1 lg:mb-8">
+
+          <p>Liens GPS :</p>
           <motion.a
-            href="https://maps.app.goo.gl/jgW8R3P9bdiR5MMEA"
+            href={googleMapsUrl}
             tabIndex="0"
             aria-label="Accéder à Google Maps"
             target="_blank"
+            rel="noopener noreferrer"
             whileHover={{ x: 5 }}
             whileTap={{ scale: 0.9 }}
+            className="w-6"
           >
-            Google Maps
+            <Image src={GMapPic} alt="Logo de Google Maps" />
           </motion.a>
           <motion.a
-            href="44.0441922859558, -0.5360925317668931"
             tabIndex="0"
-            aria-label="Accéder à Google Maps"
+            aria-label="Accéder à Waze"
             target="_blank"
             whileHover={{ x: 5 }}
             whileTap={{ scale: 0.9 }}
+            onClick={openWaze}
+            className="w-6"
           >
-            GPS
-          </motion.a>
-          <motion.a
-            href="https://maps.app.goo.gl/jgW8R3P9bdiR5MMEA"
-            tabIndex="0"
-            aria-label="Accéder à Google Maps"
-            target="_blank"
-            whileHover={{ x: 5 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            Google Maps
+            <Image src={wazePic} alt="Logo de Waze" />
           </motion.a>
         </div>
       </div>

@@ -30,7 +30,7 @@ const Services = () => {
       <div className="flex flex-row md:flex-col gap-10 md:gap-4 mb-8">
         {servicesData.map((service, index) => (
           <div
-            className="w-1/4 md:w-3/4 md:m-auto flex flex-col items-center justify-center pr-4 gap-4 border border-solid border-black rounded-lg p-8"
+            className="w-1/4 md:w-3/4  md:m-auto flex flex-col items-center justify-center pr-4 gap-4 border border-solid border-black rounded-lg p-8"
             key={index}
           >
             <Image src={service.cover} alt={service.alt} width={50} height={50} className="opacity-50" />
@@ -51,7 +51,7 @@ const Services = () => {
               <a href="tel:0123456789">01.23.45.67.89</a>
               <p>info@lecafedelaplace.fr</p>
             </div>
-            <div id="opening_times_food" className=" bg-cafeGold w-full h-full flex flex-col justify-center items-center text-white px-6">
+            <div id="Hours" className=" bg-cafeGold w-full h-full flex flex-col justify-center items-center text-white px-6">
               <div className="flex flex-row gap-2 justify-center place-items-center py-2">
                 <span>Bar</span>
                 <Switcher onToggle={handleToggle} />
@@ -116,7 +116,7 @@ const Services = () => {
             <a href="tel:0123456789">01.23.45.67.89</a>
             <p>info@lecafedelaplace.fr</p>
           </div>
-          <div id="opening_times_food" className=" bg-cafeGold w-full h-80 flex flex-col justify-center items-center text-white px-6">
+          <div id="Hours" className=" bg-cafeGold w-full h-80 flex flex-col justify-center items-center text-white px-6">
             <div className="flex flex-row gap-2 justify-center place-items-center py-2">
               <span>Bar</span>
               <Switcher onToggle={handleToggle} />

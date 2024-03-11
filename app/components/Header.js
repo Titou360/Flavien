@@ -9,11 +9,20 @@ const Header = () => {
       <Image src={HeroPicture} className="absolute inset-0 w-full h-full object-cover" alt="Photo de la devanture du restaurant" />
       {/* Next line making a gradient over the preview pic */}
       <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-40"></div>
-      <Logo width={180} height={40} className="absolute top-5 left-5" />
-      <div className="absolute w-full flex flex-row justify-center items-center gap-3 flex-wrap text-sm py-3">
-        <Navbar />
+
+      <div className="hidden lg:block ">
+        <Logo width={90} height={20} className="absolute top-5 left-5" />
       </div>
-      <div className="md:hidden absolute bottom-10 left-50 w-full">
+      <div className="lg:hidden">
+        <Logo width={180} height={40} className="absolute top-5 left-5" />
+      </div>
+
+      <div className="absolute w-full flex flex-row justify-center items-center gap-3 flex-wrap text-sm py-3">
+        <div className='bg-black/60'>
+          <Navbar />
+        </div>
+      </div>
+      <div className="lg:hidden absolute bottom-10 left-50 w-full">
         <div className="mouse_scroll">
           <div className="mouse">
             <div className="wheel"></div>

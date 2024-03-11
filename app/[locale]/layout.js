@@ -8,7 +8,9 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Le Café de la Place, Brocas",
-  description: "Restaurant traditionnel au coeur des Landes, à Brocas, bar, brasserie, pizza et burgers, vente sur place et à emporter",
+  description: "Bar et restaurant traditionnel au coeur des Landes, à Brocas, brasserie, pizza et burgers, vente sur place et à emporter",
+  url:"http://",
+  siteName:"Le Café de la Place, Brocas"
 };
 
 export function generateStaticParams() {

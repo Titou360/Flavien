@@ -13,7 +13,7 @@ const CustomLink = ({ href, title, className = '' }) => {
       {title}
       <span
         className={`
-      h-[2px] inline-block bg-white absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300
+      h-[2px] inline-block bg-primary absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300
       `}
       >
         &nbsp;
@@ -36,9 +36,7 @@ const CustomMobileLink = ({ href, title, className = '', toggle }) => {
         {title}
         <span
           className={`
-            h-[2px] inline-block bg-primary absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300 
-            ${isOpen && pathname === href ? 'w-full' : 'w-0'}
-          
+            h-[2px] inline-block absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300 
           `}
         >
           &nbsp;
@@ -58,10 +56,10 @@ const Navbar = () => {
   };
 
   return (
-    <header className="w-full bg-light dark:bg-dark px-32 py-8 font-medium flex items-center justify-between dark:border-solid dark:border-primary dark:border-b-2 relative lg:absolute">
+    <header className="w-full bg-light dark:bg-dark p-2 font-medium flex items-center justify-center dark:border-solid dark:border-primary dark:border-b-2 relative lg:absolute">
       <button
         aria-label="button hamburger menu"
-        className="fixed z-10 p-4 right-5 flex-col justify-center items-center hidden bg-white rounded-full lg:flex"
+        className="fixed z-10 p-4 top-5 right-5 flex-col justify-center items-center hidden bg-white rounded-full lg:flex"
         onClick={handleClick}
       >
         <span
@@ -113,16 +111,11 @@ const Navbar = () => {
             <CustomMobileLink href="#Menus" className=" text-dark" title={t('Navbar:Menus')} toggle={handleClick} />
             <CustomMobileLink href="#Contact_us" className="text-black" title="Contact" toggle={handleClick} />
           </nav>
-          <div className="flex flex-row justify-center items-center mt-20">
-            <nav className="flex items-center justify-center flex-nowrap">
-              <div className="flex flex-row gap-4 items-center">
-                <div className="lg:hidden">
-                  <SocialNetwork />
-                </div>
-                <div className="lg:hidden">
-                  <ExtraHeaderDeliveryHours />
-                </div>
-              </div>
+          <div className="flex flex-row justify-center items-center mt-2">
+            <nav className="flex flex-col items-center place-content-center justify-center flex-nowrap gap-6">
+              <ExtraHeaderDeliveryHours toggle={handleClick} />
+
+              <SocialNetwork toggle={handleClick} />
 
               {/* <button
                 onClick={() => setMode(mode === 'light' ? 'dark' : 'light')}

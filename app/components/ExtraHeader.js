@@ -17,7 +17,7 @@ const ExtraHeader = () => {
   };
 
   return (
-    <nav id="extraHeader" className="w-5/6 mx-auto flex flex-row justify-between py-3">
+    <nav id="extraHeader" className="w-5/6 lg:w-full mx-auto flex flex-row justify-between py-3">
       <div className="flex flex-row gap-2 ml-2">
         <LanguageChanger />
         <div className="md:hidden">
