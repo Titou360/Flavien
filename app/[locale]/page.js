@@ -13,7 +13,7 @@ import TranslationsProvider from '../components/TranslationProvider';
 import About from '../components/about';
 import initTranslations from '../i18n';
 
-const i18nNamespaces = ['ExtraHeader', 'Navbar', 'Book', 'Common'];
+const i18nNamespaces = ['ExtraHeader', 'Navbar', 'Book', 'Common','Custom'];
 
 export default async function Home({ params: { locale } }) {
   const { t, resources } = await initTranslations(locale, i18nNamespaces);

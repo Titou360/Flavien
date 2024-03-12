@@ -11,7 +11,7 @@ const BookTable = () => {
       whileTap={{ scale: 0.9 }}
       href="tel:0033547871549"
     >
-      {t('Book:Book')}
+      {t('Custom:BookTable')}
     </motion.a>
   );
 };

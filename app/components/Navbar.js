@@ -79,12 +79,12 @@ const Navbar = () => {
         ></span>
       </button>
 
-      <div className="flex flex-row justify-center items-center place-items-center gap-3 text-white uppercase font-Quick text-lg lg:hidden">
+      <div className="flex flex-row flex-wrap justify-center items-center place-items-center gap-6 text-white uppercase font-Quick text-lg lg:hidden">
         <nav>
-          <CustomLink href="/" className="mr-4dark:text-light" title={t('Navbar:Home')} />
-          <CustomLink href="#Services" className="mx-4dark:text-light" title={t('Navbar:Services')} />
-          <CustomLink href="#Menus" className="mx-4dark:text-light" title={t('Navbar:Menus')} />
-          <CustomLink href="#Contact_us" className="ml-4dark:text-light" title="Contact" />
+          <CustomLink href="/" className="mr-4 dark:text-light" title={t('Custom:Home')} />
+          <CustomLink href="#Services" className="mx-4 dark:text-light" title={t('Navbar:Services')} />
+          <CustomLink href="#Menus" className="mx-4 dark:text-light" title={t('Navbar:Menus')} />
+          <CustomLink href="#Contact_us" className="ml-4 dark:text-light" title="Contact" />
         </nav>
         <BookTable />
 
@@ -106,7 +106,7 @@ const Navbar = () => {
           className="min-w-[75vw] flex flex-col justify-between z-30 items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-dark/90 dark:bg-light/75 rounded-lg bg-white py-32"
         >
           <nav className="flex flex-col items-center justify-center ">
-            <CustomMobileLink href="/" className=" text-black" title={t('Navbar:Home')} toggle={handleClick} />
+            <CustomMobileLink href="/" className=" text-black" title={t('Custom:Home')} toggle={handleClick} />
             <CustomMobileLink href="#Services" className=" text-black" title={t('Navbar:Services')} toggle={handleClick} />
             <CustomMobileLink href="#Menus" className=" text-dark" title={t('Navbar:Menus')} toggle={handleClick} />
             <CustomMobileLink href="#Contact_us" className="text-black" title="Contact" toggle={handleClick} />

@@ -27,10 +27,10 @@ const Services = () => {
         </span>
       </div>
       {/* Here we map for the differents services */}
-      <div className="flex flex-row md:flex-col gap-10 md:gap-4 mb-8">
+      <div className="w-full mx-auto flex flex-row lg:flex-col gap-10 mb-10">
         {servicesData.map((service, index) => (
           <div
-            className="w-1/4 md:w-3/4  md:m-auto flex flex-col items-center justify-center pr-4 gap-4 border border-solid border-black rounded-lg p-8"
+            className="w-1/4 lg:w-3/4 lg:mx-auto flex flex-col items-center justify-center pr-4 gap-4 border border-solid border-black rounded-lg p-8"
             key={index}
           >
             <Image src={service.cover} alt={service.alt} width={50} height={50} className="opacity-50" />

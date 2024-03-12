@@ -7,7 +7,7 @@ import DelivryIcon from '../../public/assets/img/icons/panier-repas.png';
 const ExtraHeaderDeliveryHours = ({toggle}) => {
   const { t } = useTranslation();
   return (
-    <div className="flex flex-row md:flex-col lg:items-center gap-6 lg:gap-4 mr-2">
+    <div className="flex flex-row lg:flex-col lg:items-center gap-6 lg:gap-4 mr-2">
       <Link href="#Hours" className="flex selection:justify-center place-items-center" onClick={toggle}>
         <Image src={ClockIcon} alt="Icône d'un coktail" className="w-6 mr-2 lg:hidden" />
         <p className="uppercase lg:capitalize">{t('Hours')}</p>
