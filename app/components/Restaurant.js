@@ -1,7 +1,45 @@
+'use client';
+import { motion, useAnimation } from 'framer-motion';
+import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import ActionCook from '../../public/assets/img/Restaurant/cuisinier.jpg';
 
 const Restaurant = () => {
+  const controls = useAnimation();
+  const elementRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const currentElement = elementRef.current;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (currentElement) {
+      observer.observe(currentElement);
+    }
+
+    return () => {
+      if (currentElement) {
+        observer.unobserve(currentElement);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    if (isVisible) {
+      controls.start({ opacity: 1, scale: 1 });
+    } else {
+      controls.start({ opacity: 0, scale: 0.5 });
+    }
+  }, [isVisible, controls]);
+
   return (
     <section id="Restaurant" className="relative">
       <div className="w-5/6 mx-auto my-10 flex flex-row justify-between gap-6 relative">
@@ -24,10 +62,43 @@ const Restaurant = () => {
           </div>
         </div>
         <div className="flex flex-row justify-start items-end gap-4 absolute inset-0 bottom-7 lg:-bottom-2 z-10 mx-4 lg:hidden">
-          <div className="bg-red-400 w-1/6 h-1/3">BOX1</div>
-          <div className="bg-green-400 w-1/6 h-1/3">BOX2</div>
-          <div className="bg-blue-400 w-1/6 h-1/3">BOX3</div>
-          <div className="bg-yellow-400 w-1/6 h-1/3">BOX4</div>
+          <motion.div
+            className="bg-red-400 w-1/6 h-1/3"
+            ref={elementRef}
+            style={{ opacity: 0 }} // Initially invisible
+            animate={controls}
+            transition={{ duration: 0.5 }}
+          >
+            BOX1
+          </motion.div>
+
+          <motion.div
+            className="bg-green-400 w-1/6 h-1/3"
+            ref={elementRef}
+            style={{ opacity: 0 }} // Initially invisible
+            animate={controls}
+            transition={{ duration: 0.5 }}
+          >
+            BOX2
+          </motion.div>
+          <motion.div
+            className="bg-blue-400 w-1/6 h-1/3"
+            ref={elementRef}
+            style={{ opacity: 0 }} // Initially invisible
+            animate={controls}
+            transition={{ duration: 0.5 }}
+          >
+            BOX3
+          </motion.div>
+          <motion.div
+            className="bg-yellow-400 w-1/6 h-1/3"
+            ref={elementRef}
+            style={{ opacity: 0 }} // Initially invisible
+            animate={controls}
+            transition={{ duration: 0.5 }}
+          >
+            BOX4
+          </motion.div>
         </div>
         <div id="cook" className="w-1/3 h-full relative md:hidden">
           <Image src={ActionCook} alt="Photo d'un cuisinier au travail" className="object-cover" />
