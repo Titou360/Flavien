@@ -4,6 +4,7 @@ import NousDeux from '../../public/assets/img/About/deux.jpg';
 import { useTranslation } from 'react-i18next';
 import { motion, useAnimation } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
+import SectionHeader from "../components/SectionHeader"
 
 const About = () => {
   const { t } = useTranslation();
@@ -45,12 +46,7 @@ const About = () => {
 
   return (
     <section id="About_us" className="relative w-5/6 lg:w-full lg:px-3 my-10 lg:my-4 py-8 border-y-2 border-black">
-      <div className="relative">
-        <h2 className="uppercase text-4xl p-6 text-center">nous deux</h2>
-        <span className="absolute -top-6 left-1/2 transform -translate-x-1/2 left-50 -ml-12 m-4 font-Kristi text-5xl text-black/60 capitalize place">
-          à propos <span className="normal-case">de</span>
-        </span>
-      </div>
+      <SectionHeader subtitle="à propos" subtitle2=" de" title="nous deux" />
       <motion.div
         className="w-3/4 md:w-full m-auto flex flex-row lg:flex-col justify-between place-items-center gap-10"
         ref={elementRef}

@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import GMapPic from '../../public/assets/img/icons/carte.png';
 import wazePic from '../../public/assets/img/icons/waze.png';
+import SectionHeader from './SectionHeader';
 
 const latitude = 44.04421545064293;
 const longitude = -0.5360549779704035;
@@ -22,18 +23,13 @@ const Map = () => {
 
   return (
     <section id="Map" className="w-5/6 md:w-full relative my-10 flex flex-col justify-center">
-      <div className="relative">
-        <h2 className="uppercase text-4xl p-6 text-center">retrouver ?</h2>
-        <span className="absolute -top-6 left-1/2 transform -translate-x-1/2 left-50 -ml-2 m-3 font-Kristi text-5xl text-black/50 capitalize">
-          Comment <span className="normal-case">nous</span>
-        </span>
-      </div>
+      <SectionHeader subtitle="comment" subtitle2="nous" title="retrouver" />
 
-      <div className="flex flex-row lg:flex-col gap-10 lg:gap-2">
-        <div className="w-3/4 mx-auto lg:w-full lg:px-2 flex lg:order-2">
+      <div className="w-full flex flex-row lg:flex-col gap-10 lg:gap-2">
+        <div className="w-5/6 justify-center mx-auto lg:w-full lg:px-2 flex lg:order-2">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2867.9032720412156!2d-0.5360818!3d44.044053500000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd55cbc4c66f0e91%3A0xd6b78361f271c301!2sLe%20Caf%C3%A9%20de%20la%20place!5e0!3m2!1sfr!2sfr!4v1710159788533!5m2!1sfr!2sfr"
-            width="1024"
+            width="600"
             height="450"
             style={{ border: 0 }}
             allowFullScreen=""

@@ -3,6 +3,7 @@ import { motion, useAnimation } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import ActionCook from '../../public/assets/img/Restaurant/cuisinier.jpg';
+import SectionHeader from './SectionHeader';
 
 const Restaurant = () => {
   const controls = useAnimation();
@@ -44,12 +45,7 @@ const Restaurant = () => {
     <section id="Restaurant" className="relative">
       <div className="w-5/6 mx-auto my-10 flex flex-row justify-between gap-6 relative">
         <div className="w-2/3 lg:w-full relative mt-32 lg:mt-0 ml-10 lg:ml-0 lg:mx-auto">
-          <div id="Title_restaurant">
-            <h2 className="uppercase text-4xl p-6">RESTAURANT</h2>
-            <span className="absolute -top-6 left-0 m-4 font-Kristi text-5xl text-black/60 capitalize">
-              à propos <span className="normal-case">du</span>
-            </span>
-          </div>
+          <SectionHeader subtitle="à propos" subtitle2=" du" title="restaurant" />
 
           <div className="flex flex-row h-full lg:flex-col lg:gap-10">
             <p className="w-1/2 lg:w-full text-black/60 p-4 lg:p-0 text-balance md:text-center">

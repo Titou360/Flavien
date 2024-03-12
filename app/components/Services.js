@@ -7,6 +7,7 @@ import Switcher from './Switcher';
 import Link from 'next/link';
 import BurgerPic from '../../public/assets/img/Services/burger.jpg';
 import PizzaPic from '../../public/assets/img/Services/pizza.jpg';
+import SectionHeader from './SectionHeader';
 
 const servicesData = data.services;
 const timingRestaurant = data.timeSchedule.restaurant;
@@ -20,22 +21,17 @@ const Services = () => {
   };
   return (
     <section id="Services" className="w-5/6 md:w-full h-full my-10 lg:mb-0">
-      <div className="relative">
-        <h2 className="uppercase text-4xl p-6 text-center">services</h2>
-        <span className="absolute -top-6 left-1/2 transform -translate-x-1/2 left-50 -ml-2 m-3 font-Kristi text-5xl text-black/50 capitalize">
-          à propos <span className="normal-case">de nos</span>
-        </span>
-      </div>
+      <SectionHeader subtitle="à propos" subtitle2=" de nos" title="services" />
       {/* Here we map for the differents services */}
       <div className="w-full mx-auto flex flex-row lg:flex-col gap-10 mb-10">
         {servicesData.map((service, index) => (
           <div
-            className="w-1/4 lg:w-3/4 lg:mx-auto flex flex-col items-center justify-center pr-4 gap-4 border border-solid border-black rounded-lg p-8"
+            className="w-1/4 lg:w-3/4 lg:mx-auto flex flex-col items-center justify-center pr-4 gap-4 border border-solid border-black rounded-lg p-8 transition ease-in-out duration-300 hover:border-cafeGold group"
             key={index}
           >
-            <Image src={service.cover} alt={service.alt} width={50} height={50} className="opacity-50" />
-            <h4>{service.title}</h4>
-            <p className="text-center opacity-55">{service.description}</p>
+            <Image src={service.cover} alt={service.alt} width={50} height={50} className="opacity-50 group-hover:fill-cafeGray" />
+            <h4 className="group-hover:text-cafeGray">{service.title}</h4>
+            <p className="text-center opacity-55 group-hover:text-cafeGray group-hover:opacity-100">{service.description}</p>
           </div>
         ))}
       </div>
@@ -85,7 +81,7 @@ const Services = () => {
               <h4 className=" text-white flex justify-center place-items-center uppercase font-Quick text-4xl">nos burgers</h4>
 
               <Link href="#" className="text-white text-xl underline font-Quick">
-                Accéder au menu
+                Accéder à notre choix
               </Link>
             </div>
           </div>
@@ -98,7 +94,7 @@ const Services = () => {
               <span className="text-white capitalize font-Kristi text-8xl ">découvrez</span>
               <h4 className=" text-white flex justify-center place-items-center uppercase font-Quick text-4xl">nos pizzas</h4>
               <Link href="#" className="text-white text-xl underline font-Quick">
-                Accéder au menu
+                Accéder à notre choix
               </Link>
             </div>
           </div>

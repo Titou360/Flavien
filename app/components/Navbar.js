@@ -1,9 +1,7 @@
-'use client';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import Link from 'next/link';
 import { useState } from 'react';
-import { useTranslation } from 'react-i18next';
-import BookTable from './BookTable';
 import ExtraHeaderDeliveryHours from './ExtraHeaderDeliveryHours';
 import SocialNetwork from './SocialNetwork';
 
@@ -21,8 +19,8 @@ const CustomLink = ({ href, title, className = '' }) => {
     </Link>
   );
 };
+
 const CustomMobileLink = ({ href, title, className = '', toggle }) => {
-  // const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
 
   const handleClick = () => {
@@ -47,7 +45,6 @@ const CustomMobileLink = ({ href, title, className = '', toggle }) => {
 };
 
 const Navbar = () => {
-  // const [mode, setMode] = useThemeSwitcher();
   const [isOpen, setIsOpen] = useState(false);
   const { t } = useTranslation();
 
@@ -68,9 +65,7 @@ const Navbar = () => {
           }`}
         ></span>
         <span
-          className={`bg-black transition-all duration-300 ease-out block h-0.5 w-6 rounded-sm my-0.5 ${
-            isOpen ? 'opacity-0' : 'opacity-100'
-          }`}
+          className={`bg-black transition-all duration-300 ease-out block h-0.5 w-6 rounded-sm my-0.5 ${isOpen ? 'opacity-0' : 'opacity-100'}`}
         ></span>
         <span
           className={`bg-black transition-all duration-300 ease-out block h-0.5 w-6 rounded-sm ${
@@ -81,22 +76,11 @@ const Navbar = () => {
 
       <div className="flex flex-row flex-wrap justify-center items-center place-items-center gap-6 text-white uppercase font-Quick text-lg lg:hidden">
         <nav>
-          <CustomLink href="/" className="mr-4 dark:text-light" title={t('Custom:Home')} />
-          <CustomLink href="#Services" className="mx-4 dark:text-light" title={t('Navbar:Services')} />
-          <CustomLink href="#Menus" className="mx-4 dark:text-light" title={t('Navbar:Menus')} />
-          <CustomLink href="#Contact_us" className="ml-4 dark:text-light" title="Contact" />
+          <CustomLink href="/" className="mr-4 dark:text-light hover:text-cafeGold" title={t('Custom:Home')} />
+          <CustomLink href="#Services" className="mx-4 dark:text-light hover:text-cafeGold" title={t('Navbar:Services')} />
+          <CustomLink href="#Menus" className="mx-4 dark:text-light hover:text-cafeGold" title={t('Navbar:Menus')} />
+          <CustomLink href="#Contact_us" className="ml-4 dark:text-light hover:text-cafeGold" title="Contact" />
         </nav>
-        <BookTable />
-
-        <div className="flex flex-row ">
-          {/* <button
-            aria-label="button dark mode"
-            onClick={() => setMode(mode === 'light' ? 'dark' : 'light')}
-            className="ml-3 flex items-center justify-center rounded-full p-1"
-          >
-            {mode === 'dark' ? <SunIcon className={'fill-primary'} /> : <MoonIcon className={'fill-dark'} />}
-          </button> */}
-        </div>
       </div>
 
       {isOpen ? (
@@ -114,19 +98,7 @@ const Navbar = () => {
           <div className="flex flex-row justify-center items-center mt-2">
             <nav className="flex flex-col items-center place-content-center justify-center flex-nowrap gap-6">
               <ExtraHeaderDeliveryHours toggle={handleClick} />
-
               <SocialNetwork toggle={handleClick} />
-
-              {/* <button
-                onClick={() => setMode(mode === 'light' ? 'dark' : 'light')}
-                className="ml-3 flex items-center justify-center rounded-full p-1 sm:mx-1"
-              >
-                {mode === 'dark' ? (
-                  <SunIcon className={'fill-primary w-6 mr-3 sm:mx-1'} />
-                ) : (
-                  <MoonIcon className={'fill-dark lg:fill-light w-6 mr-3 sm:mx-1'} />
-                )}
-              </button> */}
             </nav>
           </div>
         </motion.div>
