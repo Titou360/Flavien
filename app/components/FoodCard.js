@@ -1,15 +1,21 @@
-"use client"
-import Modal from './Modal';
+import Image from 'next/image';
+import Logo from '../../public/assets/img/icons/menu2.png';
+import SectionHeader from './SectionHeader';
 
 const FoodCard = () => {
   return (
-    <section id="beverage" className="relative w-1/2 lg:w-5/6">
-      <div className="border border-1 border-black/60 border-spacing-8 rounded-lg">
-        <h2 className="uppercase text-4xl p-6 relative">carte du restaurant</h2>
-        <span className="absolute -top-6 left-0 m-4 font-Kristi text-5xl text-black/60 capitalize">
-          Consulter <span className="normal-case">notre</span>
-        </span>
-        <Modal />
+    <section id="beverage" className="relative">
+      <div className="border border-1 border-black/60 rounded-lg flex flex-col items-center transition ease-in-out duration-300 hover:border-cafeGold group">
+        <Image
+          src={Logo}
+          alt="Icone de boissons"
+          width={50}
+          height={50}
+          className="py-4 opacity-50 group-hover:transition group-hover:ease-in-out group-hover:duration-300 group-hover:opacity-100"
+        />
+        <div className="w-full">
+          <SectionHeader subtitle="Consultez" subtitle2=" notre carte" title=" des mets" />
+        </div>
       </div>
     </section>
   );

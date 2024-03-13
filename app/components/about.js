@@ -56,7 +56,7 @@ const About = () => {
       >
         <Image src={NousDeux} alt="Photo des deux propriétaires" width={300} height={300} className="p-3 lg:mx-20" />
         <div className="flex flex-col lg:mx-4">
-          <h4 className="lg:mb-8">Notre histoire</h4>
+          <h3 className="lg:mb-8">Notre histoire</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, ad corrupti impedit ipsam aperiam accusantium ullam repellendus earum
             commodi facere adipisci perferendis nihil voluptatibus deleniti. Ut inventore neque doloremque temporibus doloribus! Rerum cumque minima

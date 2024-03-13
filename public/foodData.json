@@ -1,0 +1,62 @@
+{
+  "Entrées": [
+    {
+      "title": "Salade César",
+      "description": "Laitue romaine, poulet grillé, croûtons, parmesan, sauce César",
+      "price": "9.99"
+    },
+    {
+      "title": "Carpaccio de bœuf",
+      "description": "Tranches fines de bœuf marinées avec de l'huile d'olive, du jus de citron, du parmesan et des câpres",
+      "price": "12.50"
+    }
+  ],
+  "Plats Chauds": [
+    {
+      "title": "Filet de saumon grillé",
+      "description": "Filet de saumon frais grillé, servi avec des légumes sautés",
+      "price": "16.99"
+    },
+    {
+      "title": "Steak frites",
+      "description": "Steak de bœuf grillé accompagné de frites croustillantes",
+      "price": "14.99"
+    }
+  ],
+  "Burgers": [
+    {
+      "title": "Burger classique",
+      "description": "Steak de bœuf, cheddar, laitue, tomate, oignon, sauce barbecue, servi avec des frites",
+      "price": "11.99"
+    },
+    {
+      "title": "Burger végétarien",
+      "description": "Galette de pois chiches, avocat, tomate, laitue, oignon rouge, mayonnaise végétalienne, servi avec des frites",
+      "price": "10.50"
+    }
+  ],
+  "Pizzas": [
+    {
+      "title": "Pizza Margherita",
+      "description": "Tomate, mozzarella, basilic",
+      "price": "9.99"
+    },
+    {
+      "title": "Pizza Quatre saisons",
+      "description": "Tomate, mozzarella, champignons, jambon, artichauts, olives noires, origan",
+      "price": "12.50"
+    }
+  ],
+  "Desserts": [
+    {
+      "title": "Tiramisu",
+      "description": "Biscuits à la cuillère imbibés de café et de liqueur, couches de mascarpone crémeux, saupoudré de cacao",
+      "price": "7.99"
+    },
+    {
+      "title": "Crème brûlée",
+      "description": "Crème anglaise à la vanille recouverte d'une fine couche de sucre caramélisé",
+      "price": "8.50"
+    }
+  ]
+}

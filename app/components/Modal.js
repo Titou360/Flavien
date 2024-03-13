@@ -1,57 +1,85 @@
-import React, { useState } from 'react';
+import { useEffect, useState } from 'react';
 
-const Modal = ({openText, modalTitle, modalContent}) => {
-  const [isOpen, setIsOpen] = useState(false);
 
-  const openModal = () => {
-    setIsOpen(true);
-  };
 
-  const closeModal = () => {
-    setIsOpen(!true);
-  };
+const Modal = ({ content, onClose }) => {
+  const [data, setData] = useState(null);
+  const [title, setTitle] = useState('');
+
+  useEffect(() => {
+    if (content === 'food') {
+      setTitle('La carte des Mets');
+      fetch('foodData.json')
+        .then((response) => response.json())
+        .then((data) => setData(data));
+    } else if (content === 'drinks') {
+      setTitle('La carte des Boissons');
+      fetch('drinksData.json')
+        .then((response) => response.json())
+        .then((data) => setData(data));
+    }
+  }, [content]);
+
+  useEffect(() => {
+    const modal = document.getElementById('myModal');
+    if (modal) {
+      if (content) {
+        modal.showModal();
+      } else {
+        modal.close();
+      }
+    }
+  }, [content]);
 
   return (
-    <>
-      <p onClick={openModal} id="btn" className="cursor-pointer uppercase">
-        {openText}
-      </p>
-
-      {isOpen && (
-        <div className="fixed z-10 inset-0 overflow-y-auto">
-          <div className="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
-            <div className="fixed inset-0 transition-opacity" aria-hidden="true">
-              <div className="absolute inset-0 bg-gray-500 opacity-75"></div>
+    <dialog id="myModal" className="h-auto w-11/12 md:w-1/2 p-5 bg-white rounded-md">
+      {/* Modal content */}
+      <div className="flex flex-col w-full h-auto">
+        {data && (
+          <>
+            {/* Header */}
+            <div className="flex w-full h-auto justify-center items-center">
+              <div className="flex w-10/12 h-auto py-3 justify-center items-center text-2xl font-bold font-Quick">{title}</div>
+              <div onClick={onClose} className="flex w-1/12 h-auto justify-center cursor-pointer">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#000000"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="feather feather-x"
+                >
+                  <line x1="18" y1="6" x2="6" y2="18" />
+                  <line x1="6" y1="6" x2="18" y2="18" />
+                </svg>
+              </div>
             </div>
-            <span className="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
-            <div className="w-3/4 h-screen inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
-              <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
-                <div className="sm:flex sm:items-start">
-                  <div className="mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-gray-100 sm:mx-0 sm:h-10 sm:w-10">
-                    {/* logo to be place here */}
-                  </div>
-                  <div className="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
-                    <h3 className="text-lg leading-6 font-medium text-gray-900" id="modal-headline">
-                      {modalTitle}
-                    </h3>
-                    <div className="mt-2">
-                      <p className="text-sm text-gray-500">
-                        {modalContent}
-                      </p>
+            {/* Modal Content */}
+            {/* Modal Content */}
+            {Object.entries(data).map(([category, items]) => (
+              <div key={category} className="mt-6">
+                <h3 className="text-4xl text-center font-Kristi">{category}</h3>
+                {items.map((item, index) => (
+                  <div key={index} className='flex flex-row justify-between mx-32'>
+                    <div className="mt-2 flex flex-col">
+                      <h4 className="text-base font-medium font-Quick">{item.title}</h4>
+                      <p className="text-sm font-Quick">{item.description}</p>
                     </div>
+                    <p className="text-sm font-bold font-Quick">{item.price} €</p>
                   </div>
-                </div>
+                ))}
               </div>
-              <div className="flex justify-center items-center bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
-                <button onClick={closeModal} type="button" className="w-1/6 inline-flex justify-center items-center place-content-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-gray-800 text-base font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 sm:ml-3 sm:w-auto sm:text-sm">
-                  Fermer
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-    </>
+            ))}
+            {/* End of Modal Content */}
+          </>
+        )}
+      </div>
+      {/* End of Modal content */}
+    </dialog>
   );
 };
 

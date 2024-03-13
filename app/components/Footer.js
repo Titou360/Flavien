@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer className="w-5/6 lg:w-full m-auto h-auto bg-gray-700 rounded-t-lg flex flex-row md:flex-col justify-between place-items-center px-10 pt-2 md:gap-3">
       <div className="w-1/3 md:w-full md:order-2 relative flex flex-col font-Quick text-xl text-white gap-0">
-        <h4 className="text-2xl">Restez connectés !</h4>
+        <h2 className="text-2xl">Restez connectés !</h2>
         <motion.a
           href="#"
           className="hover:underline"

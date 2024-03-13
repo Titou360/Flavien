@@ -22,7 +22,7 @@ const Map = () => {
   const googleMapsUrl = `https://www.google.com/maps?q=${latitude},${longitude}`;
 
   return (
-    <section id="Map" className="w-5/6 md:w-full relative my-10 flex flex-col justify-center">
+    <section id="Map" className="w-5/6 md:w-full relative pb-10 flex flex-col justify-center">
       <SectionHeader subtitle="comment" subtitle2="nous" title="retrouver" />
 
       <div className="w-full flex flex-row lg:flex-col gap-10 lg:gap-2">
@@ -35,6 +35,7 @@ const Map = () => {
             allowFullScreen=""
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
+            title="Carte géographique du restaurant"
           ></iframe>
         </div>
         <div className="hidden lg:flex w-1/4 flex-col justify-center items-center lg:w-full lg:flex-row lg:gap-10 lg:justify-center lg:place-items-center lg:item-center lg:order-1 lg:mb-8">

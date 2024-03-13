@@ -1,0 +1,63 @@
+{
+  "Aperitifs": [
+    {
+      "title": "Mojito",
+      "description": "Rhum, menthe",
+      "price": "8.99"
+    },
+    {
+      "title": "Kir",
+      "price": "6.50"
+    }
+  ],
+  "Softs": [
+    {
+      "title": "Soda",
+      "price": "3.50"
+    },
+    {
+      "title": "Jus de fruits",
+      "price": "4.00"
+    }
+  ],
+  "Bières": [
+    {
+      "title": "Bière blonde",
+      "price": "5.99"
+    },
+    {
+      "title": "Bière brune",
+      "price": "6.50"
+    }
+  ],
+  "Digestifs": [
+    {
+      "title": "Cognac",
+      "price": "9.99"
+    },
+    {
+      "title": "Chartreuse",
+      "price": "8.50"
+    }
+  ],
+  "Vins": [
+    {
+      "title": "Vin rouge",
+      "price": "12.99"
+    },
+    {
+      "title": "Vin blanc",
+      "price": "11.50"
+    }
+  ],
+  "Cafés": [
+    {
+      "title": "Café",
+      "price": "2.50"
+    },
+    {
+      "title": "Café latte",
+      "price": "3.50"
+    }
+  ]
+}

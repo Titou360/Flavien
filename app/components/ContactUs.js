@@ -24,7 +24,7 @@ const ContactUs = () => {
         </div>
         <div className="flex flex-col gap-6">
           <div className="text-white uppercase flex flex-row lg:flex-col">
-            <h4 className="inline font-Quick text-4xl lg:text-xl font-thin">Contactez-nous !</h4>
+            <h2 className="inline font-Quick text-4xl lg:text-xl font-thin">Contactez-nous !</h2>
             <Link href="tel:0033547871549" className="underline decoration-1 underline-offset-2 ml-4 ont-Quick text-4xl lg:text-xl font-bold">
               05.47.87.15.49
             </Link>
@@ -38,7 +38,7 @@ const ContactUs = () => {
       <div className="hidden lg:block w-full flex-row lg:flex-col absolute items-center justify-evenly inset-0 gap-2">
         <div className="flex flex-col gap-6">
           <div className="text-white uppercase flex flex-row lg:flex-col place-items-center">
-            <h4 className="font-Quick text-4xl lg:text-xl font-thin">Contactez-nous !</h4>
+            <h2 className="font-Quick text-4xl lg:text-xl font-thin">Contactez-nous !</h2>
             <Link href="tel:0033547871549" className="underline decoration-1 underline-offset-2 ml-4 ont-Quick text-4xl lg:text-xl font-bold">
               05.47.87.15.49
             </Link>

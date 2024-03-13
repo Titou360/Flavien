@@ -30,7 +30,7 @@ const Services = () => {
             key={index}
           >
             <Image src={service.cover} alt={service.alt} width={50} height={50} className="opacity-50 group-hover:fill-cafeGray" />
-            <h4 className="group-hover:text-cafeGray">{service.title}</h4>
+            <h3 className="group-hover:text-cafeGray">{service.title}</h3>
             <p className="text-center opacity-55 group-hover:text-cafeGray group-hover:opacity-100">{service.description}</p>
           </div>
         ))}
@@ -40,12 +40,12 @@ const Services = () => {
         <div className="w-full h-screen mx-auto pt-8 flex flex-row lg:flex-col justify-between align-baseline gap-6">
           <div className="w-1/3 lg:w-full md:order-1 flex flex-col gap-6 lg:gap-0">
             <div id="find_us" className="bg-cafeGray w-full h-full flex flex-col justify-center items-center text-white px-6 md:m-auto">
-              <h4 className="uppercase mb-6">retrouvez nous ici</h4>
+              <h3 className="uppercase mb-6">retrouvez nous ici</h3>
               <adress className="text-center my-2">
                 39 Place Robert Bezos <br /> 40420 Brocas
               </adress>
-              <a href="tel:0123456789">01.23.45.67.89</a>
-              <p>info@lecafedelaplace.fr</p>
+              <Link href="tel:0033547871549">05.47.87.15.49</Link>
+              <Link href="#">info@lecafedelaplace.fr</Link>
             </div>
             <div id="Hours" className=" bg-cafeGold w-full h-full flex flex-col justify-center items-center text-white px-6">
               <div className="flex flex-row gap-2 justify-center place-items-center py-2">
@@ -53,18 +53,18 @@ const Services = () => {
                 <Switcher onToggle={handleToggle} />
                 <span>Restaurant</span>
               </div>
-              <h4 className="uppercase mb-6">Nos Heures d&apos;ouverture</h4>
+              <h3 className="uppercase mb-6">Nos Heures d&apos;ouverture</h3>
 
               {isChecked
                 ? timingRestaurant.map((timing, index) => (
                     <div className="w-full flex flex-row justify-between items-center text-sm" key={index}>
-                      <h5 className="uppercase">{timing.day}</h5>
+                      <h4 className="uppercase">{timing.day}</h4>
                       <div>{timing.time}</div>
                     </div>
                   ))
                 : timingPub.map((timing, index) => (
                     <div className="w-full flex flex-row justify-between items-center text-sm" key={index}>
-                      <h5 className="uppercase">{timing.day}</h5>
+                      <h4 className="uppercase">{timing.day}</h4>
                       <div>{timing.time}</div>
                     </div>
                   ))}
@@ -78,7 +78,7 @@ const Services = () => {
 
             <div className="w-full absolute inset-0 flex justify-center place-items-center flex-col gap-8">
               <span className="text-white capitalize font-Kristi text-8xl ">découvrez</span>
-              <h4 className=" text-white flex justify-center place-items-center uppercase font-Quick text-4xl">nos burgers</h4>
+              <h3 className=" text-white flex justify-center place-items-center uppercase font-Quick text-4xl">nos burgers</h3>
 
               <Link href="#" className="text-white text-xl underline font-Quick">
                 Accéder à notre choix
@@ -92,7 +92,7 @@ const Services = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-90"></div>
             <div className="w-full absolute inset-0 flex justify-center place-items-center flex-col gap-8">
               <span className="text-white capitalize font-Kristi text-8xl ">découvrez</span>
-              <h4 className=" text-white flex justify-center place-items-center uppercase font-Quick text-4xl">nos pizzas</h4>
+              <h3 className=" text-white flex justify-center place-items-center uppercase font-Quick text-4xl">nos pizzas</h3>
               <Link href="#" className="text-white text-xl underline font-Quick">
                 Accéder à notre choix
               </Link>
@@ -105,7 +105,7 @@ const Services = () => {
       <div className="hidden lg:block lg:pb-10">
         <div className="w-full flex flex-col gap-0 h-full">
           <div id="find_us" className="bg-cafeGray w-full h-80 flex flex-col justify-center items-center text-white px-6 m-auto">
-            <h4 className="uppercase mb-6">retrouvez nous ici</h4>
+            <h3 className="uppercase mb-6">retrouvez nous ici</h3>
             <adress className="text-center my-2">
               39 Place Robert Bezos <br /> 40420 Brocas
             </adress>
@@ -118,18 +118,18 @@ const Services = () => {
               <Switcher onToggle={handleToggle} />
               <span>Restaurant</span>
             </div>
-            <h4 className="uppercase mb-6">Nos Heures d&apos;ouverture</h4>
+            <h3 className="uppercase mb-6">Nos Heures d&apos;ouverture</h3>
 
             {isChecked
               ? timingRestaurant.map((timing, index) => (
                   <div className="w-full flex flex-row justify-between items-center text-sm" key={index}>
-                    <h5 className="uppercase">{timing.day}</h5>
+                    <h4 className="uppercase">{timing.day}</h4>
                     <div>{timing.time}</div>
                   </div>
                 ))
               : timingPub.map((timing, index) => (
                   <div className="w-full flex flex-row justify-between items-center text-sm" key={index}>
-                    <h5 className="uppercase">{timing.day}</h5>
+                    <h4 className="uppercase">{timing.day}</h4>
                     <div>{timing.time}</div>
                   </div>
                 ))}
@@ -141,7 +141,7 @@ const Services = () => {
 
             <div className="w-full absolute inset-0 flex justify-center place-items-center flex-col gap-8">
               <span className="text-white capitalize font-Kristi text-8xl ">découvrez</span>
-              <h4 className=" text-white flex justify-center place-items-center uppercase font-Quick text-4xl">nos burgers</h4>
+              <h3 className=" text-white flex justify-center place-items-center uppercase font-Quick text-4xl">nos burgers</h3>
 
               <Link href="#" className="text-white text-xl underline font-Quick">
                 Accéder au menu
@@ -154,7 +154,7 @@ const Services = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-90"></div>
             <div className="w-full absolute inset-0 flex justify-center place-items-center flex-col gap-8">
               <span className="text-white capitalize font-Kristi text-8xl ">découvrez</span>
-              <h4 className=" text-white flex justify-center place-items-center uppercase font-Quick text-4xl">nos pizzas</h4>
+              <h3 className=" text-white flex justify-center place-items-center uppercase font-Quick text-4xl">nos pizzas</h3>
               <Link href="#" className="text-white text-xl underline font-Quick">
                 Accéder au menu
               </Link>

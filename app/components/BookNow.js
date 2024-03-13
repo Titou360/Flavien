@@ -10,9 +10,9 @@ const BookNow = () => {
       <div className="absolute inset-0 bg-gradient-to-l from-transparent to-black opacity-70 lg:h-64"></div>
 
       <div className="w-full h-full lg:h-64 absolute inset-0 flex justify-center place-items-center flex-row lg:flex-col lg:justify-start gap-8 lg:gap-4">
-        <div className='flex flex-row gap-8 lg:flex-col'>
+        <div className='flex flex-row gap-8 lg:flex-col place-items-baseline'>
           <span className="text-white capitalize font-Kristi text-8xl">Réservez</span>
-          <h4 className="text-white flex justify-center place-items-center uppercase font-Quick text-4xl">une table</h4>
+          <h2 className="text-white flex justify-center place-items-center uppercase font-Quick text-4xl">une table</h2>
         </div>
         <BookTable />
       </div>

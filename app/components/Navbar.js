@@ -74,14 +74,13 @@ const Navbar = () => {
         ></span>
       </button>
 
-      <div className="flex flex-row flex-wrap justify-center items-center place-items-center gap-6 text-white uppercase font-Quick text-lg lg:hidden">
-        <nav>
+        <nav className="flex flex-row flex-nowrap justify-center items-center place-items-center gap-6 text-white uppercase font-Quick text-lg lg:hidden">
           <CustomLink href="/" className="mr-4 dark:text-light hover:text-cafeGold" title={t('Custom:Home')} />
           <CustomLink href="#Services" className="mx-4 dark:text-light hover:text-cafeGold" title={t('Navbar:Services')} />
           <CustomLink href="#Menus" className="mx-4 dark:text-light hover:text-cafeGold" title={t('Navbar:Menus')} />
           <CustomLink href="#Contact_us" className="ml-4 dark:text-light hover:text-cafeGold" title="Contact" />
         </nav>
-      </div>
+
 
       {isOpen ? (
         <motion.div
@@ -104,7 +103,7 @@ const Navbar = () => {
         </motion.div>
       ) : null}
 
-      <div className="absolute left-[50%] top-2 translate-x-[-50%] "></div>
+      {/* <div className="absolute left-[50%] top-2 translate-x-[-50%] "></div> */}
     </header>
   );
 };
