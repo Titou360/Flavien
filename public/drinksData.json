@@ -1,43 +1,69 @@
 {
-  "Aperitifs": [
-    {
-      "title": "Mojito",
-      "description": "Rhum, menthe",
-      "price": "8.99"
-    },
-    {
-      "title": "Kir",
-      "price": "6.50"
-    }
-  ],
   "Softs": [
     {
-      "title": "Soda",
+      "title": "Coca Cola 33cl",
       "price": "3.50"
     },
     {
-      "title": "Jus de fruits",
+      "title": "Jus de fruits au choix",
+      "description": "Orange, Ace, Abricot, Pomme",
       "price": "4.00"
     }
   ],
-  "Bières": [
+  "Aperitifs": [
     {
-      "title": "Bière blonde",
-      "price": "5.99"
+      "title": "Mojito",
+      "description": "Rhum blanc, feuilles de menthe fraîche, sucre de canne, jus de citron vert, eau gazeuse, glace pilée",
+      "price": "8.99",
+      "delivery": "no"
     },
     {
-      "title": "Bière brune",
+      "title": "Kir vin blanc",
+      "description": "Vin blanc sec, crème au choix : Cassis, mûre, pêche",
       "price": "6.50"
     }
   ],
-  "Digestifs": [
+
+  "Bières": [
     {
-      "title": "Cognac",
-      "price": "9.99"
+      "title": "Bière blonde à la pression 15cl",
+      "price": "2.00"
     },
     {
-      "title": "Chartreuse",
-      "price": "8.50"
+      "title": "Bière blonde à la pression 25cl",
+      "price": "3.00"
+    },
+    {
+      "title": "Bière blonde à la pression 50cl",
+      "price": "5.50"
+    },
+    {
+      "title": "Desperados 33cl",
+      "description": "Bière arômatisée à la téquila",
+      "price": "6.00",
+      "delivery": "yes"
+    }
+  ],
+  "Eaux": [
+    {
+      "title": "Abatilles plates 50cl",
+      "price": "9.99",
+      "delivery": "yes"
+    },
+    {
+      "title": "Abatilles plates 100cl",
+      "price": "8.50",
+      "delivery": "yes"
+    },
+    {
+      "title": "Abatilles gazeuse 50cl",
+      "price": "8.50",
+      "delivery": "yes"
+    },
+    {
+      "title": "Abatilles gazeuse 100cl",
+      "price": "8.50",
+      "delivery": "yes"
     }
   ],
   "Vins": [
@@ -48,6 +74,16 @@
     {
       "title": "Vin blanc",
       "price": "11.50"
+    }
+  ],
+  "Digestifs": [
+    {
+      "title": "Cognac",
+      "price": "9.99"
+    },
+    {
+      "title": "Chartreuse",
+      "price": "8.50"
     }
   ],
   "Cafés": [

@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react';
-import saladeIcon, { ChefIcon, DeliveryIcon, SaladeIcon, SunIcon } from './Icons';
+import { ChefIcon, DeliveryIcon, SaladeIcon } from './Icons';
 
 const Modal = ({ content, onClose }) => {
   const [data, setData] = useState(null);
   const [title, setTitle] = useState('');
+  const [showAdditionalInfo, setShowAdditionalInfo] = useState(false);
+  const [showDeliveryIcon, setShowDeliveryIcon] = useState(false);
 
   useEffect(() => {
     if (content === 'food') {
@@ -11,11 +13,15 @@ const Modal = ({ content, onClose }) => {
       fetch('foodData.json')
         .then((response) => response.json())
         .then((data) => setData(data));
+      setShowDeliveryIcon(true);
     } else if (content === 'drinks') {
       setTitle('La carte des Boissons');
       fetch('drinksData.json')
         .then((response) => response.json())
-        .then((data) => setData(data));
+        .then((data) => {
+          setData(data);
+          setShowDeliveryIcon(true);
+        });
     } else if (content === 'burgers') {
       setTitle('La carte des Burgers');
       fetch('foodData.json')
@@ -23,6 +29,7 @@ const Modal = ({ content, onClose }) => {
         .then((data) => {
           const burgersData = data.Burgers;
           setData({ Burgers: burgersData });
+          setShowDeliveryIcon(true);
         });
     } else if (content === 'pizzas') {
       setTitle('La carte des Pizzas');
@@ -31,6 +38,7 @@ const Modal = ({ content, onClose }) => {
         .then((data) => {
           const pizzasData = data.Pizzas;
           setData({ Pizzas: pizzasData });
+          setShowDeliveryIcon(true);
         });
     }
   }, [content]);
@@ -46,13 +54,17 @@ const Modal = ({ content, onClose }) => {
     }
   }, [content]);
 
+  useEffect(() => {
+    setShowAdditionalInfo(['food', 'burgers', 'pizzas'].includes(content));
+  }, [content]);
+
   return (
     <dialog id="myModal" className="h-auto w-11/12 p-5 bg-white rounded-md">
       {/* Modal content */}
       <div className="flex flex-col w-full h-auto">
         {data && (
           <>
-            {/* Header */}
+            {/* Modal Header */}
             <div className="flex w-full h-auto justify-center items-center">
               <div className="flex w-10/12 h-auto py-3 justify-center items-center text-2xl font-bold font-Quick">{title}</div>
               <div onClick={onClose} className="flex w-1/12 h-auto justify-center cursor-pointer">
@@ -73,6 +85,28 @@ const Modal = ({ content, onClose }) => {
                 </svg>
               </div>
             </div>
+            {/* Condition pour afficher uniquement pour 'burgers', 'pizzas' et 'food' */}
+            <div className='flex flex-row justify-center place-items-center'>
+              {showAdditionalInfo && (
+                <div className="flex flex-row">
+                  <div className="flex flex-col justify-center place-items-center mr-3 ">
+                    <ChefIcon className="w-10 lg:w-6 fill-green-500" />
+                    <p>Fait Maison</p>
+                  </div>
+                  <div className="flex flex-col justify-center place-items-center ml-3">
+                    <SaladeIcon className="w-10 lg:w-6 lg:mr-1 fill-green-500" />
+                    <p>Plat végétarien</p>
+                  </div>
+                </div>
+              )}
+              {showDeliveryIcon && (
+                <div className="flex flex-col justify-center place-items-center mx-3">
+                  <DeliveryIcon className="w-10 lg:w-6 fill-green-500" />
+                  <p>Livraison possible</p>
+                </div>
+              )}
+            </div>
+
             {/* Modal Content */}
             {Object.entries(data).map(([category, items]) => (
               <div key={category} className="mt-6">
