@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { useState } from 'react';
 import data from '../../public/data.json';
 import Switcher from './Switcher';
-
+import Modal from './Modal';
 import Link from 'next/link';
 import BurgerPic from '../../public/assets/img/Services/burger.jpg';
 import PizzaPic from '../../public/assets/img/Services/pizza.jpg';
@@ -18,6 +18,19 @@ const Services = () => {
 
   const handleToggle = (newValue) => {
     setIsChecked(newValue);
+  };
+
+  const [modalContent, setModalContent] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = (content) => {
+    setModalContent(content);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalContent(null);
+    setIsModalOpen(false);
   };
   return (
     <section id="Services" className="w-5/6 md:w-full h-full my-10 lg:mb-0">
@@ -80,9 +93,9 @@ const Services = () => {
               <span className="text-white capitalize font-Kristi text-8xl ">découvrez</span>
               <h3 className=" text-white flex justify-center place-items-center uppercase font-Quick text-4xl">nos burgers</h3>
 
-              <Link href="#" className="text-white text-xl underline font-Quick">
+              <div onClick={() => openModal('burgers')} className="text-white text-xl underline font-Quick">
                 Accéder à notre choix
-              </Link>
+              </div>
             </div>
           </div>
 
@@ -93,9 +106,9 @@ const Services = () => {
             <div className="w-full absolute inset-0 flex justify-center place-items-center flex-col gap-8">
               <span className="text-white capitalize font-Kristi text-8xl ">découvrez</span>
               <h3 className=" text-white flex justify-center place-items-center uppercase font-Quick text-4xl">nos pizzas</h3>
-              <Link href="#" className="text-white text-xl underline font-Quick">
+              <div onClick={() => openModal('pizzas')} className="text-white text-xl underline font-Quick">
                 Accéder à notre choix
-              </Link>
+              </div>
             </div>
           </div>
         </div>
@@ -143,9 +156,9 @@ const Services = () => {
               <span className="text-white capitalize font-Kristi text-8xl ">découvrez</span>
               <h3 className=" text-white flex justify-center place-items-center uppercase font-Quick text-4xl">nos burgers</h3>
 
-              <Link href="#" className="text-white text-xl underline font-Quick">
-                Accéder au menu
-              </Link>
+              <div onClick={() => openModal('burgers')} className="text-white text-xl underline font-Quick">
+                Accéder à notre choix
+              </div>
             </div>
           </div>
           <div id="pizzas" className="w-full h-80 relative">
@@ -155,13 +168,14 @@ const Services = () => {
             <div className="w-full absolute inset-0 flex justify-center place-items-center flex-col gap-8">
               <span className="text-white capitalize font-Kristi text-8xl ">découvrez</span>
               <h3 className=" text-white flex justify-center place-items-center uppercase font-Quick text-4xl">nos pizzas</h3>
-              <Link href="#" className="text-white text-xl underline font-Quick">
-                Accéder au menu
-              </Link>
+              <div onClick={() => openModal('pizzas')} className="text-white text-xl underline font-Quick">
+                Accéder à notre choix
+              </div>
             </div>
           </div>
         </div>
       </div>
+      {isModalOpen && <Modal content={modalContent} onClose={closeModal} />}
     </section>
   );
 };

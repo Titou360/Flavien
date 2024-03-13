@@ -20,10 +20,10 @@ const OurCards = () => {
 
   return (
     <section id="Menus" className="w-5/6 h-full lg:w-full py-10 lg:my-0 flex flex-row lg:flex-col justify-evenly items-center gap-6">
-     <div className="cursor-pointer w-1/2" onClick={() => openModal('food')}>
+     <div className="cursor-pointer w-1/2 lg:w-5/6 lg:mx-auto" onClick={() => openModal('food')}>
         <FoodCard />
       </div>
-      <div className="cursor-pointer w-1/2" onClick={() => openModal('drinks')}>
+      <div className="cursor-pointer w-1/2 lg:w-5/6 lg:mx-auto" onClick={() => openModal('drinks')}>
         <DrinksCard />
       </div>
       {isModalOpen && <Modal content={modalContent} onClose={closeModal} />}

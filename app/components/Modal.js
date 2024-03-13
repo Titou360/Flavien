@@ -1,7 +1,5 @@
 import { useEffect, useState } from 'react';
 
-
-
 const Modal = ({ content, onClose }) => {
   const [data, setData] = useState(null);
   const [title, setTitle] = useState('');
@@ -17,6 +15,22 @@ const Modal = ({ content, onClose }) => {
       fetch('drinksData.json')
         .then((response) => response.json())
         .then((data) => setData(data));
+    } else if (content === 'burgers') {
+      setTitle('La carte des Burgers');
+      fetch('foodData.json')
+        .then((response) => response.json())
+        .then((data) => {
+          const burgersData = data.Burgers;
+          setData({ Burgers: burgersData });
+        });
+    } else if (content === 'pizzas') {
+      setTitle('La carte des Pizzas');
+      fetch('foodData.json')
+        .then((response) => response.json())
+        .then((data) => {
+          const pizzasData = data.Pizzas;
+          setData({ Pizzas: pizzasData });
+        });
     }
   }, [content]);
 
@@ -32,7 +46,7 @@ const Modal = ({ content, onClose }) => {
   }, [content]);
 
   return (
-    <dialog id="myModal" className="h-auto w-11/12 md:w-1/2 p-5 bg-white rounded-md">
+    <dialog id="myModal" className="h-auto w-11/12 p-5 bg-white rounded-md">
       {/* Modal content */}
       <div className="flex flex-col w-full h-auto">
         {data && (
@@ -59,19 +73,19 @@ const Modal = ({ content, onClose }) => {
               </div>
             </div>
             {/* Modal Content */}
-            {/* Modal Content */}
             {Object.entries(data).map(([category, items]) => (
               <div key={category} className="mt-6">
                 <h3 className="text-4xl text-center font-Kristi">{category}</h3>
-                {items.map((item, index) => (
-                  <div key={index} className='flex flex-row justify-between mx-32'>
-                    <div className="mt-2 flex flex-col">
-                      <h4 className="text-base font-medium font-Quick">{item.title}</h4>
-                      <p className="text-sm font-Quick">{item.description}</p>
+                {Array.isArray(items) &&
+                  items.map((item, index) => (
+                    <div key={index} className="flex flex-row justify-between mx-32 lg:mx-0 lg:mt-2">
+                      <div className="mt-2 lg:mt-0 flex flex-col lg:w-3/4">
+                        <h4 className="text-base font-medium font-Quick">{item.title}</h4>
+                        <p className="text-sm font-Quick">{item.description}</p>
+                      </div>
+                      <p className="text-sm lg:text-xs font-bold font-Quick">{item.price} €</p>
                     </div>
-                    <p className="text-sm font-bold font-Quick">{item.price} €</p>
-                  </div>
-                ))}
+                  ))}
               </div>
             ))}
             {/* End of Modal Content */}

@@ -33,6 +33,11 @@
       "title": "Burger végétarien",
       "description": "Galette de pois chiches, avocat, tomate, laitue, oignon rouge, mayonnaise végétalienne, servi avec des frites",
       "price": "10.50"
+    },
+    {
+      "title": "Burger Poulet",
+      "description": "Buns, poulet croustillant, salade, tomate, oignons",
+      "price": "10.50"
     }
   ],
   "Pizzas": [
