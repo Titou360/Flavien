@@ -1,3 +1,4 @@
+// this is the components for the "About" section
 "use client"
 import Image from 'next/image';
 import NousDeux from '../../public/assets/img/About/deux.jpg';

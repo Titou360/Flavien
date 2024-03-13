@@ -3,12 +3,18 @@
     {
       "title": "Salade César",
       "description": "Laitue romaine, poulet grillé, croûtons, parmesan, sauce César",
-      "price": "9.99"
+      "price": "9.99",
+      "homemade": "yes",
+      "delivery": "yes",
+      "vegetarian": "yes"
     },
     {
       "title": "Carpaccio de bœuf",
       "description": "Tranches fines de bœuf marinées avec de l'huile d'olive, du jus de citron, du parmesan et des câpres",
-      "price": "12.50"
+      "price": "12.50",
+      "homemade": "yes",
+      "delivery": "no",
+      "vegetarian": "yes"
     }
   ],
   "Plats Chauds": [

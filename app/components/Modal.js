@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import saladeIcon, { ChefIcon, DeliveryIcon, SaladeIcon, SunIcon } from './Icons';
 
 const Modal = ({ content, onClose }) => {
   const [data, setData] = useState(null);
@@ -79,11 +80,20 @@ const Modal = ({ content, onClose }) => {
                 {Array.isArray(items) &&
                   items.map((item, index) => (
                     <div key={index} className="flex flex-row justify-between mx-32 lg:mx-0 lg:mt-2">
-                      <div className="mt-2 lg:mt-0 flex flex-col lg:w-3/4">
-                        <h4 className="text-base font-medium font-Quick">{item.title}</h4>
+                      <div className="flex flex-col lg:w-3/4 mt-2 lg:mt-0 ">
+                        <div className="flex flex-row gap-6">
+                          <h4 className="text-base font-medium font-Quick">{item.title}</h4>
+                        </div>
                         <p className="text-sm font-Quick">{item.description}</p>
                       </div>
-                      <p className="text-sm lg:text-xs font-bold font-Quick">{item.price} €</p>
+                      <div className="flex flex-row">
+                        {item.homemade === 'yes' ? <ChefIcon className="fill-green-500 w-10 mr-3 lg:w-6 lg:mr-1 " /> : null}
+                        {item.delivery === 'yes' ? <DeliveryIcon className="fill-green-500 w-10 mx-3 lg:w-6 lg:mx-1" /> : null}
+                        {item.vegetarian === 'yes' ? <SaladeIcon className="fill-green-500 w-10 ml-3 lg:w-6 lg:ml-1" /> : null}
+                      </div>
+                      <div className="flex flex-col">
+                        <p className="text-sm lg:text-xs font-bold font-Quick">{item.price} €</p>
+                      </div>
                     </div>
                   ))}
               </div>
