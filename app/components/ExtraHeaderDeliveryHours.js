@@ -1,24 +1,30 @@
-import Image from 'next/image';
-import Link from 'next/link';
+import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import ClockIcon from '../../public/assets/img/icons/horloge.svg';
-import DelivryIcon from '../../public/assets/img/icons/panier-repas.png';
+import { DeliveryIcon, HorlogeIcon } from './Icons';
 
-const ExtraHeaderDeliveryHours = ({toggle}) => {
+const ExtraHeaderDeliveryHours = () => {
   const { t } = useTranslation();
   return (
-    <div className="flex flex-row lg:flex-col lg:items-center gap-6 lg:gap-4 mr-2">
-      <Link href="#Hours" className="flex selection:justify-center place-items-center" onClick={toggle}>
-        <Image src={ClockIcon} alt="Icône d'un coktail" className="w-6 mr-2 lg:hidden" />
-        <p className="uppercase lg:capitalize">{t('Hours')}</p>
-      </Link>
+    <div className="flex flex-row justify-center items-center lg:flex-col lg:items-center gap-6 lg:gap-3 mr-2">
+      <nav className="flex items-center justify-center flex-nowrap lg:flex-col lg:gap-6">
+        <motion.a
+          tabIndex="0"
+          href="#Hours"
+          className="flex items-center justify-center flex-nowrap"
+        >
+          <HorlogeIcon className="w-6 mr-2 lg:hidden dark:fill-cafeGold" />
+          <p className="uppercase lg:capitalize dark:text-cafeGold">{t('Hours')}</p>
+        </motion.a>
 
-      <div className="flex justify-center place-items-center ">
-        <Link href="#Menus" className="flex flex-row flex-nowrap" onClick={toggle}>
-          <Image src={DelivryIcon} alt="Icône d'un sac de livraison" className="w-6 mr-2 lg:hidden" />
-          <p className="uppercase lg:capitalize">{t('Delivery')}</p>
-        </Link>
-      </div>
+        <motion.a
+          tabIndex="0"
+          href="#Menus"
+          className="flex items-center justify-center flex-nowrap"
+        >
+          <DeliveryIcon className="w-6 ml-2 lg:hidden dark:fill-cafeGold" />
+          <p className="uppercase lg:capitalize dark:text-cafeGold">{t('Delivery')}</p>
+        </motion.a>
+      </nav>
     </div>
   );
 };

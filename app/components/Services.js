@@ -39,12 +39,20 @@ const Services = () => {
       <div className="w-full mx-auto flex flex-row lg:flex-col gap-10 mb-10">
         {servicesData.map((service, index) => (
           <div
-            className="w-1/4 lg:w-3/4 lg:mx-auto flex flex-col items-center justify-center pr-4 gap-4 border border-solid border-black rounded-lg p-8 transition ease-in-out duration-300 hover:border-cafeGold group"
+            className="w-1/4 lg:w-3/4 lg:mx-auto flex flex-col items-center justify-center pr-4 gap-4 border border-solid border-black dark:border-cafeGold rounded-lg p-8 transition ease-in-out duration-300 hover:border-cafeGold dark:hover:border-cafeGold/50 group"
             key={index}
           >
-            <Image src={service.cover} alt={service.alt} width={50} height={50} className="opacity-50 group-hover:fill-cafeGray" />
-            <h3 className="group-hover:text-cafeGray">{service.title}</h3>
-            <p className="text-center opacity-55 group-hover:text-cafeGray group-hover:opacity-100">{service.description}</p>
+            <Image
+              src={service.cover}
+              alt={service.alt}
+              width={50}
+              height={50}
+              className="opacity-50 group-hover:fill-cafeGray dark:opacity-100 dark:fill-cafeGold"
+            />
+            <h3 className="group-hover:text-cafeGray dark:text-cafeGold dark:group-hover:text-cafeGold">{service.title}</h3>
+            <p className="text-center opacity-55 dark:opacity-100 dark:text-cafeGold dark:group-hover:text-cafeGold group-hover:text-cafeGray group-hover:opacity-100">
+              {service.description}
+            </p>
           </div>
         ))}
       </div>

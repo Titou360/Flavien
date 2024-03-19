@@ -74,25 +74,24 @@ const Navbar = () => {
         ></span>
       </button>
 
-        <nav className="flex flex-row flex-nowrap justify-center items-center place-items-center gap-6 text-white uppercase font-Quick text-lg lg:hidden">
-          <CustomLink href="/" className="mr-4 dark:text-light hover:text-cafeGold" title={t('Custom:Home')} />
-          <CustomLink href="#Services" className="mx-4 dark:text-light hover:text-cafeGold" title={t('Navbar:Services')} />
-          <CustomLink href="#Menus" className="mx-4 dark:text-light hover:text-cafeGold" title={t('Navbar:Menus')} />
-          <CustomLink href="#Contact_us" className="ml-4 dark:text-light hover:text-cafeGold" title="Contact" />
-        </nav>
-
+      <nav className="flex flex-row flex-nowrap justify-center items-center place-items-center gap-6 text-white uppercase font-Quick text-lg lg:hidden">
+        <CustomLink href="/" className="mr-4 dark:text-light hover:text-cafeGold" title={t('Custom:Home')} />
+        <CustomLink href="#Services" className="mx-4 dark:text-light hover:text-cafeGold" title={t('Navbar:Services')} />
+        <CustomLink href="#Menus" className="mx-4 dark:text-light hover:text-cafeGold" title={t('Navbar:Menus')} />
+        <CustomLink href="#Contact_us" className="ml-4 dark:text-light hover:text-cafeGold" title="Contact" />
+      </nav>
 
       {isOpen ? (
         <motion.div
           initial={{ scale: 0, opcacity: 0, x: '-50%', y: '-50%' }}
           animate={{ scale: 1, opacity: 1 }}
-          className="min-w-[75vw] flex flex-col justify-between z-30 items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-dark/90 dark:bg-light/75 rounded-lg bg-white py-32"
+          className="min-w-[75vw] flex flex-col justify-between z-30 items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-dark/90 dark:bg-light/75 rounded-lg bg-white dark:bg-black py-32 border-2 border-transparent dark:border-cafeGold"
         >
           <nav className="flex flex-col items-center justify-center ">
-            <CustomMobileLink href="/" className=" text-black" title={t('Custom:Home')} toggle={handleClick} />
-            <CustomMobileLink href="#Services" className=" text-black" title={t('Navbar:Services')} toggle={handleClick} />
-            <CustomMobileLink href="#Menus" className=" text-dark" title={t('Navbar:Menus')} toggle={handleClick} />
-            <CustomMobileLink href="#Contact_us" className="text-black" title="Contact" toggle={handleClick} />
+            <CustomMobileLink href="/" className=" text-black dark:text-cafeGold" title={t('Custom:Home')} toggle={handleClick} />
+            <CustomMobileLink href="#Services" className=" text-black dark:text-cafeGold" title={t('Navbar:Services')} toggle={handleClick} />
+            <CustomMobileLink href="#Menus" className=" text-dark dark:text-cafeGold" title={t('Navbar:Menus')} toggle={handleClick} />
+            <CustomMobileLink href="#Contact_us" className="text-black dark:text-cafeGold" title="Contact" toggle={handleClick} />
           </nav>
           <div className="flex flex-row justify-center items-center mt-2">
             <nav className="flex flex-col items-center place-content-center justify-center flex-nowrap gap-6">

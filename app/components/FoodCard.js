@@ -5,7 +5,7 @@ import SectionHeader from './SectionHeader';
 const FoodCard = () => {
   return (
     <section id="beverage" className="relative">
-      <div className="border border-1 border-black/60 rounded-lg flex flex-col items-center transition ease-in-out duration-300 hover:border-cafeGold group">
+      <div className="border border-1 border-black/60 dark:border-white rounded-lg flex flex-col items-center transition ease-in-out duration-300 hover:border-cafeGold group">
         <Image
           src={Logo}
           alt="Icone de boissons"

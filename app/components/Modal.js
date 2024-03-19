@@ -102,7 +102,7 @@ const Modal = ({ content, onClose }) => {
               {showDeliveryIcon && (
                 <div className="flex flex-col justify-center place-items-center mx-3">
                   <DeliveryIcon className="w-10 lg:w-6 fill-green-500" />
-                  <p>Livraison possible</p>
+                  <p>À emporter possible</p>
                 </div>
               )}
             </div>

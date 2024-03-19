@@ -48,11 +48,11 @@ const Restaurant = () => {
           <SectionHeader subtitle="à propos" subtitle2=" du" title="restaurant" />
 
           <div className="flex flex-row h-full lg:flex-col lg:gap-10">
-            <p className="w-1/2 lg:w-full text-black/60 p-4 lg:p-0 text-balance md:text-center">
+            <p className="w-1/2 lg:w-full text-black/60 dark:text-white p-4 lg:p-0 text-balance md:text-center">
               Cuisine de terroir, authentique et conviviale. Nous faisons confiance à la puissance locale au travers de ses producteurs et de leur
               savoir-faire
             </p>
-            <p className="w-1/2 lg:w-full text-black/60 p-4 lg:p-0 text-balance md:text-center">
+            <p className="w-1/2 lg:w-full text-black/60 dark:text-white p-4 lg:p-0 text-balance md:text-center">
               Une cuisine gourmande, des assiettes joliment dressées pour le plaisirs des papilles de toutes et tous.{' '}
             </p>
           </div>

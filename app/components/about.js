@@ -46,7 +46,7 @@ const About = () => {
     }, [isVisible, controls]);
 
   return (
-    <section id="About_us" className="relative w-5/6 lg:w-full lg:px-3 my-10 lg:my-4 py-8 border-y-2 border-black">
+    <section id="About_us" className="relative w-5/6 lg:w-full lg:px-3 my-10 lg:my-4 py-8 border-y-2 border-black dark:border-white">
       <SectionHeader subtitle="à propos" subtitle2=" de" title="nous deux" />
       <motion.div
         className="w-3/4 md:w-full m-auto flex flex-row lg:flex-col justify-between place-items-center gap-10"
@@ -57,8 +57,8 @@ const About = () => {
       >
         <Image src={NousDeux} alt="Photo des deux propriétaires" width={300} height={300} className="p-3 lg:mx-20" />
         <div className="flex flex-col lg:mx-4">
-          <h3 className="lg:mb-8">Notre histoire</h3>
-          <p>
+          <h3 className="lg:mb-8 dark:text-cafeGold">Notre histoire</h3>
+          <p className='dark:text-white'>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, ad corrupti impedit ipsam aperiam accusantium ullam repellendus earum
             commodi facere adipisci perferendis nihil voluptatibus deleniti. Ut inventore neque doloremque temporibus doloribus! Rerum cumque minima
             molestias animi numquam aperiam excepturi.

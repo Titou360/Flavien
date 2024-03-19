@@ -16,7 +16,7 @@ const ContactUs = () => {
           className="absolute inset-0 w-full h-full object-left object-cover"
         />
       </div>
-      <div className="absolute inset-0 bg-black/70"></div>
+      <div className="absolute inset-0 bg-black/70 dark:bg-black/60"></div>
 
       <div className="lg:hidden w-full flex flex-row lg:flex-col absolute items-center justify-evenly gap-4 inset-0 p-12">
         <div className="w-32">

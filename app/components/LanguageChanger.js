@@ -3,6 +3,8 @@
 import i18nConfig from '@/i18nConfig';
 import { usePathname, useRouter } from 'next/navigation';
 import { useTranslation } from 'react-i18next';
+import FranceFlag from "../../public/assets/img/icons/france.svg"
+import UKFlag from "../../public/assets/img/icons/uk.svg"
 
 import { motion } from 'framer-motion';
 
