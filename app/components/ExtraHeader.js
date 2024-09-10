@@ -4,26 +4,29 @@ import { MoonIcon, SunIcon } from './Icons.js';
 import LanguageChanger from './LanguageChanger';
 import SocialNetwork from './SocialNetwork.js';
 import useThemeSwitcher from './hooks/useThemeSwitcher';
+import { motion } from 'framer-motion';
 
 const ExtraHeader = () => {
   const [mode, setMode] = useThemeSwitcher();
 
   return (
-    <nav id="extraHeader" className="w-5/6 lg:w-full mx-auto flex flex-row justify-between py-3">
-      <div className="flex flex-row flex-nowrap gap-2 ">
-        <button
+    <nav id="extraHeader" className="w-full lg:w-full mx-auto flex flex-row justify-between py-3 bg-slate-100">
+      <div className="flex flex-row flex-nowrap items-center gap-3">
+        <motion.button
           aria-label="button dark mode"
           onClick={() => setMode(mode === 'light' ? 'dark' : 'light')}
-          className="mr-3 lg:ml-3 lg:mr-0 flex justify-center rounded-full p-1"
+          className="w-8 h-8 ml-3 lg:mr-0 flex justify-center place-items-center"
+          whileHover={{ y: -2 }}
+          whileTap={{ scale: 0.9 }}
         >
-          {mode === 'dark' ? <SunIcon className={'fill-cafeGold'} /> : <MoonIcon className={'fill-dark'} />}
-        </button>
-        <div>
-          <LanguageChanger />
-        </div>
+          {mode === 'dark' ? <SunIcon /> : <MoonIcon />}
+        </motion.button>
 
         <div className="lg:hidden">
           <SocialNetwork />
+        </div>
+        <div>
+          <LanguageChanger />
         </div>
       </div>
       <div className="lg:hidden">

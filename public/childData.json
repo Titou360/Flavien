@@ -1,0 +1,33 @@
+{
+  "Plat Chaud": [
+    {
+      "title": "Nuggets de poulet",
+      "description": "Filet de poulet croustillant servi avec frites et salade ",
+      "price": ""
+    }
+  ],
+  "Dessert": [
+    {
+      "title": "1 boule de glace",
+      "description": "Parfums au choix : Chocolat, Vanille, Fraise, ...",
+      "price": ""
+    }
+  ],
+  "Boissons au choix": [
+    {
+      "title": "Verre de limonade",
+      "description": "15cl ",
+      "price": ""
+    },
+    {
+      "title": "Verre de Coca-Cola",
+      "description": "15cl",
+      "price": ""
+    },
+    {
+      "title": "Sirop à l'eau",
+      "description": "Au choix : Menthe, Fraise, Genadine, Citron, Fraise, Pêche, Orgeat",
+      "price": ""
+    }
+  ]
+}

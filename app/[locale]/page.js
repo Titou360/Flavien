@@ -1,6 +1,7 @@
 import BookNow from '../components/BookNow';
 import ContactForm from '../components/ContactForm';
 import ContactUs from '../components/ContactUs';
+import DailyChange from '../components/DailyChange';
 import ExtraFooter from '../components/ExtraFooter';
 import ExtraHeader from '../components/ExtraHeader';
 import Footer from '../components/Footer';
@@ -31,6 +32,8 @@ export default async function Home({ params: { locale } }) {
         <BookNow />
 
         <Services />
+
+        <DailyChange />
 
         <OurCards />
 

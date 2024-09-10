@@ -1,11 +1,31 @@
 {
   "Softs": [
     {
-      "title": "Coca Cola 33cl",
+      "title": "Coca-Cola 33cl",
       "price": "3.50"
     },
     {
-      "title": "Jus de fruits au choix",
+      "title": "Coca-Cola Cherry 33cl",
+      "price": "3.50"
+    },
+    {
+      "title": "Coca-Cola Zero 33cl",
+      "price": "3.50"
+    },
+    {
+      "title": "Orangina 25cl",
+      "price": "3.50"
+    },
+    {
+      "title": "Fanta 33cl",
+      "price": "3.50"
+    },
+    {
+      "title": "Schweppes Tonic 25cl",
+      "price": "3.50"
+    },
+    {
+      "title": "Jus de fruits au choix (Pampryl ou Granini) 25cl",
       "description": "Orange, Ace, Abricot, Pomme",
       "price": "4.00"
     }
@@ -47,22 +67,22 @@
   "Eaux": [
     {
       "title": "Abatilles plates 50cl",
-      "price": "9.99",
+      "price": "3",
       "delivery": "yes"
     },
     {
       "title": "Abatilles plates 100cl",
-      "price": "8.50",
+      "price": "4,50",
       "delivery": "yes"
     },
     {
       "title": "Abatilles gazeuse 50cl",
-      "price": "8.50",
+      "price": "3",
       "delivery": "yes"
     },
     {
       "title": "Abatilles gazeuse 100cl",
-      "price": "8.50",
+      "price": "4,50",
       "delivery": "yes"
     }
   ],

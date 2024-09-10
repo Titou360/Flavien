@@ -1,0 +1,22 @@
+{
+  "slider": [
+    {
+      "image": "/assets/img/slider/animation-1.jpg",
+      "alt": "Le Café de la place vous invite à la soirée Moules-Frites",
+      "link": "https://www.facebook.com/event1",
+      "title": "Soirée à thème - Spécial Vendredi"
+    },
+    {
+      "image": "/assets/img/slider/animation-2.jpg",
+      "alt": "Le Café de la place vous invite à la soirée Barbecue",
+      "link": "https://www.facebook.com/event2",
+      "title": "Happy Hour - Tous les Jeudis"
+    },
+    {
+      "image": "/assets/img/slider/animation-3.jpg",
+      "alt": "Le Café de la place vous invite à la soirée Mexicaine, repas à thème",
+      "link": "https://www.facebook.com/event3",
+      "title": "Concert live - Samedi Soir"
+    }
+  ]
+}

@@ -6,8 +6,8 @@ import { CheckCaseIcon } from './Icons';
 import BookTable from './BookTable';
 const ContactUs = () => {
   return (
-    <section id="Contact_us" className="lg:h-full w-5/6 lg:w-full h-52 m-auto my-10 relative">
-      <div className="w-3/4 h-32 inset-0 m-auto">
+    <section id="Contact_us" className="lg:h-full w-full lg:w-full h-52 m-auto my-10 relative">
+      <div className="w-full h-32 inset-0 m-auto">
         <Image
           src={Vegetables}
           alt="Photo de légumes au retour du marché"
@@ -25,7 +25,7 @@ const ContactUs = () => {
         <div className="flex flex-col gap-6">
           <div className="text-white uppercase flex flex-row lg:flex-col">
             <h2 className="inline font-Quick text-4xl lg:text-xl font-thin">Contactez-nous !</h2>
-            <Link href="tel:0033547871549" className="underline decoration-1 underline-offset-2 ml-4 ont-Quick text-4xl lg:text-xl font-bold">
+            <Link href="tel:0033547871549" className="underline decoration-1 underline-offset-2 ml-4 font-Quick text-4xl lg:text-xl font-bold">
               05.47.87.15.49
             </Link>
           </div>

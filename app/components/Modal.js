@@ -6,6 +6,8 @@ const Modal = ({ content, onClose }) => {
   const [title, setTitle] = useState('');
   const [showAdditionalInfo, setShowAdditionalInfo] = useState(false);
   const [showDeliveryIcon, setShowDeliveryIcon] = useState(false);
+  const [showPriceIcon, setShowPriceIcon] = useState(false);
+  const [showServiceTag, setShowServiceTag] = useState(false);
 
   useEffect(() => {
     if (content === 'food') {
@@ -14,6 +16,9 @@ const Modal = ({ content, onClose }) => {
         .then((response) => response.json())
         .then((data) => setData(data));
       setShowDeliveryIcon(true);
+      setShowPriceIcon(true);
+      setShowAdditionalInfo(true);
+      setShowServiceTag(true);
     } else if (content === 'drinks') {
       setTitle('La carte des Boissons');
       fetch('drinksData.json')
@@ -21,6 +26,8 @@ const Modal = ({ content, onClose }) => {
         .then((data) => {
           setData(data);
           setShowDeliveryIcon(true);
+          setShowPriceIcon(true);
+          setShowServiceTag(true);
         });
     } else if (content === 'burgers') {
       setTitle('La carte des Burgers');
@@ -30,15 +37,20 @@ const Modal = ({ content, onClose }) => {
           const burgersData = data.Burgers;
           setData({ Burgers: burgersData });
           setShowDeliveryIcon(true);
+          setShowPriceIcon(true);
+          setShowAdditionalInfo(true);
+          setShowServiceTag(true);
         });
-    } else if (content === 'pizzas') {
-      setTitle('La carte des Pizzas');
-      fetch('foodData.json')
+      }  else if (content === 'children') {
+      setTitle('Le menu des enfants à 10 €');
+      fetch('childData.json')
         .then((response) => response.json())
         .then((data) => {
-          const pizzasData = data.Pizzas;
-          setData({ Pizzas: pizzasData });
-          setShowDeliveryIcon(true);
+          setData(data);
+          setShowDeliveryIcon(false);
+          setShowPriceIcon(false);
+          setShowAdditionalInfo(false);
+          setShowServiceTag(true);
         });
     }
   }, [content]);
@@ -55,7 +67,7 @@ const Modal = ({ content, onClose }) => {
   }, [content]);
 
   useEffect(() => {
-    setShowAdditionalInfo(['food', 'burgers', 'pizzas'].includes(content));
+    setShowAdditionalInfo(['food', 'burgers', 'children', 'traiteur'].includes(content));
   }, [content]);
 
   return (
@@ -65,13 +77,13 @@ const Modal = ({ content, onClose }) => {
         {data && (
           <>
             {/* Modal Header */}
-            <div className="flex w-full h-auto justify-center items-center">
+            <div className="flex h-auto justify-center items-center">
               <div className="flex w-10/12 h-auto py-3 justify-center items-center text-2xl font-bold font-Quick">{title}</div>
               <div onClick={onClose} className="flex w-1/12 h-auto justify-center cursor-pointer">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
+                  width="16"
+                  height="16"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="#000000"
@@ -86,22 +98,22 @@ const Modal = ({ content, onClose }) => {
               </div>
             </div>
             {/* Condition pour afficher uniquement pour 'burgers', 'pizzas' et 'food' */}
-            <div className='flex flex-row justify-center place-items-center'>
+            <div className="flex flex-row justify-center place-items-center mt-8">
               {showAdditionalInfo && (
-                <div className="flex flex-row">
+                <div className="flex flex-row h-14">
                   <div className="flex flex-col justify-center place-items-center mr-3 ">
-                    <ChefIcon className="w-10 lg:w-6 fill-green-500" />
+                    <ChefIcon className="w-full h-full fill-green-500" />
                     <p>Fait Maison</p>
                   </div>
                   <div className="flex flex-col justify-center place-items-center ml-3">
-                    <SaladeIcon className="w-10 lg:w-6 lg:mr-1 fill-green-500" />
+                    <SaladeIcon className="lg:mr-1 fill-green-500" />
                     <p>Plat végétarien</p>
                   </div>
                 </div>
               )}
               {showDeliveryIcon && (
-                <div className="flex flex-col justify-center place-items-center mx-3">
-                  <DeliveryIcon className="w-10 lg:w-6 fill-green-500" />
+                <div className="flex flex-col justify-center place-items-center mx-3 h-14">
+                  <DeliveryIcon className="fill-green-500" />
                   <p>À emporter possible</p>
                 </div>
               )}
@@ -117,22 +129,31 @@ const Modal = ({ content, onClose }) => {
                       <div className="flex flex-col lg:w-3/4 mt-2 lg:mt-0 ">
                         <div className="flex flex-row gap-6">
                           <h4 className="text-base font-medium font-Quick">{item.title}</h4>
+                          <div className="flex flex-row h-6">
+                            {item.homemade === 'yes' ? <ChefIcon className="fill-green-500 mr-3 lg:mr-1 " /> : null}
+                            {item.delivery === 'yes' ? <DeliveryIcon className="fill-green-500 mx-3 lg:mx-1" /> : null}
+                            {item.vegetarian === 'yes' ? <SaladeIcon className="fill-green-500 ml-3 lg:ml-1" /> : null}
+                          </div>
                         </div>
                         <p className="text-sm font-Quick">{item.description}</p>
                       </div>
-                      <div className="flex flex-row">
-                        {item.homemade === 'yes' ? <ChefIcon className="fill-green-500 w-10 mr-3 lg:w-6 lg:mr-1 " /> : null}
-                        {item.delivery === 'yes' ? <DeliveryIcon className="fill-green-500 w-10 mx-3 lg:w-6 lg:mx-1" /> : null}
-                        {item.vegetarian === 'yes' ? <SaladeIcon className="fill-green-500 w-10 ml-3 lg:w-6 lg:ml-1" /> : null}
-                      </div>
-                      <div className="flex flex-col">
-                        <p className="text-sm lg:text-xs font-bold font-Quick">{item.price} €</p>
-                      </div>
+                      {showPriceIcon && (
+                        <div className="flex flex-col">
+                          <p className="text-sm lg:text-xs font-bold font-Quick">{item.price} €</p>
+                        </div>
+                      )}
                     </div>
                   ))}
               </div>
             ))}
             {/* End of Modal Content */}
+            <div>
+              {showServiceTag && (
+                <div className="flex flex-row justify-center place-items-center mt-14 mb-8 font-Quick font-bold text-sm">
+                  <p>Prix nets - Service compris - Restaurant non fumeur, interdit aux animaux même tenus en laisse </p>
+                </div>
+              )}
+            </div>
           </>
         )}
       </div>

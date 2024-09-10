@@ -39,10 +39,10 @@ export default function LanguageChanger() {
     <>
       <motion.a
         tabIndex="0"
-        aria-label="Translate in French"
+        aria-label="Traduire en Français"
         whileHover={{ y: -2 }}
         whileTap={{ scale: 0.9 }}
-        className="w-6 mr-3 cursor-pointer"
+        className="w-8 h-8 mr-3 cursor-pointer"
         onClick={() => handleChange('fr')}
       >
         🇫🇷
@@ -52,7 +52,7 @@ export default function LanguageChanger() {
         aria-label="Translate in English"
         whileHover={{ y: -2 }}
         whileTap={{ scale: 0.9 }}
-        className="w-6 mr-3 cursor-pointer"
+        className="w-8 h-8 cursor-pointer"
         onClick={() => handleChange('en')}
       >
         🇬🇧

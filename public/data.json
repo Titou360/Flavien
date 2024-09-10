@@ -3,89 +3,117 @@
     {
       "title": "Restaurant",
       "cover": "/assets/img/icons/cloche-couvrant-le-plat-chaud.png",
-      "description": "Restaurant traditionnel, découvrez notre carte",
+      "description": "Restaurant traditionnel, découvrez notre carte sur ce site",
       "alt": "Icône d'un plat chaud sous cloche"
     },
     {
       "title": "Bar",
       "cover": "/assets/img/icons/verre-a-vin.png",
-      "description": "Bar ouvert 6 jours sur 7 jusqu'à 22h00",
+      "description": "Bar ouvert 6 jours sur 7 jusqu'à 21h30",
       "alt": "Icône d'un verre à vin"
     },
     {
       "title": "Caféterie",
       "cover": "/assets/img/icons/machine-a-cafe.png",
-      "description": "Café, Thé et boissons fraiches",
+      "description": "Café, Thé et boissons fraîches",
       "alt": "Icône d'une machine à café"
     },
     {
       "title": "Vente à emporter",
       "cover": "/assets/img/icons/fast-food.png",
-      "description": "Pizza & Burger à emporter. Seules les commandes par téléphone et sur place seront acceptées",
+      "description": "Une sélection de plats à commander et à retirer sur place",
       "alt": "Icône d'un morceau de pizza, d'un burger et d'une boisson"
     }
   ],
 
   "timeSchedule": {
     "restaurant": [
-       {
-         "day": "Lundi",
-         "time": "Fermé"
-       },
-       {
-         "day": "Mardi",
-         "time": "11.30-14.00 - 19.00-21.30"
-       },
-       {
-         "day": "Mercredi",
-         "time": "11.30-14.00 - 19.00-21.30"
-       },
-       {
-         "day": "Jeudi",
-         "time": "11.30-14.00 - 19.00-21.30"
-       },
-       {
-         "day": "Vendredi",
-         "time": "11.30-14.00 - 19.00-22.00"
-       },
-       {
-         "day": "Samedi",
-         "time": "12.00-14.00 - 19.00-22.00"
-       },
-       {
-         "day": "Dimanche",
-         "time": "12.00-14.30 - Fermé"
-       }
-     ],
-     "pub": [
-       {
-         "day": "Lundi",
-         "time": "Fermé"
-       },
-       {
-         "day": "Mardi",
-         "time": "08.30-14.00 - 17.30-21.30"
-       },
-       {
-         "day": "Mercredi",
-         "time": "08.30-14.00 - 17.30-21.30"
-       },
-       {
-         "day": "Jeudi",
-         "time": "08.30-14.00 - 17.30-21.30"
-       },
-       {
-         "day": "Vendredi",
-         "time": "08.30-14.00 - 17.30-22.00"
-       },
-       {
-         "day": "Samedi",
-         "time": "08.00-14.00 - 17.30-22.00"
-       },
-       {
-         "day": "Dimanche",
-         "time": "08.30-15.00 - Fermé"
-       }
-     ]
+      {
+        "day": "Lundi",
+        "time": "Fermé"
+      },
+      {
+        "day": "Mardi",
+        "time": "11.30-14.00 - 19.00-21.30"
+      },
+      {
+        "day": "Mercredi",
+        "time": "11.30-14.00 - 19.00-21.30"
+      },
+      {
+        "day": "Jeudi",
+        "time": "11.30-14.00 - 19.00-21.30"
+      },
+      {
+        "day": "Vendredi",
+        "time": "11.30-14.00 - 19.00-22.00"
+      },
+      {
+        "day": "Samedi",
+        "time": "12.00-14.00 - 19.00-22.00"
+      },
+      {
+        "day": "Dimanche",
+        "time": "12.00-14.30 - Fermé"
+      }
+    ],
+    "pub": [
+      {
+        "day": "Lundi",
+        "time": "Fermé"
+      },
+      {
+        "day": "Mardi",
+        "time": "08.30-14.00 - 17.30-21.30"
+      },
+      {
+        "day": "Mercredi",
+        "time": "08.30-14.00 - 17.30-21.30"
+      },
+      {
+        "day": "Jeudi",
+        "time": "08.30-14.00 - 17.30-21.30"
+      },
+      {
+        "day": "Vendredi",
+        "time": "08.30-14.00 - 17.30-22.00"
+      },
+      {
+        "day": "Samedi",
+        "time": "08.00-14.00 - 17.30-22.00"
+      },
+      {
+        "day": "Dimanche",
+        "time": "08.30-15.00 - Fermé"
+      }
+    ]
+  },
+
+  "brasseur": [
+    {
+      "starters": {
+        "price": "4.00 €",
+        "items": ["Oeufs mimosas", "Croque Monsieur", "Salade Façon Niçoise", "Assiette de charcuteries"]
+      },
+      "hotplates": {
+        "price": "10.00 €",
+        "items": ["Cuisse de poulet", "Saucisse de Toulouse", "Steak haché", "Poisson du moment", "Jambon braisé"],
+        "garniture": {
+          "description": "Frites maison, salade, écrasé de pomme de terre, haricots verts, pommes de terre grenailles"
+        }
+      },
+      "desserts": {
+        "price": "4.00 €",
+        "items": ["Brioche façon pain perdu", "Tiramisu", "Moelleux au chocolat", "Crème brûlée"]
+      },
+      "options": [
+        { "name": "Entrée + Plat", "price": "13.50 €" },
+        { "name": "Plat + Dessert", "price": "13.50 €" },
+        { "name": "Entrée + Plat + Dessert", "price": "17.00 €" }
+      ],
+      "delivery": [
+        {"deliveryText" : "Possibilité de commander à emporter"}
+      ]
     }
+  ]
 }

@@ -6,7 +6,7 @@ import Switcher from './Switcher';
 import Modal from './Modal';
 import Link from 'next/link';
 import BurgerPic from '../../public/assets/img/Services/burger.jpg';
-import PizzaPic from '../../public/assets/img/Services/pizza.jpg';
+import TraiteurPic from '../../public/assets/img/Services/traiteur.webp';
 import SectionHeader from './SectionHeader';
 
 const servicesData = data.services;
@@ -33,7 +33,7 @@ const Services = () => {
     setIsModalOpen(false);
   };
   return (
-    <section id="Services" className="w-5/6 md:w-full h-full my-10 lg:mb-0">
+    <section id="Services" className="w-5/6 md:w-full h-full my-20 lg:mb-0">
       <SectionHeader subtitle="à propos" subtitle2=" de nos" title="services" />
       {/* Here we map for the differents services */}
       <div className="w-full mx-auto flex flex-row lg:flex-col gap-10 mb-10">
@@ -101,21 +101,21 @@ const Services = () => {
               <span className="text-white capitalize font-Kristi text-8xl ">découvrez</span>
               <h3 className=" text-white flex justify-center place-items-center uppercase font-Quick text-4xl">nos burgers</h3>
 
-              <div onClick={() => openModal('burgers')} className="text-white text-xl underline font-Quick">
+              <div onClick={() => openModal('burgers')} className="text-white text-xl underline font-Quick cursor-pointer">
                 Accéder à notre choix
               </div>
             </div>
           </div>
 
           <div id="pizzas" className="w-1/3 md:w-full md:order-3 relative h-full">
-            <Image src={PizzaPic} className="w-full h-full object-cover" alt="Photo d'une pizza" />
+            <Image src={TraiteurPic} className="w-full h-full object-cover" alt="Photo du traiteur" />
             {/* Next line making a gradient over the pic */}
             <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-90"></div>
             <div className="w-full absolute inset-0 flex justify-center place-items-center flex-col gap-8">
               <span className="text-white capitalize font-Kristi text-8xl ">découvrez</span>
-              <h3 className=" text-white flex justify-center place-items-center uppercase font-Quick text-4xl">nos pizzas</h3>
-              <div onClick={() => openModal('pizzas')} className="text-white text-xl underline font-Quick">
-                Accéder à notre choix
+              <h3 className=" text-white flex justify-center place-items-center uppercase font-Quick text-4xl">Service traiteur</h3>
+              <div onClick={() => openModal('pizzas')} className="text-white text-xl underline font-Quick cursor-pointer">
+                Accéder à nos services
               </div>
             </div>
           </div>
@@ -169,15 +169,15 @@ const Services = () => {
               </div>
             </div>
           </div>
-          <div id="pizzas" className="w-full h-80 relative">
-            <Image src={PizzaPic} className="w-full h-full object-cover" alt="Photo d'une pizza" />
+          <div id="traiteur" className="w-full h-80 relative">
+            <Image src={TraiteurPic} className="w-full h-full object-cover" alt="Photo d'un buffet traiteur" />
             {/* Next line making a gradient over the pic */}
             <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-90"></div>
             <div className="w-full absolute inset-0 flex justify-center place-items-center flex-col gap-8">
               <span className="text-white capitalize font-Kristi text-8xl ">découvrez</span>
-              <h3 className=" text-white flex justify-center place-items-center uppercase font-Quick text-4xl">nos pizzas</h3>
-              <div onClick={() => openModal('pizzas')} className="text-white text-xl underline font-Quick">
-                Accéder à notre choix
+              <h3 className=" text-white flex justify-center place-items-center uppercase font-Quick text-4xl">service traiteur</h3>
+              <div onClick={() => openModal('traiteur')} className="text-white text-xl underline font-Quick">
+                Accéder à nos services
               </div>
             </div>
           </div>

@@ -4,6 +4,10 @@ import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import ActionCook from '../../public/assets/img/Restaurant/cuisinier.jpg';
 import SectionHeader from './SectionHeader';
+import Aperitif from '../../public/assets/img/Restaurant/aperitif.jpg';
+import Salade from '../../public/assets/img/Restaurant/salade.jpg';
+import Burger from '../../public/assets/img/Restaurant/burger.webp';
+import Glace from '../../public/assets/img/Restaurant/glace.jpg';
 
 const Restaurant = () => {
   const controls = useAnimation();
@@ -43,62 +47,67 @@ const Restaurant = () => {
 
   return (
     <section id="Restaurant" className="relative">
-      <div className="w-5/6 mx-auto my-10 flex flex-row justify-between gap-6 relative">
+      <div className="w-5/6 mx-auto my-20 flex flex-row justify-between gap-6 relative">
         <div className="w-2/3 lg:w-full relative mt-32 lg:mt-0 ml-10 lg:ml-0 lg:mx-auto">
           <SectionHeader subtitle="à propos" subtitle2=" du" title="restaurant" />
 
           <div className="flex flex-row h-full lg:flex-col lg:gap-10">
             <p className="w-1/2 lg:w-full text-black/60 dark:text-white p-4 lg:p-0 text-balance md:text-center">
               Cuisine de terroir, authentique et conviviale. Nous faisons confiance à la puissance locale au travers de ses producteurs et de leur
-              savoir-faire
+              savoir-faire.
             </p>
             <p className="w-1/2 lg:w-full text-black/60 dark:text-white p-4 lg:p-0 text-balance md:text-center">
-              Une cuisine gourmande, des assiettes joliment dressées pour le plaisirs des papilles de toutes et tous.{' '}
+              Une cuisine gourmande, des assiettes joliment dressées pour le plaisir des papilles de toutes et tous.
             </p>
           </div>
         </div>
+
+        {/* Images with motion.div */}
         <div className="flex flex-row justify-start items-end gap-4 absolute inset-0 bottom-7 lg:-bottom-2 z-10 mx-4 lg:hidden">
           <motion.div
-            className="bg-red-400 w-1/6 h-1/3"
+            className="bg-red-400 w-1/6 h-1/3 relative" // `relative` to contain the Image component
             ref={elementRef}
-            style={{ opacity: 0 }} // Initially invisible
+            style={{ opacity: 0 }}
             animate={controls}
             transition={{ duration: 0.5 }}
           >
-            BOX1
+            <Image src={Aperitif} alt="Aperitif" layout="fill" objectFit="cover" />
           </motion.div>
 
           <motion.div
-            className="bg-green-400 w-1/6 h-1/3"
+            className="bg-green-400 w-1/6 h-1/3 relative"
             ref={elementRef}
-            style={{ opacity: 0 }} // Initially invisible
+            style={{ opacity: 0 }}
             animate={controls}
             transition={{ duration: 0.5 }}
           >
-            BOX2
+            <Image src={Salade} alt="Salade" layout="fill" objectFit="cover" />
           </motion.div>
+
           <motion.div
-            className="bg-blue-400 w-1/6 h-1/3"
+            className="bg-blue-400 w-1/6 h-1/3 relative"
             ref={elementRef}
-            style={{ opacity: 0 }} // Initially invisible
+            style={{ opacity: 0 }}
             animate={controls}
             transition={{ duration: 0.5 }}
           >
-            BOX3
+            <Image src={Burger} alt="Burger" layout="fill" objectFit="cover" />
           </motion.div>
+
           <motion.div
-            className="bg-yellow-400 w-1/6 h-1/3"
+            className="bg-yellow-400 w-1/6 h-1/3 relative"
             ref={elementRef}
-            style={{ opacity: 0 }} // Initially invisible
+            style={{ opacity: 0 }}
             animate={controls}
             transition={{ duration: 0.5 }}
           >
-            BOX4
+            <Image src={Glace} alt="Glace" layout="fill" objectFit="cover" />
           </motion.div>
         </div>
+
+        {/* Cook image */}
         <div id="cook" className="w-1/3 h-full relative md:hidden">
           <Image src={ActionCook} alt="Photo d'un cuisinier au travail" className="object-cover" />
-          {/* Next line making a gradient over the pic */}
           <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-50"></div>
         </div>
       </div>
