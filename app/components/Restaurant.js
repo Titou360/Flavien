@@ -1,13 +1,13 @@
 'use client';
 import { motion, useAnimation } from 'framer-motion';
-import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
-import ActionCook from '../../public/assets/img/Restaurant/cuisinier.jpg';
-import SectionHeader from './SectionHeader';
+import { useEffect, useRef, useState } from 'react';
 import Aperitif from '../../public/assets/img/Restaurant/aperitif.jpg';
-import Salade from '../../public/assets/img/Restaurant/salade.jpg';
 import Burger from '../../public/assets/img/Restaurant/burger.webp';
+import ActionCook from '../../public/assets/img/Restaurant/cuisinier.jpg';
 import Glace from '../../public/assets/img/Restaurant/glace.jpg';
+import Salade from '../../public/assets/img/Restaurant/salade.jpg';
+import SectionHeader from './SectionHeader';
 
 const Restaurant = () => {
   const controls = useAnimation();
@@ -65,43 +65,25 @@ const Restaurant = () => {
         {/* Images with motion.div */}
         <div className="flex flex-row justify-start items-end gap-4 absolute inset-0 bottom-7 lg:-bottom-2 z-10 mx-4 lg:hidden">
           <motion.div
-            className="bg-red-400 w-1/6 h-1/3 relative" // `relative` to contain the Image component
+            className="w-1/6 h-1/3 relative" // `relative` to contain the Image component
             ref={elementRef}
             style={{ opacity: 0 }}
             animate={controls}
             transition={{ duration: 0.5 }}
           >
-            <Image src={Aperitif} alt="Aperitif" layout="fill" objectFit="cover" />
+            <Image src={Aperitif} alt="Aperitif" className="object-cover w-full h-full" />
           </motion.div>
 
-          <motion.div
-            className="bg-green-400 w-1/6 h-1/3 relative"
-            ref={elementRef}
-            style={{ opacity: 0 }}
-            animate={controls}
-            transition={{ duration: 0.5 }}
-          >
-            <Image src={Salade} alt="Salade" layout="fill" objectFit="cover" />
+          <motion.div className="w-1/6 h-1/3 relative" ref={elementRef} style={{ opacity: 0 }} animate={controls} transition={{ duration: 0.5 }}>
+            <Image src={Salade} alt="Salade" fill style={{ objectFit: 'cover' }} />
           </motion.div>
 
-          <motion.div
-            className="bg-blue-400 w-1/6 h-1/3 relative"
-            ref={elementRef}
-            style={{ opacity: 0 }}
-            animate={controls}
-            transition={{ duration: 0.5 }}
-          >
-            <Image src={Burger} alt="Burger" layout="fill" objectFit="cover" />
+          <motion.div className="w-1/6 h-1/3 relative" ref={elementRef} style={{ opacity: 0 }} animate={controls} transition={{ duration: 0.5 }}>
+            <Image src={Burger} alt="Burger" fill style={{ objectFit: 'cover' }} />
           </motion.div>
 
-          <motion.div
-            className="bg-yellow-400 w-1/6 h-1/3 relative"
-            ref={elementRef}
-            style={{ opacity: 0 }}
-            animate={controls}
-            transition={{ duration: 0.5 }}
-          >
-            <Image src={Glace} alt="Glace" layout="fill" objectFit="cover" />
+          <motion.div className="w-1/6 h-1/3 relative" ref={elementRef} style={{ opacity: 0 }} animate={controls} transition={{ duration: 0.5 }}>
+            <Image src={Glace} alt="Glace" fill style={{ objectFit: 'cover' }} />
           </motion.div>
         </div>
 

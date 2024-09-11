@@ -1,45 +1,95 @@
 {
   "Entrées": [
     {
-      "title": "Salade César",
-      "description": "Laitue romaine, poulet grillé, croûtons, parmesan, sauce César",
-      "price": "9.99",
+      "title": "Camembert rôti à partager",
+      "description": "Ail et persil, servi avec toasts de pain grillé et salade",
+      "price": "10.00",
       "homemade": "yes",
       "delivery": "yes",
       "vegetarian": "yes"
     },
     {
-      "title": "Carpaccio de bœuf",
-      "description": "Tranches fines de bœuf marinées avec de l'huile d'olive, du jus de citron, du parmesan et des câpres",
-      "price": "12.50",
-      "homemade": "yes",
-      "delivery": "no",
-      "vegetarian": "yes"
+      "title": "Assiette de charcuteries",
+      "description": "Rosette, Lomo, Coppa, Jambon de Serrano, Chorizo, cornichon et beurre",
+      "price": "14.00",
+      "homemade": "no",
+      "delivery": "yes",
+      "vegetarian": "no"
     }
   ],
-  "Plats Chauds": [
+  "Salades": [
     {
-      "title": "Filet de saumon grillé",
-      "description": "Filet de saumon frais grillé, servi avec des légumes sautés",
-      "price": "16.99",
+      "title": "Salade César",
+      "description": "Salade, tomates, oignons, poulet frit, lardons, croûtons, sauce vinaigrette maison",
+      "price": "15.00",
       "homemade": "yes",
-      "delivery": "no",
+      "delivery": "yes",
       "vegetarian": "yes"
     },
     {
-      "title": "Steak frites",
-      "description": "Steak de bœuf grillé accompagné de frites croustillantes",
-      "price": "14.99",
+      "title": "Salade Landaise",
+      "description": "Salade, tomates, oignons, gésiers, magret fumé de la Maison Ducasse, pignon de pin, foie gras, sauce vinaigrette maison",
+      "price": "15.00",
+      "homemade": "yes",
+      "delivery": "yes",
+      "vegetarian": "yes"
+    },
+    {
+      "title": "Salade de chèvre",
+      "description": "Salade, tomates, oignons, Noix, Toast de chèvre et miel, sauce vinaigrette maison",
+      "price": "14.00",
+      "homemade": "yes",
+      "delivery": "yes",
+      "vegetarian": "yes"
+    },
+    {
+      "title": "Assiette gourmande",
+      "description": "Salade, tomates, oignons, magret fumé de la Maison Ducasse, graisseron, asperges, maïs,concombre, carotte pignon de pin, sauce vinaigrette maison",
+      "price": "15.00",
+      "homemade": "yes",
+      "delivery": "yes",
+      "vegetarian": "yes"
+    }
+  ],
+  "Viandes": [
+    {
+      "title": "Grillade de boeuf de Chalosse",
+      "description": "Maison Ducasse, servie avec Beurre Maïtre d'hôtel",
+      "price": "16.00",
+      "homemade": "yes",
+      "delivery": "yes",
+      "vegetarian": "no"
+    },
+    {
+      "title": "Entrecôtes 300g",
+      "description": "Maison Ducasse, servie avec Beurre Maïtre d'hôtel",
+      "price": "21.00",
       "homemade": "yes",
       "delivery": "no",
-      "vegetarian": "yes"
+      "vegetarian": "no"
+    },
+    {
+      "title": "Magret de Canard",
+      "description": "Origine France, Sauce Miel épices",
+      "price": "16.00",
+      "homemade": "yes",
+      "delivery": "yes",
+      "vegetarian": "no"
+    },
+    {
+      "title": "Tartare de magret de Canard",
+      "description": "Origine France, avec copeaux de foie gras",
+      "price": "19.00",
+      "homemade": "yes",
+      "delivery": "yes",
+      "vegetarian": "no"
     }
   ],
   "Burgers": [
     {
       "title": "Burger Classique",
       "description": "Pain brioché, Steak de 150g Maison Ducasse, salade, tomate, oignon, sauce Maison. Servi avec frites et salade",
-      "price": "10",
+      "price": "10.00",
       "homemade": "yes",
       "delivery": "yes",
       "vegetarian": "no"
@@ -47,7 +97,7 @@
     {
       "title": "Burger Poulet",
       "description": "Pain brioché, Poulet frit croustillant, salade, tomate, oignon, sauce Maison. Servi avec frites et salade",
-      "price": "10",
+      "price": "10.00",
       "homemade": "yes",
       "delivery": "yes",
       "vegetarian": "no"
@@ -55,7 +105,7 @@
     {
       "title": "Double Burger Classique",
       "description": "Pain brioché, 2 Steaks de 150g Maison Ducasse, salade, tomate, oignon, sauce Maison. Servi avec frites et salade",
-      "price": "15",
+      "price": "14.00",
       "homemade": "yes",
       "delivery": "yes",
       "vegetarian": "no"
@@ -63,20 +113,36 @@
     {
       "title": "Double Burger Bacon",
       "description": "Pain brioché, 2 Steaks de 150g Maison Ducasse, bacon, salade, tomate, oignon, sauce Maison. Servi avec frites et salade",
-      "price": "15",
-      "homemade": "yes",
-      "delivery": "yes",
-      "vegetarian": "no"
-    },
-    {
-      "title": "Burger du moment",
-      "description": "Présent sur notre page d'accueil, notre page Facebook et sur le tableau dans la salle de restaurant",
-      "price": "13",
+      "price": "15.00",
       "homemade": "yes",
       "delivery": "yes",
       "vegetarian": "no"
     }
   ],
+
+  "Le Burger du Moment": {
+    "name": "Le Bikette",
+    "description": "Un burger gourmand avec une viande d'exception et un fromage de chèvre fondant",
+    "ingredients": ["Pain brioché", "Steak haché de bœuf de la Maison Ducasse", "Tomate", "Oignon", "Salade", "Fromage de chèvre", "Oeuf au plat"],
+    "price": "13.00",
+    "image": "/assets/img/DailyChange/burger.png",
+    "available": true,
+    "month": "Septembre",
+    "specialOffer": {
+      "offerText": "Sur place ou à emporter",
+      "price": "15.00"
+    },
+    "homemade": "yes",
+    "delivery": "yes",
+    "vegetarian": "no",
+
+    "images": [
+      { "src": "/assets/img/image1.jpg", "alt": "Image 1" },
+      { "src": "/assets/img/image2.jpg", "alt": "Image 2" },
+      { "src": "/assets/img/image3.jpg", "alt": "Image 3" }
+    ]
+  },
+
   "Desserts": [
     {
       "title": "Tiramisu",
@@ -88,26 +154,5 @@
       "description": "Crème anglaise à la vanille recouverte d'une fine couche de sucre caramélisé",
       "price": "8.50"
     }
-  ],
-
-  
-  "burgerOfTheDay": {
-    "name": "Le Bikette",
-    "description": "Vous l'avez plebiscité en Août, vous l'avez réclamé, vous l'aurez pour Septembre !",
-    "ingredients": ["Pain brioché", "Steak haché de bœuf de la Maison Ducasse", "Tomate", "Oignon", "Salade", "Fromage de chèvre", "Oeuf"],
-    "price": "13.00 €",
-    "image": "/assets/img/DailyChange/burger.png",
-    "available": true,
-    "month":"Septembre",
-    "specialOffer": {
-      "offerText": "Sur place ou à emporter",
-      "price": "15.00 €"
-    },
-
-    "images": [
-      { "src": "/assets/img/image1.jpg", "alt": "Image 1" },
-      { "src": "/assets/img/image2.jpg", "alt": "Image 2" },
-      { "src": "/assets/img/image3.jpg", "alt": "Image 3" }
-    ]
-  }
+  ]
 }

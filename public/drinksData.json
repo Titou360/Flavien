@@ -1,119 +1,220 @@
 {
   "Softs": [
     {
-      "title": "Coca-Cola 33cl",
-      "price": "3.50"
+      "title": "Soda",
+      "description": "Coca-cola 33cl, Coca-Cola Zéro 33cl, Coca-Cola Cherry 33cl, Orangina 25cl",
+      "delivery": "no",
+      "price": "3.00"
     },
     {
-      "title": "Coca-Cola Cherry 33cl",
-      "price": "3.50"
+      "title": "Jus de Fruits 25cl",
+      "description": "Jus de pomme, Jus d'orange, Jus d'ananas, ACE",
+      "delivery": "yes",
+      "price": "3.00"
     },
     {
-      "title": "Coca-Cola Zero 33cl",
-      "price": "3.50"
+      "title": "Diabolo",
+      "description": "Grenadine, Menthe, Citron, Pêche, Violette, Fraise, Orgeat",
+      "delivery": "no",
+      "price": "2.00"
     },
     {
-      "title": "Orangina 25cl",
-      "price": "3.50"
-    },
-    {
-      "title": "Fanta 33cl",
-      "price": "3.50"
-    },
-    {
-      "title": "Schweppes Tonic 25cl",
-      "price": "3.50"
-    },
-    {
-      "title": "Jus de fruits au choix (Pampryl ou Granini) 25cl",
-      "description": "Orange, Ace, Abricot, Pomme",
-      "price": "4.00"
+      "title": "Sirop à l'eau",
+      "description": "Grenadine, Menthe, Citron, Pêche, Violette, Fraise, Orgeat",
+      "delivery": "no",
+      "price": "1.50"
     }
   ],
   "Aperitifs": [
     {
-      "title": "Mojito",
-      "description": "Rhum blanc, feuilles de menthe fraîche, sucre de canne, jus de citron vert, eau gazeuse, glace pilée",
-      "price": "8.99",
+      "title": "Clan Campbell 2cl",
+      "description": "",
+      "price": "2.00",
       "delivery": "no"
     },
     {
-      "title": "Kir vin blanc",
-      "description": "Vin blanc sec, crème au choix : Cassis, mûre, pêche",
-      "price": "6.50"
+      "title": "Clan Campbell 4cl",
+      "description": "",
+      "price": "3.00",
+      "delivery": "no"
+    },
+    {
+      "title": "Jack Daniel's 4cl",
+      "description": "",
+      "price": "4.00",
+      "delivery": "no"
+    },
+    {
+      "title": "Havana Blanc 4cl",
+      "description": "",
+      "price": "4.00",
+      "delivery": "no"
+    },
+    {
+      "title": "Captain Morgan 4cl",
+      "description": "",
+      "price": "4.00",
+      "delivery": "no"
+    },
+    {
+      "title": "Ricard 4cl",
+      "description": "",
+      "price": "4.00",
+      "delivery": "no"
+    },
+    {
+      "title": "Porto 8cl",
+      "description": "",
+      "price": "4.00",
+      "delivery": "no"
+    },
+    {
+      "title": "Martini 8cl",
+      "description": "Bianco, Rosso, Rosato",
+      "price": "3.00",
+      "delivery": "no"
+    },
+    {
+      "title": "Gin Tonic 6cl",
+      "description": "",
+      "price": "6.00",
+      "delivery": "no"
+    },
+    {
+      "title": "Kir 12cl",
+      "description": "au choix : Crème de cassis ou crème de pêche",
+      "price": "2.50",
+      "delivery": "no"
+    },
+    {
+      "title": "Suze 4cl",
+      "description": "",
+      "price": "3.00",
+      "delivery": "no"
     }
   ],
 
   "Bières": [
     {
-      "title": "Bière blonde à la pression 15cl",
-      "price": "2.00"
+      "title": "Krombacher",
+      "description": "Bière blonde à la pression 15cl",
+      "price": "1.50",
+      "delivery": "no"
     },
     {
-      "title": "Bière blonde à la pression 25cl",
-      "price": "3.00"
+      "title": "Krombacher",
+      "description": "Bière blonde à la pression 25cl",
+      "price": "2.50",
+      "delivery": "no"
     },
     {
-      "title": "Bière blonde à la pression 50cl",
-      "price": "5.50"
+      "title": "Krombacher",
+      "description": "Bière blonde à la pression 50cl",
+      "price": "5.00",
+      "delivery": "no"
+    },
+    {
+      "title": "Leffe 33cl",
+      "description": "Bière bouteille",
+      "price": "5.00",
+      "delivery": "yes"
     },
     {
       "title": "Desperados 33cl",
-      "description": "Bière arômatisée à la téquila",
+      "description": "Bière arômatisée à la téquila en bouteille",
       "price": "6.00",
       "delivery": "yes"
     }
   ],
   "Eaux": [
     {
-      "title": "Abatilles plates 50cl",
-      "price": "3",
-      "delivery": "yes"
-    },
-    {
       "title": "Abatilles plates 100cl",
-      "price": "4,50",
-      "delivery": "yes"
-    },
-    {
-      "title": "Abatilles gazeuse 50cl",
-      "price": "3",
+      "price": "4,00",
       "delivery": "yes"
     },
     {
       "title": "Abatilles gazeuse 100cl",
-      "price": "4,50",
+      "price": "4,00",
       "delivery": "yes"
+    },
+    {
+      "title": "Perrier 33cl",
+      "price": "3.00",
+      "delivery": "no"
     }
   ],
   "Vins": [
     {
-      "title": "Vin rouge",
-      "price": "12.99"
+      "title": "Château Moulin de Pourquey",
+      "description": "Vin rouge, bouteille de 75 cl",
+      "price": "18.00",
+      "delivery": "yes"
     },
     {
-      "title": "Vin blanc",
-      "price": "11.50"
+      "title": "Vin du Sud-Ouest",
+      "description": "Rouge, blanc ou Rosé, verre de 12cl",
+      "price": "1.50",
+      "delivery": "no"
+    },
+    {
+      "title": "Vin du Sud-Ouest",
+      "description": "Rouge, blanc ou Rosé, carafe de 25cl",
+      "price": "3.00",
+      "delivery": "no"
+    },
+    {
+      "title": "Vin du Sud-Ouest",
+      "description": "Rouge, blanc ou Rosé, carafe de 50cl",
+      "price": "6.00",
+      "delivery": "no"
+    },
+    {
+      "title": "Côte de Blaye",
+      "description": "Rouge, blanc ou Rosé, bouteille de 75cl",
+      "price": "15.00",
+      "delivery": "yes"
+    },
+    {
+      "title": "Tursan Impératrice",
+      "description": "Rouge, blanc ou Rosé, bouteille de 75cl",
+      "price": "13.00",
+      "delivery": "yes"
+    },
+    {
+      "title": "Côte de Gascogne",
+      "description": "Rouge ou Rosé, bouteille de 75cl",
+      "price": "13.00",
+      "delivery": "yes"
+    },
+    {
+      "title": "Tariquet Première Grives",
+      "description": "Blanc moelleux, bouteille de 75cl",
+      "price": "21.00",
+      "delivery": "yes"
     }
   ],
   "Digestifs": [
     {
       "title": "Cognac",
-      "price": "9.99"
+      "price": "9.99",
+      "delivery": "no"
     },
     {
       "title": "Chartreuse",
-      "price": "8.50"
+      "price": "8.50",
+      "delivery": "no"
     }
   ],
   "Cafés": [
     {
       "title": "Café",
-      "price": "2.50"
+      "price": "2.50",
+      "delivery": "yes"
     },
     {
       "title": "Café latte",
-      "price": "3.50"
+      "price": "3.50",
+      "delivery": "yes"
     }
   ]
 }

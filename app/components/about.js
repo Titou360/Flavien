@@ -63,7 +63,7 @@ const About = () => {
           className="p-3 lg:mx-20 shadow-[0_3px_10px_rgb(0,0,0,0.2)]"
         />
         <div className="flex flex-col lg:mx-4">
-          <p className="dark:text-white text-sm font-Quick">
+          <p className="dark:text-white text-lg font-Quick">
             Le Café de la Place a enfin retrouvé son éclat grâce à notre passion et notre engagement.
             <br />
             C&apos;est avec joie que nous avons réouvert les portes de ce lieu emblématique.
@@ -73,7 +73,7 @@ const About = () => {
             mettant l&apos;accent sur son activité restaurant.
             <br />
             Fier de la spécialité dans la cuisson des viandes à la plancha, Flavien a rapidement pris ses marques en favorisant des approvisionnements
-            locaux, que ce soit pour notre carte régulière ou notre menu du jour, toujours fait maison et proposé à un prix accessible.
+            locaux, que ce soit pour notre carte régulière ou notre menu brasseur, toujours fait maison et proposé à un prix accessible.
             <br />
             Nous tenons à souligner que chaque plat peut être dégusté sur place ou emporté pour une expérience gustative où vous le souhaitez. <br />
             Au plaisir de vous accueilir.

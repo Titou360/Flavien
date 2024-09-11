@@ -64,27 +64,27 @@
       },
       {
         "day": "Mardi",
-        "time": "08.30-14.00 - 17.30-21.30"
+        "time": "07.00-14.00 - 17.30-21.00"
       },
       {
         "day": "Mercredi",
-        "time": "08.30-14.00 - 17.30-21.30"
+        "time": "07.00-14.00 - 17.30-21.00"
       },
       {
         "day": "Jeudi",
-        "time": "08.30-14.00 - 17.30-21.30"
+        "time": "07.00-14.00 - 17.30-21.00"
       },
       {
         "day": "Vendredi",
-        "time": "08.30-14.00 - 17.30-22.00"
+        "time": "07.00-14.00 - 17.30-21.30"
       },
       {
         "day": "Samedi",
-        "time": "08.00-14.00 - 17.30-22.00"
+        "time": "08.00-14.00 - 17.30-21.30"
       },
       {
         "day": "Dimanche",
-        "time": "08.30-15.00 - Fermé"
+        "time": "08.00-14.00 - Fermé"
       }
     ]
   },
@@ -97,7 +97,7 @@
       },
       "hotplates": {
         "price": "10.00 €",
-        "items": ["Cuisse de poulet", "Saucisse de Toulouse", "Steak haché", "Poisson du moment", "Jambon braisé"],
+        "items": ["Poulet façon Saltimboca", "Saucisse de Toulouse", "Steak haché", "Noix de joue de porc confite", "Jambon braisé","Poisson du moment"],
         "garniture": {
           "description": "Frites maison, salade, écrasé de pomme de terre, haricots verts, pommes de terre grenailles"
         }

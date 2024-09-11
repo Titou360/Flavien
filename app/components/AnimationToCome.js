@@ -1,7 +1,7 @@
 'use client';
+import Image from 'next/image';
 import { useState } from 'react';
 import data from '../../public/animationsData.json';
-import Image from 'next/image';
 
 const Slider = () => {
   const { slider } = data; // Récupération des données du slider depuis le fichier JSON
@@ -43,9 +43,8 @@ const Slider = () => {
           <Image
             src={slide.image}
             alt={slide.alt}
-            layout="fill" // Utilisez `layout="fill"` pour occuper tout l'espace parent
-            objectFit="cover" // Pour obtenir l'effet "object-cover"
-            className="pointer-events-none"
+            fill
+            style={{ objectFit: 'cover' }} // Pour forcer l'image à couvrir tout le conteneur
           />
           {/* <a
             href={slide.link}
