@@ -20,7 +20,7 @@ export function generateStaticParams() {
 export default function RootLayout({ children, params: { locale } }) {
   return (
     <html lang={locale} dir={dir(locale)} className="scroll-smooth">
-      <body className={`${inter.className} bg-gray-100 dark:bg-black`}>{children}</body>
+      <body className={`${inter.className} bg-gray-100 dark:bg-black border-2 border-red-500`}>{children}</body>
     </html>
   );
 }

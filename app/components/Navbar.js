@@ -56,7 +56,7 @@ const Navbar = () => {
     <header className="w-full bg-light p-2 font-medium flex items-center justify-center relative">
       <button
         aria-label="button hamburger menu"
-        className="fixed z-10 p-4 top-5 right-5 flex-col justify-center items-center hidden bg-white rounded-full lg:flex"
+        className="fixed z-10 p-4 top-5 right-12 flex-col justify-center items-center hidden bg-white rounded-full lg:flex"
         onClick={handleClick}
       >
         <span

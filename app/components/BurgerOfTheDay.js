@@ -7,12 +7,12 @@ const burgerOfTheDay = data['Le Burger du Moment'];
 
 const BurgerOfTheDay = () => {
   return (
-    <div id="" className="w-full h-full lg:h-96 relative">
-      <Image src={burgerBg} className="absolute w-full h-full lg:h-screen lg:overflow-hidden object-cover opacity-95" alt="Photo d'un burger" />
+    <div id="burgerOfTheDay" className="w-full h-full relative">
+      <Image src={burgerBg} className="absolute w-full h-full object-cover opacity-95" alt="Photo d'un burger" />
       {/* Gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-90"></div>
 
-      <div className="w-full absolute inset-0 flex justify-around place-items-center flex-col gap-8 text-white">
+      <div className="w-full absolute inset-0 flex justify-around lg:justify-around place-items-center flex-col gap-8 text-white">
         {/* Titre du burger */}
         <h4 className="bg-gradient-to-r from-orange-600 to-orange-500 bg-clip-text text-transparent text-4xl font-bold">{burgerOfTheDay.name}</h4>
 
@@ -30,7 +30,7 @@ const BurgerOfTheDay = () => {
         </ul>
 
         {/* Affichage du prix */}
-        <div className="absolute w-[130px] h-[130px] rounded-full bg-gradient-to-r from-orange-600 to-orange-500 top-10 right-10 grid min-h-[24px] min-w-[24px] translate-x-2/4 -translate-y-2/4 place-items-center py-1 px-1 text-xs text-white">
+        <div className="absolute w-[130px] h-[130px] rounded-full bg-gradient-to-r from-orange-600 to-orange-500 top-10 right-10 lg:top-0 lg:left-1/2 lg:transform lg:-translate-x-1/2 lg:-translate-y-1/2 grid min-h-[24px] min-w-[24px] translate-x-2/4 -translate-y-2/4 place-items-center py-1 px-1 text-xs text-white">
           <span className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-3xl text-center whitespace-nowrap">
             {burgerOfTheDay.price} €
           </span>
