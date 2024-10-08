@@ -5,7 +5,7 @@ import { DeliveryIcon, HorlogeIcon } from './Icons';
 const ExtraHeaderDeliveryHours = () => {
   const { t } = useTranslation();
   return (
-    <nav className="flex flex-row flex-nowrap items-center gap-3 lg:flex-col lg:gap-6">
+    <nav className="flex flex-row flex-nowrap items-center gap-3 lg:gap-6">
       <motion.a
         tabIndex="0"
         href="#Hours"

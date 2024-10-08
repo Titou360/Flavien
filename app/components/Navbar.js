@@ -87,14 +87,14 @@ const Navbar = () => {
           animate={{ scale: 1, opacity: 1 }}
           className="min-w-[75vw] flex flex-col justify-between z-30 items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-dark/90 dark:bg-light/75 rounded-lg bg-white dark:bg-black py-32 border-2 border-transparent dark:border-cafeGold"
         >
-          <nav className="flex flex-col items-center justify-center ">
+          <nav className="flex flex-col items-center justify-center lg:text-xl">
             <CustomMobileLink href="/" className=" text-black dark:text-cafeGold" title={t('Custom:Home')} toggle={handleClick} />
             <CustomMobileLink href="#Services" className=" text-black dark:text-cafeGold" title={t('Navbar:Services')} toggle={handleClick} />
             <CustomMobileLink href="#Menus" className=" text-dark dark:text-cafeGold" title={t('Navbar:Menus')} toggle={handleClick} />
             <CustomMobileLink href="#Contact_us" className="text-black dark:text-cafeGold" title="Contact" toggle={handleClick} />
           </nav>
-          <div className="flex flex-row justify-center items-center mt-2">
-            <nav className="flex flex-col items-center place-content-center justify-center flex-nowrap gap-6">
+          <div className="w-full flex justify-center items-center mt-2">
+            <nav className="w-full flex flex-row items-center justify-center gap-6 mt-8">
               <ExtraHeaderDeliveryHours toggle={handleClick} />
               <SocialNetwork toggle={handleClick} />
             </nav>

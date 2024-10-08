@@ -24,7 +24,7 @@ export default async function Home({ params: { locale } }) {
       <ExtraHeader />
       <Header />
 
-      <main className="flex min-h-screen flex-col items-center justify-between">
+      <main className="flex w-full min-h-screen flex-col items-center justify-between border border-solid border-red-500">
         <About />
 
         <Restaurant />

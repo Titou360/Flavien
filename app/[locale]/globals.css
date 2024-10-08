@@ -23,7 +23,7 @@
   --indicator-color: #c5a485;
 }
 
-body::before {
+.body::before {
   content: '';
   position: fixed;
   z-index: 10000;

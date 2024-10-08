@@ -10,14 +10,14 @@ const BurgerOfTheDay = () => {
     <div id="burgerOfTheDay" className="w-full h-full relative">
       <Image src={burgerBg} className="absolute w-full h-full object-cover opacity-95" alt="Photo d'un burger" />
       {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-90"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-100"></div>
 
       <div className="w-full absolute inset-0 flex justify-between lg:justify-around place-items-center flex-col gap-8 text-white">
-        {/* Affichage du prix */}
         {/* Titre du burger */}
         <h4 className="bg-gradient-to-r from-orange-600 to-orange-500 bg-clip-text text-transparent text-4xl font-bold pt-6">
           {burgerOfTheDay.name}
         </h4>
+        {/* Affichage du prix */}
         <div className="w-[120px] h-[60px] rounded-md bg-gradient-to-r from-orange-600 to-orange-500 place-items-center py-1 px-2 text-xs text-white relative">
           <span className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-2xl text-center whitespace-nowrap">
             {burgerOfTheDay.price} €
@@ -31,7 +31,7 @@ const BurgerOfTheDay = () => {
         {/* Liste des ingrédients */}
         <ul>
           {burgerOfTheDay.ingredients.map((ingredient, i) => (
-            <li key={i} className="list-disc m-0 p-0 text-left text-xl">
+            <li key={i} className="list-disc text-left pl-4 text-xl">
               {ingredient}
             </li>
           ))}
