@@ -3,87 +3,113 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "Quicksand";
-  src: url("/assets/fonts/Quicksand.ttf");
+  font-family: 'Quicksand';
+  src: url('/assets/fonts/Quicksand.ttf');
 }
 @font-face {
-  font-family: "Kristi";
-  src: url("/assets/fonts/Kristi.ttf");
+  font-family: 'Kristi';
+  src: url('/assets/fonts/Kristi.ttf');
+}
+
+/* General Option */
+.font-effect-outline {
+  color: white;
+  text-shadow: -1px -1px 0 rgba(0, 0, 0, 1), 1px -1px 0 rgba(0, 0, 0, 1), -1px 1px 0 rgba(0, 0, 0, 1), 1px 1px 0 rgba(0, 0, 0, 1);
+}
+
+/* CSS for the reading progress indicator */
+:root {
+  --indicator-height: 10px;
+  --indicator-color: #c5a485;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  z-index: 10000;
+  height: var(--indicator-height);
+  inset: 0;
+  background: var(--indicator-color);
+  animation: scale 3s linear;
+  animation-timeline: scroll(root);
+  transform-origin: 0 50%;
+}
+
+@keyframes scale {
+  0% {
+    transform: scaleX(0);
+  }
+  90%,
+  100% {
+    transform: scaleX(1);
+  }
 }
 
 /* CSS for the mouse in Hero */
 .mouse_scroll {
-	display: block;
-	margin: 0 auto;
-	width: 24px;
-	height: 100px;
-	margin-top: 125px;
+  display: block;
+  margin: 0 auto;
+  width: 24px;
+  height: 100px;
+  margin-top: 125px;
 }
 
-
-.m_scroll_arrows
-{
+.m_scroll_arrows {
   display: block;
   width: 5px;
   height: 5px;
   -ms-transform: rotate(45deg); /* IE 9 */
   -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
   transform: rotate(45deg);
-   
+
   border-right: 2px solid white;
   border-bottom: 2px solid white;
   margin: 0 0 3px 4px;
-  
+
   width: 16px;
   height: 16px;
 }
 
-
-.unu
-{
+.unu {
   margin-top: 1px;
 }
 
-.unu, .doi, .trei
-{
-    -webkit-animation: mouse-scroll 1s infinite;
-    -moz-animation: mouse-scroll 1s infinite;
-    animation: mouse-scroll 1s infinite;
-  
+.unu,
+.doi,
+.trei {
+  -webkit-animation: mouse-scroll 1s infinite;
+  -moz-animation: mouse-scroll 1s infinite;
+  animation: mouse-scroll 1s infinite;
 }
 
-.unu
-{
-  -webkit-animation-delay: .1s;
-  -moz-animation-delay: .1s;
+.unu {
+  -webkit-animation-delay: 0.1s;
+  -moz-animation-delay: 0.1s;
   -webkit-animation-direction: alternate;
-  
+
   animation-direction: alternate;
   animation-delay: alternate;
 }
 
-.doi
-{
-  -webkit-animation-delay: .2s;
-  -moz-animation-delay: .2s;
+.doi {
+  -webkit-animation-delay: 0.2s;
+  -moz-animation-delay: 0.2s;
   -webkit-animation-direction: alternate;
-  
-  animation-delay: .2s;
+
+  animation-delay: 0.2s;
   animation-direction: alternate;
-  
+
   margin-top: -6px;
 }
 
-.trei
-{
-  -webkit-animation-delay: .3s;
-  -moz-animation-delay: .3s;
+.trei {
+  -webkit-animation-delay: 0.3s;
+  -moz-animation-delay: 0.3s;
   -webkit-animation-direction: alternate;
-  
-  animation-delay: .3s;
+
+  animation-delay: 0.3s;
   animation-direction: alternate;
-  
-  
+
   margin-top: -6px;
 }
 
@@ -103,12 +129,12 @@
   margin: 5px auto;
   background: white;
   position: relative;
-  
+
   height: 4px;
   width: 4px;
   border: 2px solid #fff;
   -webkit-border-radius: 8px;
-          border-radius: 8px;
+  border-radius: 8px;
 }
 
 .wheel {
@@ -117,8 +143,8 @@
   animation: mouse-wheel 0.6s linear infinite;
 }
 
-@-webkit-keyframes mouse-wheel{
-   0% {
+@-webkit-keyframes mouse-wheel {
+  0% {
     opacity: 1;
     -webkit-transform: translateY(0);
     -ms-transform: translateY(0);
@@ -133,67 +159,112 @@
   }
 }
 @-moz-keyframes mouse-wheel {
-  0% { top: 1px; }
-  25% { top: 2px; }
-  50% { top: 3px;}
-  75% { top: 2px;}
-  100% { top: 1px;}
+  0% {
+    top: 1px;
+  }
+  25% {
+    top: 2px;
+  }
+  50% {
+    top: 3px;
+  }
+  75% {
+    top: 2px;
+  }
+  100% {
+    top: 1px;
+  }
 }
 @-o-keyframes mouse-wheel {
-
-   0% { top: 1px; }
-  25% { top: 2px; }
-  50% { top: 3px;}
-  75% { top: 2px;}
-  100% { top: 1px;}
+  0% {
+    top: 1px;
+  }
+  25% {
+    top: 2px;
+  }
+  50% {
+    top: 3px;
+  }
+  75% {
+    top: 2px;
+  }
+  100% {
+    top: 1px;
+  }
 }
 @keyframes mouse-wheel {
-
-   0% { top: 1px; }
-  25% { top: 2px; }
-  50% { top: 3px;}
-  75% { top: 2px;}
-  100% { top: 1px;}
+  0% {
+    top: 1px;
+  }
+  25% {
+    top: 2px;
+  }
+  50% {
+    top: 3px;
+  }
+  75% {
+    top: 2px;
+  }
+  100% {
+    top: 1px;
+  }
 }
 
 @-webkit-keyframes mouse-scroll {
-
-  0%   { opacity: 0;}
-  50%  { opacity: .5;}
-  100% { opacity: 1;}
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 @-moz-keyframes mouse-scroll {
-
-  0%   { opacity: 0; }
-  50%  { opacity: .5; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 @-o-keyframes mouse-scroll {
-
-  0%   { opacity: 0; }
-  50%  { opacity: .5; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 @keyframes mouse-scroll {
-
-  0%   { opacity: 0; }
-  50%  { opacity: .5; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-
-
 
 /* Modal */
-  dialog[open] {
-  animation: appear .15s cubic-bezier(0, 1.8, 1, 1.8);
+dialog[open] {
+  animation: appear 0.15s cubic-bezier(0, 1.8, 1, 1.8);
 }
 
-  dialog::backdrop {
-    background: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(54, 54, 54, 0.5));
-    backdrop-filter: blur(3px);
-  }
-  
- 
+dialog::backdrop {
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(54, 54, 54, 0.5));
+  backdrop-filter: blur(3px);
+}
+
 @keyframes appear {
   from {
     opacity: 0;
@@ -204,4 +275,4 @@
     opacity: 1;
     transform: translateX(0);
   }
-} 
+}

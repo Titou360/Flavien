@@ -28,7 +28,7 @@ const Modal = ({ content, onClose }) => {
         .then((data) => {
           setData(data);
           setShowDeliveryIcon(true);
-          setShowPriceIcon(false); // Pas besoin de l'icône de prix pour les boissons
+          setShowPriceIcon(true); // Pas besoin de l'icône de prix pour les boissons
           setShowAdditionalInfo(true); // Afficher la légende
           setShowServiceTag(true);
         });

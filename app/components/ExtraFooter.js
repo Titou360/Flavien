@@ -5,7 +5,7 @@ const ExtraFooter = () => {
     <div className="flex flex-col bg-black dark:bg-white">
       {' '}
       <div className="flex justify-center my-4">
-        <nav className="flex flex-row justify-evenly items-center gap-6 text-white uppercase">
+        <nav className="flex flex-row lg:flex-col justify-evenly items-center gap-6 text-white uppercase">
           <Link
             href="#"
             className="relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-white after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"

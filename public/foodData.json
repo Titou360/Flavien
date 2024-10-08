@@ -121,9 +121,9 @@
   ],
 
   "Le Burger du Moment": {
-    "name": "Le Bikette",
-    "description": "Un burger gourmand avec une viande d'exception et un fromage de chèvre fondant",
-    "ingredients": ["Pain brioché", "Steak haché de bœuf de la Maison Ducasse", "Tomate", "Oignon", "Salade", "Fromage de chèvre", "Oeuf au plat"],
+    "name": "L'italien",
+    "description": "Un burger gourmand avec une viande d'exception, de la Mozzarella et un Pesto gourmand",
+    "ingredients": ["Pain brioché", "Steak haché de bœuf de la Maison Ducasse", "Tomate", "Oignon", "Salade", "Mozzarella", "Pesto", "Sauce Burger Maison"],
     "price": "13.00",
     "image": "/assets/img/DailyChange/burger.png",
     "available": true,

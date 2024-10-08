@@ -10,12 +10,12 @@ const ExtraHeader = () => {
   const [mode, setMode] = useThemeSwitcher();
 
   return (
-    <nav id="extraHeader" className="w-full lg:w-full mx-auto flex flex-row justify-between py-3 bg-slate-100">
+    <nav id="extraHeader" className="w-full lg:w-full mx-auto flex flex-row justify-between py-3 bg-slate-100 dark:bg-black ">
       <div className="flex flex-row flex-nowrap items-center gap-3">
         <motion.button
           aria-label="button dark mode"
           onClick={() => setMode(mode === 'light' ? 'dark' : 'light')}
-          className="w-8 h-8 ml-3 lg:mr-0 flex justify-center place-items-center"
+          className="w-8 h-8 ml-3 lg:mr-0 flex justify-center place-items-center dark:fill-white"
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.9 }}
         >

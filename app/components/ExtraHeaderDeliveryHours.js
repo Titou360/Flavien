@@ -9,7 +9,7 @@ const ExtraHeaderDeliveryHours = () => {
       <motion.a
         tabIndex="0"
         href="#Hours"
-        className="w-8 h-8 flex items-center justify-center flex-nowrap"
+        className="w-8 h-8 flex items-center justify-center flex-nowrap dark:fill-white"
         whileHover={{ y: -2 }}
         whileTap={{ scale: 0.9 }}
       >
@@ -20,7 +20,7 @@ const ExtraHeaderDeliveryHours = () => {
       <motion.a
         tabIndex="0"
         href="#Menus"
-        className="w-8 h-8 flex items-center justify-center flex-nowrap"
+        className="w-8 h-8 flex items-center justify-center flex-nowrap dark:fill-white"
         whileHover={{ y: -2 }}
         whileTap={{ scale: 0.9 }}
       >

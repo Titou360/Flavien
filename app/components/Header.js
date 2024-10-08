@@ -17,8 +17,10 @@ const Header = () => {
           priority={true}
         />
         {/* Next line making a gradient over the preview pic */}
-        <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-40"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-100"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+          <h1 className="font-effect-outline text-8xl lg:text-4xl font-Quick text-center my-4 bold">Le Café de la Place</h1>
+
           <BookTable />
         </div>
 

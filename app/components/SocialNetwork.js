@@ -23,7 +23,7 @@ const SocialNetwork = () => {
         target="_blank"
         whileHover={{ y: -2 }}
         whileTap={{ scale: 0.9 }}
-        className="w-8 h-8"
+        className="w-8 h-8 dark:fill-white"
       >
         <FacebookIcon />
       </motion.a>

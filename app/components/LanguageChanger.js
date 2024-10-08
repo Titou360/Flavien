@@ -42,7 +42,7 @@ export default function LanguageChanger() {
         aria-label="Traduire en Français"
         whileHover={{ y: -2 }}
         whileTap={{ scale: 0.9 }}
-        className="w-8 h-8 mr-3 cursor-pointer"
+        className="w-8 h-8 mr-3 cursor-pointer dark:text-white"
         onClick={() => handleChange('fr')}
       >
         🇫🇷
@@ -52,7 +52,7 @@ export default function LanguageChanger() {
         aria-label="Translate in English"
         whileHover={{ y: -2 }}
         whileTap={{ scale: 0.9 }}
-        className="w-8 h-8 cursor-pointer"
+        className="w-8 h-8 cursor-pointer dark:text-white"
         onClick={() => handleChange('en')}
       >
         🇬🇧
