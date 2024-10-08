@@ -23,10 +23,10 @@
   --indicator-color: #c5a485;
 }
 
-.body::before {
+.progressBar::before {
   content: '';
   position: fixed;
-  z-index: 10000;
+  z-index: 100;
   height: var(--indicator-height);
   inset: 0;
   background: var(--indicator-color);
