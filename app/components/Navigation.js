@@ -62,7 +62,7 @@ const Navigation = ({ toggleMenu }) => {
           onMouseEnter={() => setHoveredLink('Notre carte')}
           onMouseLeave={() => setHoveredLink(null)}
         >
-          <CustomLink href="/#menus" title="Notre carte" toggleMenu={toggleMenu} />
+          <CustomLink href="/#menus" title="La carte" toggleMenu={toggleMenu} />
         </li>
         <li
           className={`px-4 py-4 hover:bg-gray-100 dark:hover:bg-gray-600 cursor-pointer transition-opacity duration-300 ${

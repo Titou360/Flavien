@@ -5,9 +5,9 @@ const BookTable = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="flex justify-center items-center h-full">
+    <div className="flex justify-center items-center h-full w-full">
       <motion.a
-        className="text-xl border-2 border-solid px-12 py-6 xs:px-1 bg-cafeGold hover:bg-white hover:border-cafeGold rounded-lg lg:px-2 cursor-pointer text-black font-bold"
+        className="text-xl lg:text-sm border-2 border-solid px-12 py-6 lg:px-10 xs:px-1 bg-cafeGold hover:bg-white hover:border-cafeGold rounded-lg cursor-pointer text-black font-bold"
         whileHover={{ y: -2 }}
         whileTap={{ scale: 0.9 }}
         href="tel:0033547871549"

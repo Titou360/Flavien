@@ -36,11 +36,11 @@ const HamburgerMenu = () => {
 
       {/* Sliding menu */}
       <div
-        className={`fixed top-0 right-0 w-1/4 md:w-[90%] lg:w-[45%] h-full bg-white dark:bg-gray-800 z-40 flex items-center justify-start pl-3 transition-transform duration-500 ease-out transform ${
+        className={`fixed top-0 right-0 w-1/4 md:w-[65%] lg:w-[45%]  h-full bg-white dark:bg-gray-800 z-40 flex items-center justify-start pl-3 transition-transform duration-500 ease-out transform ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
-        <Navigation toggleMenu={toggleMenu} />
+        <Navigation />
       </div>
     </div>
   );
