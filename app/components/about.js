@@ -46,7 +46,7 @@ const About = () => {
   }, [isVisible, controls]);
 
   return (
-    <section id="About_us" className="relative w-5/6 lg:w-full lg:px-3 lg:my-4 py-20 border-y-2 border-black dark:border-white">
+    <section id="about" className="relative w-5/6 lg:w-full my-16 lg:px-3 lg:my-4 py-20 border-y-2 border-black dark:border-white">
       <SectionHeader subtitle="à propos" subtitle2=" de" title="nous deux" />
       <motion.div
         className="w-3/4 md:w-full m-auto flex flex-row lg:flex-col justify-between place-items-center gap-10"

@@ -33,7 +33,7 @@ const Services = () => {
     setIsModalOpen(false);
   };
   return (
-    <section id="Services" className="w-5/6 md:w-full h-full my-20 lg:mb-0">
+    <section id="services" className="w-5/6 md:w-full h-full my-20 lg:mb-0">
       <SectionHeader subtitle="à propos" subtitle2=" de nos" title="services" />
       {/* Here we map for the differents services */}
       <div className="w-full mx-auto flex flex-row lg:flex-col gap-10 mb-10">

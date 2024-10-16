@@ -3,8 +3,6 @@
 import i18nConfig from '@/i18nConfig';
 import { usePathname, useRouter } from 'next/navigation';
 import { useTranslation } from 'react-i18next';
-import FranceFlag from "../../public/assets/img/icons/france.svg"
-import UKFlag from "../../public/assets/img/icons/uk.svg"
 
 import { motion } from 'framer-motion';
 
@@ -15,7 +13,6 @@ export default function LanguageChanger() {
   const currentPathname = usePathname();
 
   const handleChange = (newLocale) => {
-
     // set cookie for next-i18n-router
     const days = 30;
     const date = new Date();
@@ -27,7 +24,7 @@ export default function LanguageChanger() {
 
     // redirect to the new locale path
     if (currentLocale === i18nConfig.defaultLocale && !i18nConfig.prefixDefault) {
-      newPathname ='/' + newLocale + currentPathname;
+      newPathname = '/' + newLocale + currentPathname;
     } else {
       newPathname = currentPathname.replace(`/${currentLocale}`, `/${newLocale}`);
     }
@@ -36,27 +33,31 @@ export default function LanguageChanger() {
   };
 
   return (
-    <>
+    <div className="flex flex-row gap-2 justify-center items-center">
       <motion.a
         tabIndex="0"
         aria-label="Traduire en Français"
         whileHover={{ y: -2 }}
         whileTap={{ scale: 0.9 }}
-        className="w-8 h-8 mr-3 cursor-pointer dark:text-white"
+        className="w-8 h-8 cursor-pointer dark:text-white hover:text-cafeGold hover:underline hover:underline-offset-4"
         onClick={() => handleChange('fr')}
       >
-        🇫🇷
+        FR
       </motion.a>
+
+      {/* Separator */}
+      <span className="text-black dark:text-white mx-4">|</span>
+
       <motion.a
         tabIndex="0"
         aria-label="Translate in English"
         whileHover={{ y: -2 }}
         whileTap={{ scale: 0.9 }}
-        className="w-8 h-8 cursor-pointer dark:text-white"
+        className="w-8 h-8 cursor-pointer dark:text-white hover:text-cafeGold hover:underline hover:underline-offset-4"
         onClick={() => handleChange('en')}
       >
-        🇬🇧
+        EN
       </motion.a>
-    </>
+    </div>
   );
 }

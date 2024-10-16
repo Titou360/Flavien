@@ -8,7 +8,7 @@ const burgerOfTheDay = data['Le Burger du Moment'];
 const BurgerOfTheDay = () => {
   return (
     <div id="burgerOfTheDay" className="w-full h-full relative">
-      <Image src={burgerBg} className="absolute w-full h-full object-cover opacity-95" alt="Photo d'un burger" />
+      <Image src={burgerBg} className="absolute w-full h-full object-cover opacity-95" alt="Photo d'un burger" loading="lazy" />
       {/* Gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-100"></div>
 

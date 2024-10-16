@@ -6,7 +6,8 @@ module.exports = {
     extend: {
       fontFamily: {
         Quick: ['Quicksand', 'sans'],
-        Kristi: ['Kristi', 'serif']
+        Kristi: ['Kristi', 'serif'],
+        Oakes: ['Oakes', 'serif']
       },
       colors: {
         cafeGray: '#2c2c2c',

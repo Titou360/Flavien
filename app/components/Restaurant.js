@@ -53,11 +53,10 @@ const Restaurant = () => {
 
           <div className="flex flex-row h-full lg:flex-col lg:gap-10">
             <p className="w-1/2 lg:w-full text-black/60 dark:text-white p-4 lg:p-0 text-balance md:text-center">
-              Cuisine de terroir, authentique et conviviale. Nous faisons confiance à la puissance locale au travers de ses producteurs et de leur
-              savoir-faire.
+              Cuisine de terroir, authentique et conviviale. Nous faisons confiance à la puissance du savoir-faire des producteurs locaux et de leurs produits.
             </p>
             <p className="w-1/2 lg:w-full text-black/60 dark:text-white p-4 lg:p-0 text-balance md:text-center">
-              Une cuisine gourmande, des assiettes joliment dressées pour le plaisir des papilles de toutes et tous.
+              Une cuisine gourmande, une carte variée, des assiettes joliment dressées pour le plaisir des papilles de toutes et tous.
             </p>
           </div>
         </div>

@@ -20,7 +20,7 @@ const OurCards = () => {
   };
 
   return (
-    <section id="Menus" className="w-5/6 h-full lg:w-full my-20 lg:my-0 flex flex-row lg:flex-col justify-evenly items-center gap-6">
+    <section id="menus" className="w-5/6 h-full lg:w-full my-20 lg:my-0 flex flex-row lg:flex-col justify-evenly items-center gap-6">
       <div className="cursor-pointer w-1/2 lg:w-5/6 lg:mx-auto" onClick={() => openModal('food')}>
         <FoodCard />
       </div>

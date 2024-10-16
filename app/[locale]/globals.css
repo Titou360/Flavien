@@ -11,6 +11,11 @@
   src: url('/assets/fonts/Kristi.ttf');
 }
 
+@font-face {
+  font-family: 'Oakes';
+  src: url('/assets/fonts/OakesGroteskBold.ttf');
+}
+
 /* General Option */
 .font-effect-outline {
   color: white;
@@ -26,7 +31,7 @@
 .progressBar::before {
   content: '';
   position: fixed;
-  z-index: 100;
+  z-index: 101;
   height: var(--indicator-height);
   inset: 0;
   background: var(--indicator-color);
@@ -42,6 +47,13 @@
   90%,
   100% {
     transform: scaleX(1);
+  }
+}
+
+@media (max-width: 1024px) {
+  .progressBar::before {
+    display: none; /* Masque complètement la barre de progression */
+    animation: none; /* Désactive l'animation */
   }
 }
 

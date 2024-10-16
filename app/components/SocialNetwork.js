@@ -3,19 +3,7 @@ import { FacebookIcon, InstagramIcon } from './Icons';
 
 const SocialNetwork = () => {
   return (
-    <div className="flex flex-row">
-      {/* <motion.a
-        tabIndex="0"
-        aria-label="Join us on Instagram"
-        href="#"
-        target="_blank"
-        whileHover={{ y: -2 }}
-        whileTap={{ scale: 0.9 }}
-        className="w-6 h-6 mr-3 dark:fill-cafeGold"
-      >
-        <InstagramIcon />
-      </motion.a> */}
-
+    <div className="flex flex-row justify-center items-center h-10 gap-6">
       <motion.a
         tabIndex="0"
         aria-label="Join us on Facebook"
@@ -23,9 +11,21 @@ const SocialNetwork = () => {
         target="_blank"
         whileHover={{ y: -2 }}
         whileTap={{ scale: 0.9 }}
-        className="w-8 h-8 dark:fill-white"
+        className="w-6 h-6 dark:fill-white"
       >
         <FacebookIcon />
+      </motion.a>
+
+      <motion.a
+        tabIndex="0"
+        aria-label="Join us on Instagram"
+        href="#"
+        target="_blank"
+        whileHover={{ y: -2 }}
+        whileTap={{ scale: 0.9 }}
+        className="w-6 h-6 dark:fill-white"
+      >
+        <InstagramIcon />
       </motion.a>
     </div>
   );

@@ -5,7 +5,7 @@ import SectionHeader from './SectionHeader';
 
 const DailyChange = () => {
   return (
-    <section id="#dailychange" className="flex flex-row lg:flex-col w-5/6 lg:w-full">
+    <section id="dailychange" className="flex flex-row lg:flex-col w-5/6 lg:w-full lg:mt-20">
       <div className="w-1/3 lg:w-full h-full relative p-4 lg:p-0 lg:my-30">
         <SectionHeader subtitle="Notre" subtitle2=" menu" title="brasseur" />
         <div className="flex border-solid border-2 border-transparent dark:border-cafeGold flex-col items-center transition ease-in-out duration-300 hover:border-cafeGold group h-[700px] bg-gradient-to-t from-gray-700 to-slate-800 text-white">

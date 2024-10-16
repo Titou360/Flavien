@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
-import { useTranslation } from 'react-i18next';
 import Link from 'next/link';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import ExtraHeaderDeliveryHours from './ExtraHeaderDeliveryHours';
 import SocialNetwork from './SocialNetwork';
 
@@ -87,7 +87,7 @@ const Navbar = () => {
           animate={{ scale: 1, opacity: 1 }}
           className="min-w-[75vw] flex flex-col justify-between z-30 items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-dark/90 dark:bg-light/75 rounded-lg bg-white dark:bg-black py-32 border-2 border-transparent dark:border-cafeGold"
         >
-          <nav className="flex flex-col items-center justify-center lg:text-xl">
+          <nav className="flex flex-col items-center justify-center lg:text-4xl">
             <CustomMobileLink href="/" className=" text-black dark:text-cafeGold" title={t('Custom:Home')} toggle={handleClick} />
             <CustomMobileLink href="#Services" className=" text-black dark:text-cafeGold" title={t('Navbar:Services')} toggle={handleClick} />
             <CustomMobileLink href="#Menus" className=" text-dark dark:text-cafeGold" title={t('Navbar:Menus')} toggle={handleClick} />

@@ -5,7 +5,6 @@ import DailyChange from '../components/DailyChange';
 import ExtraFooter from '../components/ExtraFooter';
 import ExtraHeader from '../components/ExtraHeader';
 import Footer from '../components/Footer';
-import Header from '../components/Header';
 import Map from '../components/Map';
 import OurCards from '../components/OurCards';
 import Restaurant from '../components/Restaurant';
@@ -14,7 +13,7 @@ import TranslationsProvider from '../components/TranslationProvider';
 import About from '../components/about';
 import initTranslations from '../i18n';
 
-const i18nNamespaces = ['ExtraHeader', 'Navbar', 'Book', 'Common','Custom'];
+const i18nNamespaces = ['ExtraHeader', 'Navbar', 'Book', 'Common', 'Custom'];
 
 export default async function Home({ params: { locale } }) {
   const { t, resources } = await initTranslations(locale, i18nNamespaces);
@@ -22,9 +21,8 @@ export default async function Home({ params: { locale } }) {
   return (
     <TranslationsProvider resources={resources} locale={locale} namespaces={i18nNamespaces}>
       <ExtraHeader />
-      <Header />
-
       <main className="flex w-full min-h-screen flex-col items-center justify-between">
+
         <About />
 
         <Restaurant />
