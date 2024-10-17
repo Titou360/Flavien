@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { FacebookIcon, InstagramIcon } from './Icons';
 
-const SocialNetwork = () => {
+const SocialNetwork = ({ color = 'dark:fill-white' }) => {
   return (
     <div className="flex flex-row justify-center items-center h-10 gap-6">
       <motion.a
@@ -11,7 +11,7 @@ const SocialNetwork = () => {
         target="_blank"
         whileHover={{ y: -2 }}
         whileTap={{ scale: 0.9 }}
-        className="w-6 h-6 dark:fill-white"
+        className={`w-6 h-6 ${color}`} 
       >
         <FacebookIcon />
       </motion.a>
@@ -23,7 +23,7 @@ const SocialNetwork = () => {
         target="_blank"
         whileHover={{ y: -2 }}
         whileTap={{ scale: 0.9 }}
-        className="w-6 h-6 dark:fill-white"
+        className={`w-6 h-6 ${color}`}
       >
         <InstagramIcon />
       </motion.a>

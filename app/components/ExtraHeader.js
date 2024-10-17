@@ -11,19 +11,21 @@ import Link from 'next/link.js';
 const ExtraHeader = () => {
   return (
     <header className="relative w-full h-screen">
-      <nav id="extraHeader" className="w-full flex flex-row items-center p-4 dark:bg-black fixed top-0 left-0 z-50">
-        {/* Logo positioned fixed to the top left */}
-        <div className="fixed top-5 left-5 z-30 lg:hidden">
+      <nav id="extraHeader" className="relative w-full flex flex-row items-center dark:bg-black top-0 left-0 z-50">
+        {/* Logo visible sur mobile (ne suit pas le défilement) */}
+        <div className="absolute top-5 left-5 z-30 hidden lg:block">
           <Link href="/">
-            <Logo width={150} height={150} href="/" />
+            <Logo width={80} height={80} />
           </Link>
         </div>
-        <div className="fixed top-5 left-5 z-30 hidden lg:block">
+        {/* Logo visible sur grand écran (ne suit pas le défilement) */}
+        <div className="absolute top-5 left-5 z-30 lg:hidden">
           <Link href="/">
-            <Logo width={100} height={100} href="/" />
+            <Logo width={150} height={150} />
           </Link>
         </div>
       </nav>
+
       {/* Hamburger Menu stays in the top right */}
       <HamburgerMenu />
 
@@ -43,7 +45,7 @@ const ExtraHeader = () => {
           savoureux et de boissons rafraîchissantes. <br /> Plus qu&apos;un simple bar-restaurant, c&apos;est le point de rencontre incontournable des
           habitants et des visiteurs. <br /> Nous vous souhaitons la bienvenue au
         </p>
-        <h1 className="font-effect-outline text-8xl lg:text-4xl font-Quick text-center my-12 bold">Café de la Place</h1>
+        <h1 className="lg:min-w-80 font-effect-outline text-8xl lg:text-5xl font-Quick text-center my-12 bold">Café de la Place</h1>
 
         <BookTable />
       </div>

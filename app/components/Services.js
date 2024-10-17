@@ -1,13 +1,13 @@
 'use client';
 import Image from 'next/image';
-import { useState } from 'react';
-import data from '../../public/data.json';
-import Switcher from './Switcher';
-import Modal from './Modal';
 import Link from 'next/link';
+import { useState } from 'react';
 import BurgerPic from '../../public/assets/img/Services/burger.jpg';
 import TraiteurPic from '../../public/assets/img/Services/traiteur.webp';
+import data from '../../public/data.json';
+import Modal from './Modal';
 import SectionHeader from './SectionHeader';
+import Switcher from './Switcher';
 
 const servicesData = data.services;
 const timingRestaurant = data.timeSchedule.restaurant;
@@ -62,7 +62,7 @@ const Services = () => {
           <div className="w-1/3 lg:w-full md:order-1 flex flex-col gap-6 lg:gap-0">
             <div
               id="find_us"
-              className="bg-cafeGray w-full h-full flex flex-col justify-center items-center text-white px-6 md:m-auto border-solid border-2 border-transparent dark:border-cafeGold"
+              className="bg-cafeBlack w-full h-full flex flex-col justify-center items-center text-white px-6 md:m-auto border-solid border-2 border-transparent dark:border-cafeGold"
             >
               <h3 className="uppercase mb-6">retrouvez nous ici</h3>
               <adress className="text-center my-2">
@@ -75,13 +75,12 @@ const Services = () => {
               id="Hours"
               className=" bg-cafeGold w-full h-full flex flex-col justify-center items-center text-white px-6 border-solid border-2 border-transparent dark:border-cafeGold"
             >
+              <h3 className="uppercase mb-6">Nos Heures d&apos;ouverture</h3>
               <div className="flex flex-row gap-2 justify-center place-items-center py-2">
                 <span>Bar</span>
                 <Switcher onToggle={handleToggle} />
                 <span>Restaurant</span>
               </div>
-              <h3 className="uppercase mb-6">Nos Heures d&apos;ouverture</h3>
-
               {isChecked
                 ? timingRestaurant.map((timing, index) => (
                     <div className="w-full flex flex-row justify-between items-center text-sm" key={index}>
@@ -131,7 +130,7 @@ const Services = () => {
       {/* Here is the code for mobile screens */}
       <div className="hidden lg:block lg:pb-10">
         <div className="w-full flex flex-col gap-0 h-full">
-          <div id="find_us" className="bg-cafeGray w-full h-80 flex flex-col justify-center items-center text-white px-6 m-auto">
+          <div id="find_us" className="w-full h-80 flex flex-col justify-center items-center text-white px-6 m-auto bg-cafeBlack">
             <h3 className="uppercase mb-6">retrouvez nous ici</h3>
             <adress className="text-center my-2">
               39 Place Robert Bezos <br /> 40420 Brocas

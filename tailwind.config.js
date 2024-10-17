@@ -10,10 +10,11 @@ module.exports = {
         Oakes: ['Oakes', 'serif']
       },
       colors: {
-        cafeGray: '#2c2c2c',
-        cafeGold: '#c5a485',
-        slateWood: '#FFF8DC',
-        slateBody: '#585D6D',
+        cafeGold: '#B67C44',
+        cafeBlack: '#1A1423',
+        cafeAlmond: '#E0D1C4',
+        cafeBlue: '#0F8B8D',
+        cafeGreen: '#273B09',
         nemo: '#F77300'
       },
       backgroundImage: {

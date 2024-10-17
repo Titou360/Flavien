@@ -79,7 +79,7 @@ const ContactForm = () => {
                     id="firstName"
                     value={formData.firstName}
                     onChange={handleChange}
-                    placeholder="Prénom*"
+                    placeholder="Prénom *"
                     required
                   />
                   <label htmlFor="lastName" className="sr-only">
@@ -90,7 +90,7 @@ const ContactForm = () => {
                     type="text"
                     name="lastName"
                     id="lastName"
-                    placeholder="Nom de famille*"
+                    placeholder="Nom de famille *"
                     value={formData.lastName}
                     onChange={handleChange}
                     required
@@ -103,7 +103,7 @@ const ContactForm = () => {
                     type="email"
                     name="email"
                     id="email"
-                    placeholder="Email*"
+                    placeholder="Email *"
                     value={formData.email}
                     onChange={handleChange}
                     required
@@ -116,7 +116,7 @@ const ContactForm = () => {
                     type="number"
                     name="phoneNumber"
                     id="phoneNumber"
-                    placeholder="Téléphone*"
+                    placeholder="Téléphone *"
                     value={formData.phoneNumber}
                     onChange={handleChange}
                     required
@@ -127,7 +127,7 @@ const ContactForm = () => {
                       Votre Message
                     </label>
                     <textarea
-                      placeholder="Votre Message*"
+                      placeholder="Votre Message *"
                       name="message"
                       id="message"
                       value={formData.message}
@@ -136,6 +136,7 @@ const ContactForm = () => {
                       className="w-full h-32 bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
                     ></textarea>
                   </div>
+                  <div><p>* Les champs marqués d&apos;un astérix sont obligatoires</p></div>
                   <div className="my-2 w-2/5 md:w-full mx-auto col-span-2 lg:col-span-1">
                     <motion.button
                       whileTap={{ scale: 0.9 }}

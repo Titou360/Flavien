@@ -2,10 +2,8 @@ import BookNow from '../components/BookNow';
 import ContactForm from '../components/ContactForm';
 import ContactUs from '../components/ContactUs';
 import DailyChange from '../components/DailyChange';
-import ExtraFooter from '../components/ExtraFooter';
 import ExtraHeader from '../components/ExtraHeader';
 import Footer from '../components/Footer';
-import Map from '../components/Map';
 import OurCards from '../components/OurCards';
 import Restaurant from '../components/Restaurant';
 import Services from '../components/Services';
@@ -37,11 +35,9 @@ export default async function Home({ params: { locale } }) {
 
         <ContactUs />
         <ContactForm />
-
-        <Map />
       </main>
       <Footer />
-      <ExtraFooter />
+
     </TranslationsProvider>
   );
 }
